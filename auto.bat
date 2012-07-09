@@ -1,0 +1,1 @@
+D:\wamp\bin\php\php5.3.13\php.exe -q D:/wamp/www/wtdemo/1/get_weibo_data.php

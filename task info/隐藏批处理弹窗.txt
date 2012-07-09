@@ -1,0 +1,11 @@
+单纯 bat 本身并不具备隐藏运行的功能
+
+不过用vbs调用bat就可以实现
+
+Set ws = CreateObject("Wscript.Shell")
+ws.run "cmd /c 2002.bat",vbhide
+
+保存文件命名为  hiden.vbe 直接调用这个文件
+
+这个就是vbs调用同目录下 名为 2002.bat 的批处理隐藏运行
+

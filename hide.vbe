@@ -1,2 +1,2 @@
 Set ws = CreateObject("Wscript.Shell")
-ws.run "cmd /c test_auto.bat",vbhide
+ws.run "cmd /c auto.bat",vbhide

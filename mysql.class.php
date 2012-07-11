@@ -26,20 +26,17 @@ class mysql {
  
     /*数据库连接*/
     public function connect() {
-        if ($this->conn == "pconn") {
-            //永久链接
-            $this->conn = mysql_pconnect($this->db_host, $this->db_user, $this->db_pwd);
-        } else {
-            //即使链接
-            $this->conn = mysql_connect($this->db_host, $this->db_user, $this->db_pwd);
-        }
- 
-        if (!mysql_select_db($this->db_database, $this->conn)) {
-            if ($this->show_error) {
-                $this->show_error("数据库不可用：", $this->db_database);
-            }
-        }
-        mysql_query("SET NAMES $this->coding");
+        if(!$this->conn=mysql_connect($host,$user,$pwd)){
+			throw new Exception('db connect error');
+			return false;
+		}else{ 
+			if (!mysql_select_db($this->db_database, $this->conn)) {
+				if ($this->show_error) {
+					$this->show_error("数据库不可用：", $this->db_database);
+				}
+			}
+			mysql_query("SET NAMES $this->coding");
+		}
     }
  
     /*数据库执行语句，可执行查询添加修改删除等任何sql语句*/
@@ -146,9 +143,13 @@ class mysql {
     }
  
     //简化查询select
-    public function findall($table) {
-        $row = $this->query("SELECT * FROM $table");
-		return $this->fetch_array($row);
+    public function findall($sql) {
+		$rs=array();
+        $result = $this->query($sql);
+		while($row=mysql_fetch_array($result)) {
+			$rs[]=$row;
+		}
+		return $rs;
     }
 	
 	//获取一条

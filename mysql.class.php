@@ -26,7 +26,7 @@ class mysql {
  
     /*数据库连接*/
     public function connect() {
-        if(!$this->conn=mysql_connect($host,$user,$pwd)){
+        if(!$this->conn=mysql_connect($this->db_host,$this->db_user,$this->db_pwd)){
 			throw new Exception('db connect error');
 			return false;
 		}else{ 

@@ -77,7 +77,7 @@ function _U2_Utf8_Gb($_C){
 				$_String .= chr(0x80 | $_C & 0x3F); 
 		}elseif($_C < 0x10000){ 
 				$_String .= chr(0xE0 | $_C>>12); 
-				$_String .= chr(0x80 | $_C>>6 & 0x3F); 
+				$_String .= chr(0x80 | $_C>>6 & 0x3F);
 				$_String .= chr(0x80 | $_C & 0x3F); 
 		}elseif($_C < 0x200000) { 
 				$_String .= chr(0xF0 | $_C>>18); 
@@ -141,6 +141,4 @@ function sub_str($str, $length = 0, $append = true, $charset='utf8') {
 }
 
 //echo Pinyin('中',1); 
-//echo Pinyin("堽",1);
-//echo "<br>".ord("堽")." ** ".ord("中");
 

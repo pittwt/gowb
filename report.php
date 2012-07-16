@@ -98,7 +98,7 @@ if(isset($_GET['keywords']) && !empty($_GET['keywords'])){
 			$i++;
 			$numbers = $value['number'];
 			$ydata[$key] .= $value['number'].',';
-			$xtime .= '"'.date("Y-m-d H:i:s", $value['add_time']).'('.$i.')",';
+			$xtime .= '"'.date("Y-m-d H:i:s", $value['add_time']).'",';
 		}
 		$ydata[$key] = substr($ydata[$key], 0, -1);
 		$xtime = substr($xtime, 0, -1);
@@ -120,20 +120,6 @@ $(function () {
                 renderTo: 'container',
                 type: 'spline',
                 marginRight: 10,
-                /*events: {
-                    load: function() {
-                        // set up the updating of the chart each second
-                        var series = this.series[0];
-						var series2 = this.series[1];
-                        setInterval(function() {
-                            var x = (new Date()).getTime(), // current time
-                                y = Math.random()*1000,
-								y2 = Math.random()*1000;
-                            series.addPoint([x, y], true, true);
-							series2.addPoint([x, y2], true, true);
-                        }, 2000);
-                    }
-                }*/
             },
             title: {
                 text: '关键词图表'
@@ -171,44 +157,17 @@ $(function () {
                 data: [<?php echo $ydata[$key];?>],
             }
 			<?php }?>
-			/*,
-			{
-                name: 'Random data 2',
-                data: (function() {
-                    // generate an array of random data
-                    var data = [],
-                        time = (new Date()).getTime(),
-                        i;
-    
-                    for (i = -19; i <= 0; i++) {
-                        data.push({
-                            x: time + i * 1000,
-                            y: Math.random() * 1000
-                        });
-                    }
-                    return data;
-                })()
-            }*/
 			]
         });
     });
     
 });
-		</script>
-	</head>
-	<body>
+</script>
 <script src="js/highcharts.js"></script>
 <script src="js/modules/exporting.js"></script>
 
 <div id="container" style="min-width: 400px; height: 400px; margin: 0 auto"></div>
-</body>
-	</body>
-</html>
-<?php
-}
-
-
-
-?>
+</div>
+<?php } ?>
 </body>
 </html>

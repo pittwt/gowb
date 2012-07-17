@@ -33,7 +33,6 @@ a{ text-decoration:none;}
 </style>
 </head>
 <body>
-
 <div style="border-right:1px #ccc solid; float:left; width:100%; text-align:center;">
 <h3>字母索引</h3>
 <?php
@@ -78,7 +77,11 @@ if(isset($_GET['search']) && !empty($_GET['search'])){
 
 /* 获取keywords数据 */
 if(isset($_GET['keywords']) && !empty($_GET['keywords'])){
-	
+	if(isset($_GET['dis']) && $_GET['dis'] == 1){
+		$dis = 1;
+	} else {
+		$dis = 0;
+	}
 	$keywords = $_GET['keywords'];
 	$ydata = array();
 	$numbers=0;
@@ -90,7 +93,7 @@ if(isset($_GET['keywords']) && !empty($_GET['keywords'])){
 		$xtime = '';
 		$i = 1;
 		foreach($data as $value){
-			if($numbers == $value['number'] && $i==2){
+			if($numbers == $value['number'] && $i==2 && $dis != 1){
 				$i=1;
 				continue;
 			}

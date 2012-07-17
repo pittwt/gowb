@@ -7,8 +7,8 @@ $mailbody = 'test email';
 $mailtitle = '抓取新浪微博数据错误';
 //$mailtitle = iconv('UTF-8','GBK//IGNORE',$mailtitle);
 
-$smtp = new smtp('smtp.163.com',25,true,'wtanton@163.com','anton123.');
-if($smtp->sendmail('447825484@qq.com', 'wtanton@163.com', $mailtitle, $mailbody, 'HTML')){
+$smtp = new smtp('smtp.qq.com',25,true,'447825484@qq.com','4478Anton.');
+if($smtp->sendmail('447825484@qq.com', '447825484@qq.com', $mailtitle, $mailbody, 'HTML')){
 	echo "success";
 } else {
 	echo "fail";

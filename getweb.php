@@ -1,13 +1,14 @@
 <?php
 header("Content-type: text/html; charset=utf-8");
-$content = file_get_contents("http://s.weibo.com/weibo/%25E9%2587%2591%25E7%2589%259B%25E5%25BA%25A7&xsort=hot&Refer=STopic_box");
+require_once("spider2.php");
+$content = file_get_contents("http://s.weibo.com/weibo/%25E4%25B8%2587%25E8%25B1%25AA%25E9%2585%2592%25E5%25BA%2597&xsort=hot&Refer=STopic_box");
 echo $content;
 
 //$content = '$d=[{"_id":{"$id":"4fda7d42741d727c14000000"},"name":"\u519c\u592b\u5c71\u6cc9","bc":"123456","pic":"d: pic\water.jpg","aid":"232fd4df3"}]$c=[{"_id":{"$id":"4fdaa7f3741d725816000000"},"bc":"012345678","name":"\u7ef4\u8fbe\u7eb8\u5dfe","cls":{"id":"125","name":"\u65e5\u7528\u54c1"},"std":{"name":"\u5f20\u6570","val":"10"}}]';
 $content = preg_replace("#\\\u([0-9a-f]{4})#ie", "iconv('UCS-2BE', 'UTF-8', pack('H4','\\1'))", $content);
 //$content = uni_decode($content);
 
-file_put_contents('zz.txt', stripslashes($content));
+file_put_contents('zz.txt', $content);
 
 function unescape($str){
 	$str = rawurldecode($str);

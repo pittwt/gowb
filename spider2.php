@@ -38,14 +38,14 @@ class spider2{
 	public function getTextDataAll($content, $start, $end) {
 		preg_match_all('|'. $start .'(.*)'.$end.'|U', $content, $out);
 		return $out[1];
-	}	
+	}
 	
 	/*
 	 *	获取指定区域的html内容
 	 */
 	public function getData($content, $start, $end) {
-		if($start)$content = strstr($content,$start);
-		if($end)$content = substr($content,0,strpos($content,$end));
+		if($start) $content = strstr($content,$start);
+		if($end) $content = substr($content,0,strpos($content,$end));
 		return $content;
 	}
 	
@@ -55,6 +55,13 @@ class spider2{
 	public function getDataAll($content) {
 		preg_match_all("|<span class=\"zw_topic\">(.*)</span>|U", $content, $out);
 		return $out[0];
+	}
+	
+	/*
+	 *	微博搜索
+	 */
+	public function getSweibo(){
+	
 	}
 
 }

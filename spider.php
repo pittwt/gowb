@@ -10,16 +10,19 @@ class spider2{
 	 *	spider version
 	 */ 
 	public $version = 'spider v1.0.1';
+	public $url = null;
+	public $content = null;
 	
-	function __construct(){
-		
+	function __construct($url){
+		$this->url = $url;
+		$this->openUrl($this->url);
 	}
 	
 	/*
 	 *	获取网页内容
 	 */
-	public function openUrl($url){
-		return file_get_contents($url);
+	public function openUrl(){
+		return $this->content = file_get_contents($this->$url);
 	}
 	
 	/*

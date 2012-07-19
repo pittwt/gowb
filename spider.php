@@ -14,7 +14,7 @@ class spider{
 	public $content = null;
 	
 	function __construct($url){
-
+		$this->url = $url;
 	}
 	
 	/*
@@ -82,6 +82,23 @@ class spider{
 	}
 	
 	/*
+	 * 获取搜索微博的全部内容
+	 */
+	public function getSearchWeiboAll() {
+		
+		$page = $this->getSerachPagenum();
+		
+		$Alldata = array();
+		echo $page;exit;
+		for($i=1; $i<=$page; $i++) {
+			$content = $this->openUrl($this->url.$i);
+			$content = $this->getSearchWeibo($this->getSweibo($content));
+			$Alldata = array_merge($Alldata, $content);
+		}
+		return $Alldata;
+	}
+	
+	/*
 	 * 获取搜索微博的单条内容
 	 */
 	public function getSearchWeibo($content) {
@@ -89,7 +106,6 @@ class spider{
 		$data = array();
 		if(is_array($list[0])){
 			foreach($list[0] as $key=>$item){
-				//echo $item;exit;
 				$thumbimg = $this->getData($item, '<img class="bigcursor" src="', '"');
 				$data[$key] = array(
 					'username'	=> $this->getData($item, 'weibo_nologin_name>', '<'),
@@ -101,10 +117,6 @@ class spider{
 					'weibo_middleimg'	=> str_replace('/thumbnail/', '/bmiddle/', $thumbimg),
 					'weibo_largeimg'	=> str_replace('/thumbnail/', '/large/', $thumbimg),
 				);
-				/*print_r($data);
-				echo '<br>';
-				print_r($item);
-				exit;*/
 			}
 			return $data;
 		}
@@ -127,6 +139,36 @@ class spider{
 	public function getSearchWeibolist($content) {
 		$content = $this->getDataAll($content, '<dd class="content">[\s^<]*<p node-type="feed_list_content">', '<dd class="clear"></dd></dl>');
 		return $content;
+	}
+	
+	/*
+	 * 获取搜索结果页数
+	 */
+	public function getSearchNumbers() {
+		/*
+		 * source 找到 500+ 条结果
+		 * \u627e\u5230  找到
+		 * \u6761\u7ed3\u679c 条结果
+		 */
+		$content = $this->openUrl($this->url);
+		//echo $this->url."<br>";exit;
+		$search = array(',', '+');
+		$replace = array('', '');
+		$number = $this->getData($content, '>\u627e\u5230', '\u6761\u7ed3\u679c<');
+		return $content;str_replace($search, $replace, $number);
+	}
+	
+	/*
+	 * 获取搜索结果数
+	 */
+	public function getSerachPagenum() {
+		$numbers = $this->getSearchNumbers();
+		if($numbers >= 500) {
+			$page = 50;
+		} else {
+			$page = ceil($numbers / 20);
+		}
+		return $page;
 	}
 
 }

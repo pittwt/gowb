@@ -1,0 +1,16 @@
+<include file="Public:header" />
+<div class="cbody b-box blank10">
+	<include file="Public:sidebar" />
+	<div class="b-area-w f_r" style="width:80%;float:right;">
+		<h4>管理员信息</h4>
+		<table border="0" cellspacing="1" class="tb-b">
+			<tr>
+				<th>当前用户</th>
+				<td>{$_SESSION['loginusername']} (<if condition="$_SESSION[C('USER_AUTH_KEY')] eq 1">超级管理员<else />普通管理员</if>)</td>
+			</tr>
+		</table>
+		<h4>统计信息</h4>
+	</div>
+	<div class="clear" style="clear:both;"></div>
+</div>
+<include file="Public:footer" />

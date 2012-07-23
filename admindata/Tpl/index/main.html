@@ -1,0 +1,92 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>{$title}</title>
+<style>
+	#message{
+		width:1024px;
+		height:100%;
+		background-color:#FC9;
+		font-size:19px;
+		color:#666666;
+		}
+</style>
+</head>
+
+<body>
+
+	<h1>你一句，我一句</h1>
+	
+	<a href="__URL__/up">我要上传文件</a>
+
+
+<form action="__APP__/Cate/add" method="post">
+	
+	<h3>我要发帖</h3>
+		
+		<input type="text" name="name">
+		<input type="submit" value="提交">
+	
+	</form>
+
+
+
+
+
+	<div id="message">
+		<volist name="msglist" id="msg">
+		<form method="post" action="__APP__/Message/fabiao">
+	
+		
+		
+	
+		
+		<table width="100%" border="1">
+			
+			<tr>
+				<td>
+				<php>
+					for($i=0;$i<$msg['count'];$i++){
+						echo "&nbsp;&nbsp;";
+					}
+				</php>
+				{$msg['name']}:{$msg['content']}{$msg['ctime']}
+					<a href="javascript:void(0)" onClick="show(\'{$msg['id']}\')">回复</a>
+					
+					<div id="reply{$msg['id']}" style="display:none;">
+						
+						<input type="text" name="content">
+						<input type="submit" value="发表">
+						<input type="hidden" name="path" value="{$msg['id']},{$msg['path']}">
+						
+					</div>
+				
+				</td>
+			</tr>
+		
+		</table>
+			
+		</form>
+		</volist>
+		<br>
+	
+	
+	</div>
+
+</body>
+</html>
+
+
+<script>
+
+function show(id){
+	
+	document.getElementById("reply"+id).style.display="block";
+}
+
+
+</script>
+
+
+

@@ -1,0 +1,68 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+<!-- 
+
+1)修改php.ini配置文件中文件上传的大小 upload_max_filesize 
+2）是不是要建立一个文件上传的表单
+	*表单的类型一定要设置成二进制流的方法
+	*表单提交方法，必须是POST
+3)在表单中得设置文件上传的区域<input type="file" name="file1">
+
+服务端
+4）$_FILES  就可以获取客户端传递过来的数据  他是以个数组
+
+5）使用这个函数 move_uploaded_file('文件名称','目录')实现文件的复制
+
+在文件上传的时候需要注意：
+1)文件如何命名   time().jpg
+2)文件如何存放
+	直接把文件存放到数据库中
+	
+	数据库中存放文件名或者是文件路径
+	
+ThinkPHP直接调用类库
+-->
+
+<h1 align="center">文件上传</h1>
+
+<center><a href="__URL__/guanli">管理上传文件</a></center>
+
+<form action="__URL__/upload" method="post" enctype="multipart/form-data">
+	
+	用户名：<input type="text"><br><br>
+	
+	上传文件:<input type="file" name="file[]" /><br><br>
+	上传文件:<input type="file" name="file[]" /><br><br>
+	上传文件:<input type="file" name="file[]" /><br><br>
+	上传文件:<input type="file" name="file[]" /><br><br>
+	上传文件:<input type="file" name="file[]" /><br><br>
+	
+	<input type="submit" value="上传" />
+	
+
+</form>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

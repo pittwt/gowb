@@ -1,0 +1,27 @@
+[ 2012-07-23T18:59:31+08:00 ] /gowb/admin.php/Public/login/ | INFO: Tag[ route_check ] --START--
+[ 2012-07-23T18:59:31+08:00 ] /gowb/admin.php/Public/login/ | INFO: Run CheckRoute Behavior [ RunTime:0.001443s ]
+[ 2012-07-23T18:59:31+08:00 ] /gowb/admin.php/Public/login/ | INFO: Tag[ route_check ] --END-- [ RunTime:0.001674s ]
+[ 2012-07-23T18:59:31+08:00 ] /gowb/admin.php/Public/login/ | INFO: Tag[ app_begin ] --START--
+[ 2012-07-23T18:59:31+08:00 ] /gowb/admin.php/Public/login/ | INFO: Run ReadHtmlCache Behavior [ RunTime:0.001345s ]
+[ 2012-07-23T18:59:31+08:00 ] /gowb/admin.php/Public/login/ | INFO: Tag[ app_begin ] --END-- [ RunTime:0.001531s ]
+[ 2012-07-23T18:59:31+08:00 ] /gowb/admin.php/Public/login/ | INFO: Tag[ view_template ] --START--
+[ 2012-07-23T18:59:31+08:00 ] /gowb/admin.php/Public/login/ | INFO: Run LocationTemplate Behavior [ RunTime:0.001479s ]
+[ 2012-07-23T18:59:31+08:00 ] /gowb/admin.php/Public/login/ | INFO: Tag[ view_template ] --END-- [ RunTime:0.001687s ]
+[ 2012-07-23T18:59:31+08:00 ] /gowb/admin.php/Public/login/ | INFO: Tag[ view_parse ] --START--
+[ 2012-07-23T18:59:31+08:00 ] /gowb/admin.php/Public/login/ | INFO: Run ParseTemplate Behavior [ RunTime:0.014755s ]
+[ 2012-07-23T18:59:31+08:00 ] /gowb/admin.php/Public/login/ | INFO: Tag[ view_parse ] --END-- [ RunTime:0.014971s ]
+[ 2012-07-23T18:59:31+08:00 ] /gowb/admin.php/Public/login/ | INFO: Tag[ view_filter ] --START--
+[ 2012-07-23T18:59:31+08:00 ] /gowb/admin.php/Public/login/ | INFO: Run ContentReplace Behavior [ RunTime:0.000975s ]
+[ 2012-07-23T18:59:31+08:00 ] /gowb/admin.php/Public/login/ | INFO: Run TokenBuild Behavior [ RunTime:0.001129s ]
+[ 2012-07-23T18:59:31+08:00 ] /gowb/admin.php/Public/login/ | INFO: Run WriteHtmlCache Behavior [ RunTime:0.000695s ]
+[ 2012-07-23T18:59:31+08:00 ] /gowb/admin.php/Public/login/ | INFO: Run ShowRuntime Behavior [ RunTime:0.003039s ]
+[ 2012-07-23T18:59:31+08:00 ] /gowb/admin.php/Public/login/ | INFO: Tag[ view_filter ] --END-- [ RunTime:0.006412s ]
+[ 2012-07-23T18:59:31+08:00 ] /gowb/admin.php/Public/login/ | INFO: Tag[ view_end ] --START--
+[ 2012-07-23T18:59:31+08:00 ] /gowb/admin.php/Public/login/ | INFO: Run ShowPageTrace Behavior [ RunTime:0.001094s ]
+[ 2012-07-23T18:59:31+08:00 ] /gowb/admin.php/Public/login/ | INFO: Tag[ view_end ] --END-- [ RunTime:0.001275s ]
+[ 2012-07-23T18:59:31+08:00 ] /gowb/admin.php/Public/verify/ | INFO: Tag[ route_check ] --START--
+[ 2012-07-23T18:59:31+08:00 ] /gowb/admin.php/Public/verify/ | INFO: Run CheckRoute Behavior [ RunTime:0.001445s ]
+[ 2012-07-23T18:59:31+08:00 ] /gowb/admin.php/Public/verify/ | INFO: Tag[ route_check ] --END-- [ RunTime:0.001668s ]
+[ 2012-07-23T18:59:31+08:00 ] /gowb/admin.php/Public/verify/ | INFO: Tag[ app_begin ] --START--
+[ 2012-07-23T18:59:31+08:00 ] /gowb/admin.php/Public/verify/ | INFO: Run ReadHtmlCache Behavior [ RunTime:0.003174s ]
+[ 2012-07-23T18:59:31+08:00 ] /gowb/admin.php/Public/verify/ | INFO: Tag[ app_begin ] --END-- [ RunTime:0.003384s ]

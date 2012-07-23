@@ -17,11 +17,30 @@ class spider{
 		$this->url = $url;
 	}
 	
+	public function _rand() {
+		$length=26;		
+		$chars = "0123456789abcdefghijklmnopqrstuvwxyz";		
+		$max = strlen($chars) - 1;		
+		mt_srand((double)microtime() * 1000000);		
+		$string = '';
+		for($i = 0; $i < $length; $i++) {
+			$string .= $chars[mt_rand(0, $max)];
+		}
+		return $string;
+	}
+	
 	/*
 	 *	获取网页内容
 	 */
 	public function openUrl($url){
-		return $this->content = file_get_contents($url);
+		$ch = curl_init();
+		curl_setopt ($ch,CURLOPT_URL,$url);
+		curl_setopt($ch,CURLOPT_RETURNTRANSFER,true);
+		curl_setopt($ch,CURLOPT_USERAGENT,"Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; SV1; .NET CLR 1.1.4322; .NET CLR 2.0.50727)");
+		curl_setopt($ch,CURLOPT_COOKIE,$this->_rand());
+		$res = curl_exec($ch);
+		curl_close ($ch);
+		return $res;
 	}
 	
 	/*
@@ -89,9 +108,11 @@ class spider{
 		$page = $this->getSerachPagenum();
 		
 		$Alldata = array();
-		echo $page;exit;
+		//echo $page;exit;
 		for($i=1; $i<=$page; $i++) {
-			$content = $this->openUrl($this->url.$i);
+			$url = $this->url.'&page='.$i;
+			//echo $url."<br>";
+			$content = $this->openUrl($url);
 			$content = $this->getSearchWeibo($this->getSweibo($content));
 			$Alldata = array_merge($Alldata, $content);
 		}
@@ -151,11 +172,12 @@ class spider{
 		 * \u6761\u7ed3\u679c 条结果
 		 */
 		$content = $this->openUrl($this->url);
-		//echo $this->url."<br>";exit;
+		
 		$search = array(',', '+');
 		$replace = array('', '');
-		$number = $this->getData($content, '>\u627e\u5230', '\u6761\u7ed3\u679c<');
-		return $content;str_replace($search, $replace, $number);
+		$number = $this->getData($content, '>找到', '条结果<');
+		//echo $this->url."**  $number<br>".$content;exit;
+		return str_replace($search, $replace, $number);
 	}
 	
 	/*

@@ -11,6 +11,8 @@ $t_data_log = "add_data_log";
 $t_data_top_hourly = "data_top_hourly";
 $t_data_top_source = "data_top_source";
 $t_error_log = "error_data_log";
+$t_search_keywords = "search_keywords";
+$t_search_keywords_wanhao = "search_keywords_wanhao";
 
 date_default_timezone_set('Asia/Shanghai');
 

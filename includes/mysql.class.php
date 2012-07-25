@@ -207,9 +207,11 @@ class mysql {
 	}
 	 
     //简化修改update
-    public function update($table, $mod_content, $condition, $url = '') {
-        //echo "UPDATE $table SET $mod_content WHERE $condition"; exit();
-        if ($this->query("UPDATE $table SET $mod_content WHERE $condition")) {
+    public function update($table, $update_items, $condition) {
+		$items = $this->get_update_item($update_items);
+		$sql = "UPDATE $table SET $items WHERE $condition";
+        echo $sql."<br>"; //exit();
+        if ($this->query($sql)) {
 			return true;
         } else {
 			return false;

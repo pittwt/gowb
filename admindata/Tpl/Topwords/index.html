@@ -1,0 +1,29 @@
+<include file="Public:header" />
+<div class="cbody b-box blank10">
+	<include file="Public:sidebar" />
+	<div class="b-area-w f_r" style="width:80%;float:right;">
+		<table style="border: 1px solid #888888;border-collapse: collapse; margin-top: 10px;">
+			<tr>
+				<td>Id</td>
+				<td>链接地址</td>
+				<td>描述</td>
+				<td>对应表</td>
+				<td>状态</td>
+				<td>操作</td>
+			</tr>
+			<foreach name="topWords" item="value">
+			  <tr>
+				<td>{$value.id}</td>
+				<td>{$value.url}</td>
+				<td>{$value.detail}&nbsp;</td>
+				<td>{$value.table}&nbsp;</td>
+				<td>{$value.status}</td>
+				<td><a href="__URL__/edit/id/{$value.id}">修改</a>  <a href="__URL__/delete/id/{$value.id}">删除</a></td>
+			  </tr>
+			</foreach>
+			<tr><td>{$page}</td></tr>
+		</table>
+	</div>
+	<div class="clear" style="clear:both;"></div>
+</div>
+<include file="Public:footer" />

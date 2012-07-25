@@ -12,7 +12,7 @@ class IndexAction extends BaseAction {
         set_time_limit(0);
 	}
 		
-	public function index(){
+	public function topHourly(){
 		$this->display("index");
     }
     
@@ -21,7 +21,7 @@ class IndexAction extends BaseAction {
      * 获取新浪微博实时数据
      * $url = 'http://data.weibo.com/top/keyword?k=hour';
      */
-	public function topHourly() {
+	public function index() {
 		$DataTopUrl = M('DataTopUrl');
 		$url = $DataTopUrl->where('status=1')->select();
 		

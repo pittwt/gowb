@@ -1,0 +1,1020 @@
+[ 2012-07-25T10:40:22+08:00 ] /gowb/admin.php/Public/login | INFO: Tag[ route_check ] --START--
+[ 2012-07-25T10:40:22+08:00 ] /gowb/admin.php/Public/login | INFO: Run CheckRoute Behavior [ RunTime:0.001788s ]
+[ 2012-07-25T10:40:22+08:00 ] /gowb/admin.php/Public/login | INFO: Tag[ route_check ] --END-- [ RunTime:0.002113s ]
+[ 2012-07-25T10:40:22+08:00 ] /gowb/admin.php/Public/login | INFO: Tag[ app_begin ] --START--
+[ 2012-07-25T10:40:22+08:00 ] /gowb/admin.php/Public/login | INFO: Run ReadHtmlCache Behavior [ RunTime:0.001426s ]
+[ 2012-07-25T10:40:22+08:00 ] /gowb/admin.php/Public/login | INFO: Tag[ app_begin ] --END-- [ RunTime:0.001623s ]
+[ 2012-07-25T10:40:22+08:00 ] /gowb/admin.php/Public/login | INFO: Tag[ view_template ] --START--
+[ 2012-07-25T10:40:22+08:00 ] /gowb/admin.php/Public/login | INFO: Run LocationTemplate Behavior [ RunTime:0.029347s ]
+[ 2012-07-25T10:40:22+08:00 ] /gowb/admin.php/Public/login | INFO: Tag[ view_template ] --END-- [ RunTime:0.029592s ]
+[ 2012-07-25T10:40:22+08:00 ] /gowb/admin.php/Public/login | INFO: Tag[ view_parse ] --START--
+[ 2012-07-25T10:40:22+08:00 ] /gowb/admin.php/Public/login | INFO: Run ParseTemplate Behavior [ RunTime:0.068014s ]
+[ 2012-07-25T10:40:22+08:00 ] /gowb/admin.php/Public/login | INFO: Tag[ view_parse ] --END-- [ RunTime:0.068245s ]
+[ 2012-07-25T10:40:22+08:00 ] /gowb/admin.php/Public/login | INFO: Tag[ view_filter ] --START--
+[ 2012-07-25T10:40:22+08:00 ] /gowb/admin.php/Public/login | INFO: Run ContentReplace Behavior [ RunTime:0.001369s ]
+[ 2012-07-25T10:40:22+08:00 ] /gowb/admin.php/Public/login | INFO: Run TokenBuild Behavior [ RunTime:0.001464s ]
+[ 2012-07-25T10:40:22+08:00 ] /gowb/admin.php/Public/login | INFO: Run WriteHtmlCache Behavior [ RunTime:0.000762s ]
+[ 2012-07-25T10:40:22+08:00 ] /gowb/admin.php/Public/login | INFO: Run ShowRuntime Behavior [ RunTime:0.001172s ]
+[ 2012-07-25T10:40:22+08:00 ] /gowb/admin.php/Public/login | INFO: Tag[ view_filter ] --END-- [ RunTime:0.005820s ]
+[ 2012-07-25T10:40:22+08:00 ] /gowb/admin.php/Public/login | INFO: Tag[ view_end ] --START--
+[ 2012-07-25T10:40:22+08:00 ] /gowb/admin.php/Public/login | INFO: Run ShowPageTrace Behavior [ RunTime:0.001383s ]
+[ 2012-07-25T10:40:22+08:00 ] /gowb/admin.php/Public/login | INFO: Tag[ view_end ] --END-- [ RunTime:0.001635s ]
+[ 2012-07-25T10:40:22+08:00 ] /gowb/admin.php/Public/verify/ | INFO: Tag[ route_check ] --START--
+[ 2012-07-25T10:40:22+08:00 ] /gowb/admin.php/Public/verify/ | INFO: Run CheckRoute Behavior [ RunTime:0.001308s ]
+[ 2012-07-25T10:40:22+08:00 ] /gowb/admin.php/Public/verify/ | INFO: Tag[ route_check ] --END-- [ RunTime:0.001529s ]
+[ 2012-07-25T10:40:22+08:00 ] /gowb/admin.php/Public/verify/ | INFO: Tag[ app_begin ] --START--
+[ 2012-07-25T10:40:22+08:00 ] /gowb/admin.php/Public/verify/ | INFO: Run ReadHtmlCache Behavior [ RunTime:0.001491s ]
+[ 2012-07-25T10:40:22+08:00 ] /gowb/admin.php/Public/verify/ | INFO: Tag[ app_begin ] --END-- [ RunTime:0.001710s ]
+[ 2012-07-25T10:40:37+08:00 ] /gowb/admin.php/Public/login | INFO: Tag[ route_check ] --START--
+[ 2012-07-25T10:40:37+08:00 ] /gowb/admin.php/Public/login | INFO: Run CheckRoute Behavior [ RunTime:0.001187s ]
+[ 2012-07-25T10:40:37+08:00 ] /gowb/admin.php/Public/login | INFO: Tag[ route_check ] --END-- [ RunTime:0.001870s ]
+[ 2012-07-25T10:40:37+08:00 ] /gowb/admin.php/Public/login | INFO: Tag[ app_begin ] --START--
+[ 2012-07-25T10:40:37+08:00 ] /gowb/admin.php/Public/login | INFO: Run ReadHtmlCache Behavior [ RunTime:0.001064s ]
+[ 2012-07-25T10:40:37+08:00 ] /gowb/admin.php/Public/login | INFO: Tag[ app_begin ] --END-- [ RunTime:0.001255s ]
+[ 2012-07-25T10:40:37+08:00 ] /gowb/admin.php/Public/login | INFO: Tag[ view_template ] --START--
+[ 2012-07-25T10:40:37+08:00 ] /gowb/admin.php/Public/login | INFO: Run LocationTemplate Behavior [ RunTime:0.002631s ]
+[ 2012-07-25T10:40:37+08:00 ] /gowb/admin.php/Public/login | INFO: Tag[ view_template ] --END-- [ RunTime:0.003081s ]
+[ 2012-07-25T10:40:37+08:00 ] /gowb/admin.php/Public/login | INFO: Tag[ view_parse ] --START--
+[ 2012-07-25T10:40:37+08:00 ] /gowb/admin.php/Public/login | INFO: Run ParseTemplate Behavior [ RunTime:0.015257s ]
+[ 2012-07-25T10:40:37+08:00 ] /gowb/admin.php/Public/login | INFO: Tag[ view_parse ] --END-- [ RunTime:0.015468s ]
+[ 2012-07-25T10:40:37+08:00 ] /gowb/admin.php/Public/login | INFO: Tag[ view_filter ] --START--
+[ 2012-07-25T10:40:37+08:00 ] /gowb/admin.php/Public/login | INFO: Run ContentReplace Behavior [ RunTime:0.000851s ]
+[ 2012-07-25T10:40:37+08:00 ] /gowb/admin.php/Public/login | INFO: Run TokenBuild Behavior [ RunTime:0.000895s ]
+[ 2012-07-25T10:40:37+08:00 ] /gowb/admin.php/Public/login | INFO: Run WriteHtmlCache Behavior [ RunTime:0.000643s ]
+[ 2012-07-25T10:40:37+08:00 ] /gowb/admin.php/Public/login | INFO: Run ShowRuntime Behavior [ RunTime:0.000994s ]
+[ 2012-07-25T10:40:37+08:00 ] /gowb/admin.php/Public/login | INFO: Tag[ view_filter ] --END-- [ RunTime:0.003938s ]
+[ 2012-07-25T10:40:37+08:00 ] /gowb/admin.php/Public/login | INFO: Tag[ view_end ] --START--
+[ 2012-07-25T10:40:37+08:00 ] /gowb/admin.php/Public/login | INFO: Run ShowPageTrace Behavior [ RunTime:0.000854s ]
+[ 2012-07-25T10:40:37+08:00 ] /gowb/admin.php/Public/login | INFO: Tag[ view_end ] --END-- [ RunTime:0.001033s ]
+[ 2012-07-25T10:40:37+08:00 ] /gowb/admin.php/Public/verify/ | INFO: Tag[ route_check ] --START--
+[ 2012-07-25T10:40:37+08:00 ] /gowb/admin.php/Public/verify/ | INFO: Run CheckRoute Behavior [ RunTime:0.001259s ]
+[ 2012-07-25T10:40:37+08:00 ] /gowb/admin.php/Public/verify/ | INFO: Tag[ route_check ] --END-- [ RunTime:0.001481s ]
+[ 2012-07-25T10:40:37+08:00 ] /gowb/admin.php/Public/verify/ | INFO: Tag[ app_begin ] --START--
+[ 2012-07-25T10:40:37+08:00 ] /gowb/admin.php/Public/verify/ | INFO: Run ReadHtmlCache Behavior [ RunTime:0.001357s ]
+[ 2012-07-25T10:40:37+08:00 ] /gowb/admin.php/Public/verify/ | INFO: Tag[ app_begin ] --END-- [ RunTime:0.001555s ]
+[ 2012-07-25T10:40:50+08:00 ] /gowb/admin.php/Public/login | INFO: Tag[ route_check ] --START--
+[ 2012-07-25T10:40:50+08:00 ] /gowb/admin.php/Public/login | INFO: Run CheckRoute Behavior [ RunTime:0.001621s ]
+[ 2012-07-25T10:40:50+08:00 ] /gowb/admin.php/Public/login | INFO: Tag[ route_check ] --END-- [ RunTime:0.001958s ]
+[ 2012-07-25T10:40:50+08:00 ] /gowb/admin.php/Public/login | INFO: Tag[ app_begin ] --START--
+[ 2012-07-25T10:40:50+08:00 ] /gowb/admin.php/Public/login | INFO: Run ReadHtmlCache Behavior [ RunTime:0.001058s ]
+[ 2012-07-25T10:40:50+08:00 ] /gowb/admin.php/Public/login | INFO: Tag[ app_begin ] --END-- [ RunTime:0.001254s ]
+[ 2012-07-25T10:40:50+08:00 ] /gowb/admin.php/Public/login | INFO: Tag[ view_template ] --START--
+[ 2012-07-25T10:40:50+08:00 ] /gowb/admin.php/Public/login | INFO: Run LocationTemplate Behavior [ RunTime:0.001287s ]
+[ 2012-07-25T10:40:50+08:00 ] /gowb/admin.php/Public/login | INFO: Tag[ view_template ] --END-- [ RunTime:0.001592s ]
+[ 2012-07-25T10:40:50+08:00 ] /gowb/admin.php/Public/login | INFO: Tag[ view_parse ] --START--
+[ 2012-07-25T10:40:50+08:00 ] /gowb/admin.php/Public/login | INFO: Run ParseTemplate Behavior [ RunTime:0.014605s ]
+[ 2012-07-25T10:40:50+08:00 ] /gowb/admin.php/Public/login | INFO: Tag[ view_parse ] --END-- [ RunTime:0.014817s ]
+[ 2012-07-25T10:40:50+08:00 ] /gowb/admin.php/Public/login | INFO: Tag[ view_filter ] --START--
+[ 2012-07-25T10:40:50+08:00 ] /gowb/admin.php/Public/login | INFO: Run ContentReplace Behavior [ RunTime:0.000955s ]
+[ 2012-07-25T10:40:50+08:00 ] /gowb/admin.php/Public/login | INFO: Run TokenBuild Behavior [ RunTime:0.001082s ]
+[ 2012-07-25T10:40:50+08:00 ] /gowb/admin.php/Public/login | INFO: Run WriteHtmlCache Behavior [ RunTime:0.000514s ]
+[ 2012-07-25T10:40:50+08:00 ] /gowb/admin.php/Public/login | INFO: Run ShowRuntime Behavior [ RunTime:0.001206s ]
+[ 2012-07-25T10:40:50+08:00 ] /gowb/admin.php/Public/login | INFO: Tag[ view_filter ] --END-- [ RunTime:0.004454s ]
+[ 2012-07-25T10:40:50+08:00 ] /gowb/admin.php/Public/login | INFO: Tag[ view_end ] --START--
+[ 2012-07-25T10:40:50+08:00 ] /gowb/admin.php/Public/login | INFO: Run ShowPageTrace Behavior [ RunTime:0.000985s ]
+[ 2012-07-25T10:40:50+08:00 ] /gowb/admin.php/Public/login | INFO: Tag[ view_end ] --END-- [ RunTime:0.001186s ]
+[ 2012-07-25T10:40:50+08:00 ] /gowb/admin.php/Public/verify/ | INFO: Tag[ route_check ] --START--
+[ 2012-07-25T10:40:50+08:00 ] /gowb/admin.php/Public/verify/ | INFO: Run CheckRoute Behavior [ RunTime:0.001285s ]
+[ 2012-07-25T10:40:50+08:00 ] /gowb/admin.php/Public/verify/ | INFO: Tag[ route_check ] --END-- [ RunTime:0.001514s ]
+[ 2012-07-25T10:40:50+08:00 ] /gowb/admin.php/Public/verify/ | INFO: Tag[ app_begin ] --START--
+[ 2012-07-25T10:40:50+08:00 ] /gowb/admin.php/Public/verify/ | INFO: Run ReadHtmlCache Behavior [ RunTime:0.001019s ]
+[ 2012-07-25T10:40:50+08:00 ] /gowb/admin.php/Public/verify/ | INFO: Tag[ app_begin ] --END-- [ RunTime:0.001206s ]
+[ 2012-07-25T10:41:03+08:00 ] /gowb/admin.php/Public/login | INFO: Tag[ route_check ] --START--
+[ 2012-07-25T10:41:03+08:00 ] /gowb/admin.php/Public/login | INFO: Run CheckRoute Behavior [ RunTime:0.001789s ]
+[ 2012-07-25T10:41:03+08:00 ] /gowb/admin.php/Public/login | INFO: Tag[ route_check ] --END-- [ RunTime:0.002041s ]
+[ 2012-07-25T10:41:03+08:00 ] /gowb/admin.php/Public/login | INFO: Tag[ app_begin ] --START--
+[ 2012-07-25T10:41:03+08:00 ] /gowb/admin.php/Public/login | INFO: Run ReadHtmlCache Behavior [ RunTime:0.001265s ]
+[ 2012-07-25T10:41:03+08:00 ] /gowb/admin.php/Public/login | INFO: Tag[ app_begin ] --END-- [ RunTime:0.001576s ]
+[ 2012-07-25T10:41:03+08:00 ] /gowb/admin.php/Public/login | INFO: Tag[ view_template ] --START--
+[ 2012-07-25T10:41:03+08:00 ] /gowb/admin.php/Public/login | INFO: Run LocationTemplate Behavior [ RunTime:0.001317s ]
+[ 2012-07-25T10:41:03+08:00 ] /gowb/admin.php/Public/login | INFO: Tag[ view_template ] --END-- [ RunTime:0.001524s ]
+[ 2012-07-25T10:41:03+08:00 ] /gowb/admin.php/Public/login | INFO: Tag[ view_parse ] --START--
+[ 2012-07-25T10:41:03+08:00 ] /gowb/admin.php/Public/login | INFO: Run ParseTemplate Behavior [ RunTime:0.015650s ]
+[ 2012-07-25T10:41:03+08:00 ] /gowb/admin.php/Public/login | INFO: Tag[ view_parse ] --END-- [ RunTime:0.015924s ]
+[ 2012-07-25T10:41:03+08:00 ] /gowb/admin.php/Public/login | INFO: Tag[ view_filter ] --START--
+[ 2012-07-25T10:41:03+08:00 ] /gowb/admin.php/Public/login | INFO: Run ContentReplace Behavior [ RunTime:0.000886s ]
+[ 2012-07-25T10:41:03+08:00 ] /gowb/admin.php/Public/login | INFO: Run TokenBuild Behavior [ RunTime:0.000870s ]
+[ 2012-07-25T10:41:03+08:00 ] /gowb/admin.php/Public/login | INFO: Run WriteHtmlCache Behavior [ RunTime:0.000525s ]
+[ 2012-07-25T10:41:03+08:00 ] /gowb/admin.php/Public/login | INFO: Run ShowRuntime Behavior [ RunTime:0.006396s ]
+[ 2012-07-25T10:41:03+08:00 ] /gowb/admin.php/Public/login | INFO: Tag[ view_filter ] --END-- [ RunTime:0.009241s ]
+[ 2012-07-25T10:41:03+08:00 ] /gowb/admin.php/Public/login | INFO: Tag[ view_end ] --START--
+[ 2012-07-25T10:41:03+08:00 ] /gowb/admin.php/Public/login | INFO: Run ShowPageTrace Behavior [ RunTime:0.000864s ]
+[ 2012-07-25T10:41:03+08:00 ] /gowb/admin.php/Public/login | INFO: Tag[ view_end ] --END-- [ RunTime:0.001050s ]
+[ 2012-07-25T10:41:03+08:00 ] /gowb/admin.php/Public/verify/ | INFO: Tag[ route_check ] --START--
+[ 2012-07-25T10:41:03+08:00 ] /gowb/admin.php/Public/verify/ | INFO: Run CheckRoute Behavior [ RunTime:0.001297s ]
+[ 2012-07-25T10:41:03+08:00 ] /gowb/admin.php/Public/verify/ | INFO: Tag[ route_check ] --END-- [ RunTime:0.001532s ]
+[ 2012-07-25T10:41:03+08:00 ] /gowb/admin.php/Public/verify/ | INFO: Tag[ app_begin ] --START--
+[ 2012-07-25T10:41:03+08:00 ] /gowb/admin.php/Public/verify/ | INFO: Run ReadHtmlCache Behavior [ RunTime:0.001007s ]
+[ 2012-07-25T10:41:03+08:00 ] /gowb/admin.php/Public/verify/ | INFO: Tag[ app_begin ] --END-- [ RunTime:0.001193s ]
+[ 2012-07-25T10:48:50+08:00 ] /gowb/admin.php/Public/verify/ | INFO: Tag[ route_check ] --START--
+[ 2012-07-25T10:48:50+08:00 ] /gowb/admin.php/Public/verify/ | INFO: Run CheckRoute Behavior [ RunTime:0.002853s ]
+[ 2012-07-25T10:48:50+08:00 ] /gowb/admin.php/Public/verify/ | INFO: Tag[ route_check ] --END-- [ RunTime:0.003098s ]
+[ 2012-07-25T10:48:50+08:00 ] /gowb/admin.php/Public/verify/ | INFO: Tag[ app_begin ] --START--
+[ 2012-07-25T10:48:50+08:00 ] /gowb/admin.php/Public/verify/ | INFO: Run ReadHtmlCache Behavior [ RunTime:0.001320s ]
+[ 2012-07-25T10:48:50+08:00 ] /gowb/admin.php/Public/verify/ | INFO: Tag[ app_begin ] --END-- [ RunTime:0.001517s ]
+[ 2012-07-25T10:49:33+08:00 ] /gowb/admin.php/Public/verify/1343184573102 | INFO: Tag[ route_check ] --START--
+[ 2012-07-25T10:49:33+08:00 ] /gowb/admin.php/Public/verify/1343184573102 | INFO: Run CheckRoute Behavior [ RunTime:0.001166s ]
+[ 2012-07-25T10:49:33+08:00 ] /gowb/admin.php/Public/verify/1343184573102 | INFO: Tag[ route_check ] --END-- [ RunTime:0.001386s ]
+[ 2012-07-25T10:49:33+08:00 ] /gowb/admin.php/Public/verify/1343184573102 | INFO: Tag[ app_begin ] --START--
+[ 2012-07-25T10:49:33+08:00 ] /gowb/admin.php/Public/verify/1343184573102 | INFO: Run ReadHtmlCache Behavior [ RunTime:0.001078s ]
+[ 2012-07-25T10:49:33+08:00 ] /gowb/admin.php/Public/verify/1343184573102 | INFO: Tag[ app_begin ] --END-- [ RunTime:0.001268s ]
+[ 2012-07-25T10:49:41+08:00 ] /gowb/admin.php/Public/checkLogin | INFO: Tag[ route_check ] --START--
+[ 2012-07-25T10:49:41+08:00 ] /gowb/admin.php/Public/checkLogin | INFO: Run CheckRoute Behavior [ RunTime:0.002998s ]
+[ 2012-07-25T10:49:41+08:00 ] /gowb/admin.php/Public/checkLogin | INFO: Tag[ route_check ] --END-- [ RunTime:0.003253s ]
+[ 2012-07-25T10:49:41+08:00 ] /gowb/admin.php/Public/checkLogin | INFO: Tag[ app_begin ] --START--
+[ 2012-07-25T10:49:41+08:00 ] /gowb/admin.php/Public/checkLogin | INFO: Run ReadHtmlCache Behavior [ RunTime:0.001289s ]
+[ 2012-07-25T10:49:41+08:00 ] /gowb/admin.php/Public/checkLogin | INFO: Tag[ app_begin ] --END-- [ RunTime:0.001539s ]
+[ 2012-07-25T10:49:41+08:00 ] /gowb/admin.php/Public/checkLogin | SQL: SHOW COLUMNS FROM `wb_user` [ RunTime:0.005103s ]
+[ 2012-07-25T10:49:41+08:00 ] /gowb/admin.php/Public/checkLogin | SQL: SELECT * FROM `wb_user` WHERE username='admin' and password='21232f297a57a5a743894a0e4a801fc3'  [ RunTime:0.000636s ]
+[ 2012-07-25T10:49:41+08:00 ] /gowb/admin.php/Public/checkLogin | INFO: Tag[ view_template ] --START--
+[ 2012-07-25T10:49:41+08:00 ] /gowb/admin.php/Public/checkLogin | INFO: Run LocationTemplate Behavior [ RunTime:0.001246s ]
+[ 2012-07-25T10:49:41+08:00 ] /gowb/admin.php/Public/checkLogin | INFO: Tag[ view_template ] --END-- [ RunTime:0.001448s ]
+[ 2012-07-25T10:49:41+08:00 ] /gowb/admin.php/Public/checkLogin | INFO: Tag[ view_parse ] --START--
+[ 2012-07-25T10:49:41+08:00 ] /gowb/admin.php/Public/checkLogin | INFO: Run ParseTemplate Behavior [ RunTime:0.022708s ]
+[ 2012-07-25T10:49:41+08:00 ] /gowb/admin.php/Public/checkLogin | INFO: Tag[ view_parse ] --END-- [ RunTime:0.022926s ]
+[ 2012-07-25T10:49:41+08:00 ] /gowb/admin.php/Public/checkLogin | INFO: Tag[ view_filter ] --START--
+[ 2012-07-25T10:49:41+08:00 ] /gowb/admin.php/Public/checkLogin | INFO: Run ContentReplace Behavior [ RunTime:0.001046s ]
+[ 2012-07-25T10:49:41+08:00 ] /gowb/admin.php/Public/checkLogin | INFO: Run TokenBuild Behavior [ RunTime:0.000975s ]
+[ 2012-07-25T10:49:41+08:00 ] /gowb/admin.php/Public/checkLogin | INFO: Run WriteHtmlCache Behavior [ RunTime:0.000733s ]
+[ 2012-07-25T10:49:41+08:00 ] /gowb/admin.php/Public/checkLogin | INFO: Run ShowRuntime Behavior [ RunTime:0.001276s ]
+[ 2012-07-25T10:49:41+08:00 ] /gowb/admin.php/Public/checkLogin | INFO: Tag[ view_filter ] --END-- [ RunTime:0.004589s ]
+[ 2012-07-25T10:49:41+08:00 ] /gowb/admin.php/Public/checkLogin | INFO: Tag[ view_end ] --START--
+[ 2012-07-25T10:49:41+08:00 ] /gowb/admin.php/Public/checkLogin | INFO: Run ShowPageTrace Behavior [ RunTime:0.001002s ]
+[ 2012-07-25T10:49:41+08:00 ] /gowb/admin.php/Public/checkLogin | INFO: Tag[ view_end ] --END-- [ RunTime:0.001190s ]
+[ 2012-07-25T10:49:43+08:00 ] /gowb/admin.php/Index | INFO: Tag[ route_check ] --START--
+[ 2012-07-25T10:49:43+08:00 ] /gowb/admin.php/Index | INFO: Run CheckRoute Behavior [ RunTime:0.001176s ]
+[ 2012-07-25T10:49:43+08:00 ] /gowb/admin.php/Index | INFO: Tag[ route_check ] --END-- [ RunTime:0.001392s ]
+[ 2012-07-25T10:49:43+08:00 ] /gowb/admin.php/Index | INFO: Tag[ app_begin ] --START--
+[ 2012-07-25T10:49:43+08:00 ] /gowb/admin.php/Index | INFO: Run ReadHtmlCache Behavior [ RunTime:0.001003s ]
+[ 2012-07-25T10:49:43+08:00 ] /gowb/admin.php/Index | INFO: Tag[ app_begin ] --END-- [ RunTime:0.001187s ]
+[ 2012-07-25T10:49:43+08:00 ] /gowb/admin.php/Index | INFO: Tag[ view_template ] --START--
+[ 2012-07-25T10:49:43+08:00 ] /gowb/admin.php/Index | INFO: Run LocationTemplate Behavior [ RunTime:0.012498s ]
+[ 2012-07-25T10:49:43+08:00 ] /gowb/admin.php/Index | INFO: Tag[ view_template ] --END-- [ RunTime:0.012728s ]
+[ 2012-07-25T10:49:43+08:00 ] /gowb/admin.php/Index | INFO: Tag[ view_parse ] --START--
+[ 2012-07-25T10:49:43+08:00 ] /gowb/admin.php/Index | INFO: Run ParseTemplate Behavior [ RunTime:0.030934s ]
+[ 2012-07-25T10:49:43+08:00 ] /gowb/admin.php/Index | INFO: Tag[ view_parse ] --END-- [ RunTime:0.031137s ]
+[ 2012-07-25T10:49:43+08:00 ] /gowb/admin.php/Index | INFO: Tag[ view_filter ] --START--
+[ 2012-07-25T10:49:43+08:00 ] /gowb/admin.php/Index | INFO: Run ContentReplace Behavior [ RunTime:0.000782s ]
+[ 2012-07-25T10:49:43+08:00 ] /gowb/admin.php/Index | INFO: Run TokenBuild Behavior [ RunTime:0.000757s ]
+[ 2012-07-25T10:49:43+08:00 ] /gowb/admin.php/Index | INFO: Run WriteHtmlCache Behavior [ RunTime:0.000464s ]
+[ 2012-07-25T10:49:43+08:00 ] /gowb/admin.php/Index | INFO: Run ShowRuntime Behavior [ RunTime:0.001601s ]
+[ 2012-07-25T10:49:43+08:00 ] /gowb/admin.php/Index | INFO: Tag[ view_filter ] --END-- [ RunTime:0.007070s ]
+[ 2012-07-25T10:49:43+08:00 ] /gowb/admin.php/Index | INFO: Tag[ view_end ] --START--
+[ 2012-07-25T10:49:43+08:00 ] /gowb/admin.php/Index | INFO: Run ShowPageTrace Behavior [ RunTime:0.000794s ]
+[ 2012-07-25T10:49:43+08:00 ] /gowb/admin.php/Index | INFO: Tag[ view_end ] --END-- [ RunTime:0.000971s ]
+[ 2012-07-25T10:59:32+08:00 ] /gowb/admin.php/Index | INFO: Tag[ route_check ] --START--
+[ 2012-07-25T10:59:32+08:00 ] /gowb/admin.php/Index | INFO: Run CheckRoute Behavior [ RunTime:0.001782s ]
+[ 2012-07-25T10:59:32+08:00 ] /gowb/admin.php/Index | INFO: Tag[ route_check ] --END-- [ RunTime:0.002184s ]
+[ 2012-07-25T10:59:32+08:00 ] /gowb/admin.php/Index | INFO: Tag[ app_begin ] --START--
+[ 2012-07-25T10:59:32+08:00 ] /gowb/admin.php/Index | INFO: Run ReadHtmlCache Behavior [ RunTime:0.001153s ]
+[ 2012-07-25T10:59:32+08:00 ] /gowb/admin.php/Index | INFO: Tag[ app_begin ] --END-- [ RunTime:0.001336s ]
+[ 2012-07-25T10:59:32+08:00 ] /gowb/admin.php/Index | INFO: Tag[ view_template ] --START--
+[ 2012-07-25T10:59:32+08:00 ] /gowb/admin.php/Index | INFO: Run LocationTemplate Behavior [ RunTime:0.001249s ]
+[ 2012-07-25T10:59:32+08:00 ] /gowb/admin.php/Index | INFO: Tag[ view_template ] --END-- [ RunTime:0.001459s ]
+[ 2012-07-25T10:59:32+08:00 ] /gowb/admin.php/Index | INFO: Tag[ view_parse ] --START--
+[ 2012-07-25T10:59:32+08:00 ] /gowb/admin.php/Index | INFO: Run ParseTemplate Behavior [ RunTime:0.019327s ]
+[ 2012-07-25T10:59:32+08:00 ] /gowb/admin.php/Index | INFO: Tag[ view_parse ] --END-- [ RunTime:0.019641s ]
+[ 2012-07-25T10:59:32+08:00 ] /gowb/admin.php/Index | INFO: Tag[ view_filter ] --START--
+[ 2012-07-25T10:59:32+08:00 ] /gowb/admin.php/Index | INFO: Run ContentReplace Behavior [ RunTime:0.000892s ]
+[ 2012-07-25T10:59:32+08:00 ] /gowb/admin.php/Index | INFO: Run TokenBuild Behavior [ RunTime:0.000964s ]
+[ 2012-07-25T10:59:32+08:00 ] /gowb/admin.php/Index | INFO: Run WriteHtmlCache Behavior [ RunTime:0.000667s ]
+[ 2012-07-25T10:59:32+08:00 ] /gowb/admin.php/Index | INFO: Run ShowRuntime Behavior [ RunTime:0.006565s ]
+[ 2012-07-25T10:59:32+08:00 ] /gowb/admin.php/Index | INFO: Tag[ view_filter ] --END-- [ RunTime:0.009638s ]
+[ 2012-07-25T10:59:32+08:00 ] /gowb/admin.php/Index | INFO: Tag[ view_end ] --START--
+[ 2012-07-25T10:59:32+08:00 ] /gowb/admin.php/Index | INFO: Run ShowPageTrace Behavior [ RunTime:0.001088s ]
+[ 2012-07-25T10:59:32+08:00 ] /gowb/admin.php/Index | INFO: Tag[ view_end ] --END-- [ RunTime:0.001276s ]
+[ 2012-07-25T10:59:40+08:00 ] /gowb/admin.php/Index | INFO: Tag[ route_check ] --START--
+[ 2012-07-25T10:59:40+08:00 ] /gowb/admin.php/Index | INFO: Run CheckRoute Behavior [ RunTime:0.001342s ]
+[ 2012-07-25T10:59:40+08:00 ] /gowb/admin.php/Index | INFO: Tag[ route_check ] --END-- [ RunTime:0.001585s ]
+[ 2012-07-25T10:59:40+08:00 ] /gowb/admin.php/Index | INFO: Tag[ app_begin ] --START--
+[ 2012-07-25T10:59:40+08:00 ] /gowb/admin.php/Index | INFO: Run ReadHtmlCache Behavior [ RunTime:0.000995s ]
+[ 2012-07-25T10:59:40+08:00 ] /gowb/admin.php/Index | INFO: Tag[ app_begin ] --END-- [ RunTime:0.001177s ]
+[ 2012-07-25T10:59:40+08:00 ] /gowb/admin.php/Index | INFO: Tag[ view_template ] --START--
+[ 2012-07-25T10:59:40+08:00 ] /gowb/admin.php/Index | INFO: Run LocationTemplate Behavior [ RunTime:0.001205s ]
+[ 2012-07-25T10:59:40+08:00 ] /gowb/admin.php/Index | INFO: Tag[ view_template ] --END-- [ RunTime:0.001418s ]
+[ 2012-07-25T10:59:40+08:00 ] /gowb/admin.php/Index | INFO: Tag[ view_parse ] --START--
+[ 2012-07-25T10:59:40+08:00 ] /gowb/admin.php/Index | INFO: Run ParseTemplate Behavior [ RunTime:0.020184s ]
+[ 2012-07-25T10:59:40+08:00 ] /gowb/admin.php/Index | INFO: Tag[ view_parse ] --END-- [ RunTime:0.020394s ]
+[ 2012-07-25T10:59:40+08:00 ] /gowb/admin.php/Index | INFO: Tag[ view_filter ] --START--
+[ 2012-07-25T10:59:40+08:00 ] /gowb/admin.php/Index | INFO: Run ContentReplace Behavior [ RunTime:0.000934s ]
+[ 2012-07-25T10:59:40+08:00 ] /gowb/admin.php/Index | INFO: Run TokenBuild Behavior [ RunTime:0.000790s ]
+[ 2012-07-25T10:59:40+08:00 ] /gowb/admin.php/Index | INFO: Run WriteHtmlCache Behavior [ RunTime:0.000647s ]
+[ 2012-07-25T10:59:40+08:00 ] /gowb/admin.php/Index | INFO: Run ShowRuntime Behavior [ RunTime:0.000918s ]
+[ 2012-07-25T10:59:40+08:00 ] /gowb/admin.php/Index | INFO: Tag[ view_filter ] --END-- [ RunTime:0.003821s ]
+[ 2012-07-25T10:59:40+08:00 ] /gowb/admin.php/Index | INFO: Tag[ view_end ] --START--
+[ 2012-07-25T10:59:40+08:00 ] /gowb/admin.php/Index | INFO: Run ShowPageTrace Behavior [ RunTime:0.001584s ]
+[ 2012-07-25T10:59:40+08:00 ] /gowb/admin.php/Index | INFO: Tag[ view_end ] --END-- [ RunTime:0.001860s ]
+[ 2012-07-25T10:59:41+08:00 ] /gowb/admin.php/Index | INFO: Tag[ route_check ] --START--
+[ 2012-07-25T10:59:41+08:00 ] /gowb/admin.php/Index | INFO: Run CheckRoute Behavior [ RunTime:0.001255s ]
+[ 2012-07-25T10:59:41+08:00 ] /gowb/admin.php/Index | INFO: Tag[ route_check ] --END-- [ RunTime:0.001470s ]
+[ 2012-07-25T10:59:41+08:00 ] /gowb/admin.php/Index | INFO: Tag[ app_begin ] --START--
+[ 2012-07-25T10:59:41+08:00 ] /gowb/admin.php/Index | INFO: Run ReadHtmlCache Behavior [ RunTime:0.001303s ]
+[ 2012-07-25T10:59:41+08:00 ] /gowb/admin.php/Index | INFO: Tag[ app_begin ] --END-- [ RunTime:0.001534s ]
+[ 2012-07-25T10:59:41+08:00 ] /gowb/admin.php/Index | INFO: Tag[ view_template ] --START--
+[ 2012-07-25T10:59:41+08:00 ] /gowb/admin.php/Index | INFO: Run LocationTemplate Behavior [ RunTime:0.001365s ]
+[ 2012-07-25T10:59:41+08:00 ] /gowb/admin.php/Index | INFO: Tag[ view_template ] --END-- [ RunTime:0.001753s ]
+[ 2012-07-25T10:59:41+08:00 ] /gowb/admin.php/Index | INFO: Tag[ view_parse ] --START--
+[ 2012-07-25T10:59:41+08:00 ] /gowb/admin.php/Index | INFO: Run ParseTemplate Behavior [ RunTime:0.018417s ]
+[ 2012-07-25T10:59:41+08:00 ] /gowb/admin.php/Index | INFO: Tag[ view_parse ] --END-- [ RunTime:0.018686s ]
+[ 2012-07-25T10:59:41+08:00 ] /gowb/admin.php/Index | INFO: Tag[ view_filter ] --START--
+[ 2012-07-25T10:59:41+08:00 ] /gowb/admin.php/Index | INFO: Run ContentReplace Behavior [ RunTime:0.001757s ]
+[ 2012-07-25T10:59:41+08:00 ] /gowb/admin.php/Index | INFO: Run TokenBuild Behavior [ RunTime:0.001302s ]
+[ 2012-07-25T10:59:41+08:00 ] /gowb/admin.php/Index | INFO: Run WriteHtmlCache Behavior [ RunTime:0.000654s ]
+[ 2012-07-25T10:59:41+08:00 ] /gowb/admin.php/Index | INFO: Run ShowRuntime Behavior [ RunTime:0.000988s ]
+[ 2012-07-25T10:59:41+08:00 ] /gowb/admin.php/Index | INFO: Tag[ view_filter ] --END-- [ RunTime:0.005294s ]
+[ 2012-07-25T10:59:41+08:00 ] /gowb/admin.php/Index | INFO: Tag[ view_end ] --START--
+[ 2012-07-25T10:59:41+08:00 ] /gowb/admin.php/Index | INFO: Run ShowPageTrace Behavior [ RunTime:0.000841s ]
+[ 2012-07-25T10:59:41+08:00 ] /gowb/admin.php/Index | INFO: Tag[ view_end ] --END-- [ RunTime:0.001082s ]
+[ 2012-07-25T10:59:42+08:00 ] /gowb/admin.php/Topwords | INFO: Tag[ route_check ] --START--
+[ 2012-07-25T10:59:42+08:00 ] /gowb/admin.php/Topwords | INFO: Run CheckRoute Behavior [ RunTime:0.001206s ]
+[ 2012-07-25T10:59:42+08:00 ] /gowb/admin.php/Topwords | INFO: Tag[ route_check ] --END-- [ RunTime:0.001431s ]
+[ 2012-07-25T10:59:42+08:00 ] /gowb/admin.php/Topwords | INFO: Tag[ app_begin ] --START--
+[ 2012-07-25T10:59:42+08:00 ] /gowb/admin.php/Topwords | INFO: Run ReadHtmlCache Behavior [ RunTime:0.001012s ]
+[ 2012-07-25T10:59:42+08:00 ] /gowb/admin.php/Topwords | INFO: Tag[ app_begin ] --END-- [ RunTime:0.001192s ]
+[ 2012-07-25T10:59:42+08:00 ] /gowb/admin.php/Topwords | SQL: SHOW COLUMNS FROM `wb_data_top_url` [ RunTime:0.004591s ]
+[ 2012-07-25T10:59:42+08:00 ] /gowb/admin.php/Topwords | SQL: SELECT * FROM `wb_data_top_url`  [ RunTime:0.001185s ]
+[ 2012-07-25T11:00:52+08:00 ] /gowb/admin.php/Topwords | INFO: Tag[ route_check ] --START--
+[ 2012-07-25T11:00:52+08:00 ] /gowb/admin.php/Topwords | INFO: Run CheckRoute Behavior [ RunTime:0.001190s ]
+[ 2012-07-25T11:00:52+08:00 ] /gowb/admin.php/Topwords | INFO: Tag[ route_check ] --END-- [ RunTime:0.001419s ]
+[ 2012-07-25T11:00:52+08:00 ] /gowb/admin.php/Topwords | INFO: Tag[ app_begin ] --START--
+[ 2012-07-25T11:00:52+08:00 ] /gowb/admin.php/Topwords | INFO: Run ReadHtmlCache Behavior [ RunTime:0.001118s ]
+[ 2012-07-25T11:00:52+08:00 ] /gowb/admin.php/Topwords | INFO: Tag[ app_begin ] --END-- [ RunTime:0.001373s ]
+[ 2012-07-25T11:00:52+08:00 ] /gowb/admin.php/Topwords | SQL: SHOW COLUMNS FROM `wb_data_top_url` [ RunTime:0.003659s ]
+[ 2012-07-25T11:00:52+08:00 ] /gowb/admin.php/Topwords | SQL: SELECT * FROM `wb_data_top_url`  [ RunTime:0.000501s ]
+[ 2012-07-25T11:01:32+08:00 ] /gowb/admin.php/Topwords | INFO: Tag[ route_check ] --START--
+[ 2012-07-25T11:01:32+08:00 ] /gowb/admin.php/Topwords | INFO: Run CheckRoute Behavior [ RunTime:0.001264s ]
+[ 2012-07-25T11:01:32+08:00 ] /gowb/admin.php/Topwords | INFO: Tag[ route_check ] --END-- [ RunTime:0.001496s ]
+[ 2012-07-25T11:01:32+08:00 ] /gowb/admin.php/Topwords | INFO: Tag[ app_begin ] --START--
+[ 2012-07-25T11:01:32+08:00 ] /gowb/admin.php/Topwords | INFO: Run ReadHtmlCache Behavior [ RunTime:0.001387s ]
+[ 2012-07-25T11:01:32+08:00 ] /gowb/admin.php/Topwords | INFO: Tag[ app_begin ] --END-- [ RunTime:0.001585s ]
+[ 2012-07-25T11:01:32+08:00 ] /gowb/admin.php/Topwords | SQL: SHOW COLUMNS FROM `wb_data_top_url` [ RunTime:0.004174s ]
+[ 2012-07-25T11:01:32+08:00 ] /gowb/admin.php/Topwords | SQL: SELECT * FROM `wb_data_top_url`  [ RunTime:0.000460s ]
+[ 2012-07-25T11:01:32+08:00 ] /gowb/admin.php/Topwords | INFO: Tag[ view_template ] --START--
+[ 2012-07-25T11:01:32+08:00 ] /gowb/admin.php/Topwords | INFO: Run LocationTemplate Behavior [ RunTime:0.001270s ]
+[ 2012-07-25T11:01:32+08:00 ] /gowb/admin.php/Topwords | INFO: Tag[ view_template ] --END-- [ RunTime:0.001473s ]
+[ 2012-07-25T11:01:32+08:00 ] /gowb/admin.php/Topwords | INFO: Tag[ view_parse ] --START--
+[ 2012-07-25T11:01:32+08:00 ] /gowb/admin.php/Topwords | INFO: Run ParseTemplate Behavior [ RunTime:0.014010s ]
+[ 2012-07-25T11:01:32+08:00 ] /gowb/admin.php/Topwords | INFO: Tag[ view_parse ] --END-- [ RunTime:0.014219s ]
+[ 2012-07-25T11:01:32+08:00 ] /gowb/admin.php/Topwords | INFO: Tag[ view_filter ] --START--
+[ 2012-07-25T11:01:32+08:00 ] /gowb/admin.php/Topwords | INFO: Run ContentReplace Behavior [ RunTime:0.000807s ]
+[ 2012-07-25T11:01:32+08:00 ] /gowb/admin.php/Topwords | INFO: Run TokenBuild Behavior [ RunTime:0.000915s ]
+[ 2012-07-25T11:01:32+08:00 ] /gowb/admin.php/Topwords | INFO: Run WriteHtmlCache Behavior [ RunTime:0.000620s ]
+[ 2012-07-25T11:01:32+08:00 ] /gowb/admin.php/Topwords | INFO: Run ShowRuntime Behavior [ RunTime:0.000993s ]
+[ 2012-07-25T11:01:32+08:00 ] /gowb/admin.php/Topwords | INFO: Tag[ view_filter ] --END-- [ RunTime:0.004037s ]
+[ 2012-07-25T11:01:32+08:00 ] /gowb/admin.php/Topwords | INFO: Tag[ view_end ] --START--
+[ 2012-07-25T11:01:32+08:00 ] /gowb/admin.php/Topwords | INFO: Run ShowPageTrace Behavior [ RunTime:0.000792s ]
+[ 2012-07-25T11:01:32+08:00 ] /gowb/admin.php/Topwords | INFO: Tag[ view_end ] --END-- [ RunTime:0.000975s ]
+[ 2012-07-25T11:04:54+08:00 ] /gowb/admin.php/Topwords | INFO: Tag[ route_check ] --START--
+[ 2012-07-25T11:04:54+08:00 ] /gowb/admin.php/Topwords | INFO: Run CheckRoute Behavior [ RunTime:0.001953s ]
+[ 2012-07-25T11:04:54+08:00 ] /gowb/admin.php/Topwords | INFO: Tag[ route_check ] --END-- [ RunTime:0.002193s ]
+[ 2012-07-25T11:04:54+08:00 ] /gowb/admin.php/Topwords | INFO: Tag[ app_begin ] --START--
+[ 2012-07-25T11:04:54+08:00 ] /gowb/admin.php/Topwords | INFO: Run ReadHtmlCache Behavior [ RunTime:0.001116s ]
+[ 2012-07-25T11:04:54+08:00 ] /gowb/admin.php/Topwords | INFO: Tag[ app_begin ] --END-- [ RunTime:0.001391s ]
+[ 2012-07-25T11:04:54+08:00 ] /gowb/admin.php/Topwords | SQL: SHOW COLUMNS FROM `wb_data_top_url` [ RunTime:0.006544s ]
+[ 2012-07-25T11:04:54+08:00 ] /gowb/admin.php/Topwords | SQL: SELECT * FROM `wb_data_top_url`  [ RunTime:0.000566s ]
+[ 2012-07-25T11:04:54+08:00 ] /gowb/admin.php/Topwords | INFO: Tag[ view_template ] --START--
+[ 2012-07-25T11:04:54+08:00 ] /gowb/admin.php/Topwords | INFO: Run LocationTemplate Behavior [ RunTime:0.001576s ]
+[ 2012-07-25T11:04:54+08:00 ] /gowb/admin.php/Topwords | INFO: Tag[ view_template ] --END-- [ RunTime:0.001774s ]
+[ 2012-07-25T11:04:54+08:00 ] /gowb/admin.php/Topwords | INFO: Tag[ view_parse ] --START--
+[ 2012-07-25T11:04:54+08:00 ] /gowb/admin.php/Topwords | INFO: Run ParseTemplate Behavior [ RunTime:0.019188s ]
+[ 2012-07-25T11:04:54+08:00 ] /gowb/admin.php/Topwords | INFO: Tag[ view_parse ] --END-- [ RunTime:0.019430s ]
+[ 2012-07-25T11:04:54+08:00 ] /gowb/admin.php/Topwords | INFO: Tag[ view_filter ] --START--
+[ 2012-07-25T11:04:54+08:00 ] /gowb/admin.php/Topwords | INFO: Run ContentReplace Behavior [ RunTime:0.001165s ]
+[ 2012-07-25T11:04:54+08:00 ] /gowb/admin.php/Topwords | INFO: Run TokenBuild Behavior [ RunTime:0.000969s ]
+[ 2012-07-25T11:04:54+08:00 ] /gowb/admin.php/Topwords | INFO: Run WriteHtmlCache Behavior [ RunTime:0.000683s ]
+[ 2012-07-25T11:04:54+08:00 ] /gowb/admin.php/Topwords | INFO: Run ShowRuntime Behavior [ RunTime:0.001147s ]
+[ 2012-07-25T11:04:54+08:00 ] /gowb/admin.php/Topwords | INFO: Tag[ view_filter ] --END-- [ RunTime:0.004566s ]
+[ 2012-07-25T11:04:54+08:00 ] /gowb/admin.php/Topwords | INFO: Tag[ view_end ] --START--
+[ 2012-07-25T11:04:54+08:00 ] /gowb/admin.php/Topwords | INFO: Run ShowPageTrace Behavior [ RunTime:0.000918s ]
+[ 2012-07-25T11:04:54+08:00 ] /gowb/admin.php/Topwords | INFO: Tag[ view_end ] --END-- [ RunTime:0.001098s ]
+[ 2012-07-25T11:05:14+08:00 ] /gowb/admin.php/Topwords | INFO: Tag[ route_check ] --START--
+[ 2012-07-25T11:05:14+08:00 ] /gowb/admin.php/Topwords | INFO: Run CheckRoute Behavior [ RunTime:0.001149s ]
+[ 2012-07-25T11:05:14+08:00 ] /gowb/admin.php/Topwords | INFO: Tag[ route_check ] --END-- [ RunTime:0.001365s ]
+[ 2012-07-25T11:05:14+08:00 ] /gowb/admin.php/Topwords | INFO: Tag[ app_begin ] --START--
+[ 2012-07-25T11:05:14+08:00 ] /gowb/admin.php/Topwords | INFO: Run ReadHtmlCache Behavior [ RunTime:0.000993s ]
+[ 2012-07-25T11:05:14+08:00 ] /gowb/admin.php/Topwords | INFO: Tag[ app_begin ] --END-- [ RunTime:0.001173s ]
+[ 2012-07-25T11:05:14+08:00 ] /gowb/admin.php/Topwords | SQL: SHOW COLUMNS FROM `wb_data_top_url` [ RunTime:0.003579s ]
+[ 2012-07-25T11:05:14+08:00 ] /gowb/admin.php/Topwords | SQL: SELECT * FROM `wb_data_top_url`  [ RunTime:0.000526s ]
+[ 2012-07-25T11:05:14+08:00 ] /gowb/admin.php/Topwords | INFO: Tag[ view_template ] --START--
+[ 2012-07-25T11:05:14+08:00 ] /gowb/admin.php/Topwords | INFO: Run LocationTemplate Behavior [ RunTime:0.002986s ]
+[ 2012-07-25T11:05:14+08:00 ] /gowb/admin.php/Topwords | INFO: Tag[ view_template ] --END-- [ RunTime:0.003224s ]
+[ 2012-07-25T11:05:14+08:00 ] /gowb/admin.php/Topwords | INFO: Tag[ view_parse ] --START--
+[ 2012-07-25T11:05:14+08:00 ] /gowb/admin.php/Topwords | INFO: Run ParseTemplate Behavior [ RunTime:0.015152s ]
+[ 2012-07-25T11:05:14+08:00 ] /gowb/admin.php/Topwords | INFO: Tag[ view_parse ] --END-- [ RunTime:0.015362s ]
+[ 2012-07-25T11:05:14+08:00 ] /gowb/admin.php/Topwords | INFO: Tag[ view_filter ] --START--
+[ 2012-07-25T11:05:14+08:00 ] /gowb/admin.php/Topwords | INFO: Run ContentReplace Behavior [ RunTime:0.000842s ]
+[ 2012-07-25T11:05:14+08:00 ] /gowb/admin.php/Topwords | INFO: Run TokenBuild Behavior [ RunTime:0.000764s ]
+[ 2012-07-25T11:05:14+08:00 ] /gowb/admin.php/Topwords | INFO: Run WriteHtmlCache Behavior [ RunTime:0.000457s ]
+[ 2012-07-25T11:05:14+08:00 ] /gowb/admin.php/Topwords | INFO: Run ShowRuntime Behavior [ RunTime:0.000862s ]
+[ 2012-07-25T11:05:14+08:00 ] /gowb/admin.php/Topwords | INFO: Tag[ view_filter ] --END-- [ RunTime:0.003531s ]
+[ 2012-07-25T11:05:14+08:00 ] /gowb/admin.php/Topwords | INFO: Tag[ view_end ] --START--
+[ 2012-07-25T11:05:14+08:00 ] /gowb/admin.php/Topwords | INFO: Run ShowPageTrace Behavior [ RunTime:0.000748s ]
+[ 2012-07-25T11:05:14+08:00 ] /gowb/admin.php/Topwords | INFO: Tag[ view_end ] --END-- [ RunTime:0.000923s ]
+[ 2012-07-25T11:06:46+08:00 ] /gowb/admin.php/Topwords | INFO: Tag[ route_check ] --START--
+[ 2012-07-25T11:06:46+08:00 ] /gowb/admin.php/Topwords | INFO: Run CheckRoute Behavior [ RunTime:0.001338s ]
+[ 2012-07-25T11:06:46+08:00 ] /gowb/admin.php/Topwords | INFO: Tag[ route_check ] --END-- [ RunTime:0.001574s ]
+[ 2012-07-25T11:06:46+08:00 ] /gowb/admin.php/Topwords | INFO: Tag[ app_begin ] --START--
+[ 2012-07-25T11:06:46+08:00 ] /gowb/admin.php/Topwords | INFO: Run ReadHtmlCache Behavior [ RunTime:0.001182s ]
+[ 2012-07-25T11:06:46+08:00 ] /gowb/admin.php/Topwords | INFO: Tag[ app_begin ] --END-- [ RunTime:0.001401s ]
+[ 2012-07-25T11:06:46+08:00 ] /gowb/admin.php/Topwords | SQL: SHOW COLUMNS FROM `wb_data_top_url` [ RunTime:0.003424s ]
+[ 2012-07-25T11:06:46+08:00 ] /gowb/admin.php/Topwords | SQL: SELECT * FROM `wb_data_top_url`  [ RunTime:0.000450s ]
+[ 2012-07-25T11:06:46+08:00 ] /gowb/admin.php/Topwords | INFO: Tag[ view_template ] --START--
+[ 2012-07-25T11:06:46+08:00 ] /gowb/admin.php/Topwords | INFO: Run LocationTemplate Behavior [ RunTime:0.001492s ]
+[ 2012-07-25T11:06:46+08:00 ] /gowb/admin.php/Topwords | INFO: Tag[ view_template ] --END-- [ RunTime:0.001696s ]
+[ 2012-07-25T11:06:46+08:00 ] /gowb/admin.php/Topwords | INFO: Tag[ view_parse ] --START--
+[ 2012-07-25T11:06:46+08:00 ] /gowb/admin.php/Topwords | NOTIC: [8] Undefined variable: topWords 30f2e8709a98a5bdf26db5fb318aef4b.php 第 8 行.
+[ 2012-07-25T11:06:46+08:00 ] /gowb/admin.php/Topwords | INFO: Run ParseTemplate Behavior [ RunTime:0.016116s ]
+[ 2012-07-25T11:06:46+08:00 ] /gowb/admin.php/Topwords | INFO: Tag[ view_parse ] --END-- [ RunTime:0.016363s ]
+[ 2012-07-25T11:06:46+08:00 ] /gowb/admin.php/Topwords | INFO: Tag[ view_filter ] --START--
+[ 2012-07-25T11:06:46+08:00 ] /gowb/admin.php/Topwords | INFO: Run ContentReplace Behavior [ RunTime:0.000752s ]
+[ 2012-07-25T11:06:46+08:00 ] /gowb/admin.php/Topwords | INFO: Run TokenBuild Behavior [ RunTime:0.001053s ]
+[ 2012-07-25T11:06:46+08:00 ] /gowb/admin.php/Topwords | INFO: Run WriteHtmlCache Behavior [ RunTime:0.000524s ]
+[ 2012-07-25T11:06:46+08:00 ] /gowb/admin.php/Topwords | INFO: Run ShowRuntime Behavior [ RunTime:0.001061s ]
+[ 2012-07-25T11:06:46+08:00 ] /gowb/admin.php/Topwords | INFO: Tag[ view_filter ] --END-- [ RunTime:0.003942s ]
+[ 2012-07-25T11:06:46+08:00 ] /gowb/admin.php/Topwords | INFO: Tag[ view_end ] --START--
+[ 2012-07-25T11:06:46+08:00 ] /gowb/admin.php/Topwords | INFO: Run ShowPageTrace Behavior [ RunTime:0.002772s ]
+[ 2012-07-25T11:06:46+08:00 ] /gowb/admin.php/Topwords | INFO: Tag[ view_end ] --END-- [ RunTime:0.003004s ]
+[ 2012-07-25T11:06:50+08:00 ] /gowb/admin.php/Topwords | INFO: Tag[ route_check ] --START--
+[ 2012-07-25T11:06:50+08:00 ] /gowb/admin.php/Topwords | INFO: Run CheckRoute Behavior [ RunTime:0.001607s ]
+[ 2012-07-25T11:06:50+08:00 ] /gowb/admin.php/Topwords | INFO: Tag[ route_check ] --END-- [ RunTime:0.001868s ]
+[ 2012-07-25T11:06:50+08:00 ] /gowb/admin.php/Topwords | INFO: Tag[ app_begin ] --START--
+[ 2012-07-25T11:06:50+08:00 ] /gowb/admin.php/Topwords | INFO: Run ReadHtmlCache Behavior [ RunTime:0.001073s ]
+[ 2012-07-25T11:06:50+08:00 ] /gowb/admin.php/Topwords | INFO: Tag[ app_begin ] --END-- [ RunTime:0.001255s ]
+[ 2012-07-25T11:06:50+08:00 ] /gowb/admin.php/Topwords | SQL: SHOW COLUMNS FROM `wb_data_top_url` [ RunTime:0.004060s ]
+[ 2012-07-25T11:06:50+08:00 ] /gowb/admin.php/Topwords | SQL: SELECT * FROM `wb_data_top_url`  [ RunTime:0.000457s ]
+[ 2012-07-25T11:06:50+08:00 ] /gowb/admin.php/Topwords | INFO: Tag[ view_template ] --START--
+[ 2012-07-25T11:06:50+08:00 ] /gowb/admin.php/Topwords | INFO: Run LocationTemplate Behavior [ RunTime:0.001381s ]
+[ 2012-07-25T11:06:50+08:00 ] /gowb/admin.php/Topwords | INFO: Tag[ view_template ] --END-- [ RunTime:0.001576s ]
+[ 2012-07-25T11:06:50+08:00 ] /gowb/admin.php/Topwords | INFO: Tag[ view_parse ] --START--
+[ 2012-07-25T11:06:50+08:00 ] /gowb/admin.php/Topwords | INFO: Run ParseTemplate Behavior [ RunTime:0.018903s ]
+[ 2012-07-25T11:06:50+08:00 ] /gowb/admin.php/Topwords | INFO: Tag[ view_parse ] --END-- [ RunTime:0.019109s ]
+[ 2012-07-25T11:06:50+08:00 ] /gowb/admin.php/Topwords | INFO: Tag[ view_filter ] --START--
+[ 2012-07-25T11:06:50+08:00 ] /gowb/admin.php/Topwords | INFO: Run ContentReplace Behavior [ RunTime:0.000763s ]
+[ 2012-07-25T11:06:50+08:00 ] /gowb/admin.php/Topwords | INFO: Run TokenBuild Behavior [ RunTime:0.000737s ]
+[ 2012-07-25T11:06:50+08:00 ] /gowb/admin.php/Topwords | INFO: Run WriteHtmlCache Behavior [ RunTime:0.000756s ]
+[ 2012-07-25T11:06:50+08:00 ] /gowb/admin.php/Topwords | INFO: Run ShowRuntime Behavior [ RunTime:0.001216s ]
+[ 2012-07-25T11:06:50+08:00 ] /gowb/admin.php/Topwords | INFO: Tag[ view_filter ] --END-- [ RunTime:0.004224s ]
+[ 2012-07-25T11:06:50+08:00 ] /gowb/admin.php/Topwords | INFO: Tag[ view_end ] --START--
+[ 2012-07-25T11:06:50+08:00 ] /gowb/admin.php/Topwords | INFO: Run ShowPageTrace Behavior [ RunTime:0.001010s ]
+[ 2012-07-25T11:06:50+08:00 ] /gowb/admin.php/Topwords | INFO: Tag[ view_end ] --END-- [ RunTime:0.001254s ]
+[ 2012-07-25T11:07:31+08:00 ] /gowb/admin.php/Topwords | INFO: Tag[ route_check ] --START--
+[ 2012-07-25T11:07:31+08:00 ] /gowb/admin.php/Topwords | INFO: Run CheckRoute Behavior [ RunTime:0.001744s ]
+[ 2012-07-25T11:07:31+08:00 ] /gowb/admin.php/Topwords | INFO: Tag[ route_check ] --END-- [ RunTime:0.001965s ]
+[ 2012-07-25T11:07:31+08:00 ] /gowb/admin.php/Topwords | INFO: Tag[ app_begin ] --START--
+[ 2012-07-25T11:07:31+08:00 ] /gowb/admin.php/Topwords | INFO: Run ReadHtmlCache Behavior [ RunTime:0.001571s ]
+[ 2012-07-25T11:07:31+08:00 ] /gowb/admin.php/Topwords | INFO: Tag[ app_begin ] --END-- [ RunTime:0.001858s ]
+[ 2012-07-25T11:07:32+08:00 ] /gowb/admin.php/Topwords | SQL: SHOW COLUMNS FROM `wb_data_top_url` [ RunTime:0.008066s ]
+[ 2012-07-25T11:07:32+08:00 ] /gowb/admin.php/Topwords | SQL: SELECT * FROM `wb_data_top_url`  [ RunTime:0.000466s ]
+[ 2012-07-25T11:07:32+08:00 ] /gowb/admin.php/Topwords | INFO: Tag[ view_template ] --START--
+[ 2012-07-25T11:07:32+08:00 ] /gowb/admin.php/Topwords | INFO: Run LocationTemplate Behavior [ RunTime:0.001432s ]
+[ 2012-07-25T11:07:32+08:00 ] /gowb/admin.php/Topwords | INFO: Tag[ view_template ] --END-- [ RunTime:0.001624s ]
+[ 2012-07-25T11:07:32+08:00 ] /gowb/admin.php/Topwords | INFO: Tag[ view_parse ] --START--
+[ 2012-07-25T11:07:32+08:00 ] /gowb/admin.php/Topwords | INFO: Run ParseTemplate Behavior [ RunTime:0.020153s ]
+[ 2012-07-25T11:07:32+08:00 ] /gowb/admin.php/Topwords | INFO: Tag[ view_parse ] --END-- [ RunTime:0.020353s ]
+[ 2012-07-25T11:07:32+08:00 ] /gowb/admin.php/Topwords | INFO: Tag[ view_filter ] --START--
+[ 2012-07-25T11:07:32+08:00 ] /gowb/admin.php/Topwords | INFO: Run ContentReplace Behavior [ RunTime:0.003594s ]
+[ 2012-07-25T11:07:32+08:00 ] /gowb/admin.php/Topwords | INFO: Run TokenBuild Behavior [ RunTime:0.001442s ]
+[ 2012-07-25T11:07:32+08:00 ] /gowb/admin.php/Topwords | INFO: Run WriteHtmlCache Behavior [ RunTime:0.001024s ]
+[ 2012-07-25T11:07:32+08:00 ] /gowb/admin.php/Topwords | INFO: Run ShowRuntime Behavior [ RunTime:0.001124s ]
+[ 2012-07-25T11:07:32+08:00 ] /gowb/admin.php/Topwords | INFO: Tag[ view_filter ] --END-- [ RunTime:0.007910s ]
+[ 2012-07-25T11:07:32+08:00 ] /gowb/admin.php/Topwords | INFO: Tag[ view_end ] --START--
+[ 2012-07-25T11:07:32+08:00 ] /gowb/admin.php/Topwords | INFO: Run ShowPageTrace Behavior [ RunTime:0.000938s ]
+[ 2012-07-25T11:07:32+08:00 ] /gowb/admin.php/Topwords | INFO: Tag[ view_end ] --END-- [ RunTime:0.001170s ]
+[ 2012-07-25T11:11:47+08:00 ] /gowb/admin.php/Topwords | INFO: Tag[ route_check ] --START--
+[ 2012-07-25T11:11:47+08:00 ] /gowb/admin.php/Topwords | INFO: Run CheckRoute Behavior [ RunTime:0.001533s ]
+[ 2012-07-25T11:11:47+08:00 ] /gowb/admin.php/Topwords | INFO: Tag[ route_check ] --END-- [ RunTime:0.001753s ]
+[ 2012-07-25T11:11:47+08:00 ] /gowb/admin.php/Topwords | INFO: Tag[ app_begin ] --START--
+[ 2012-07-25T11:11:47+08:00 ] /gowb/admin.php/Topwords | INFO: Run ReadHtmlCache Behavior [ RunTime:0.002301s ]
+[ 2012-07-25T11:11:47+08:00 ] /gowb/admin.php/Topwords | INFO: Tag[ app_begin ] --END-- [ RunTime:0.002700s ]
+[ 2012-07-25T11:11:47+08:00 ] /gowb/admin.php/Topwords | SQL: SHOW COLUMNS FROM `wb_data_top_url` [ RunTime:0.014606s ]
+[ 2012-07-25T11:11:47+08:00 ] /gowb/admin.php/Topwords | SQL: SELECT * FROM `wb_data_top_url`  [ RunTime:0.000565s ]
+[ 2012-07-25T11:11:47+08:00 ] /gowb/admin.php/Topwords | INFO: Tag[ view_template ] --START--
+[ 2012-07-25T11:11:47+08:00 ] /gowb/admin.php/Topwords | INFO: Run LocationTemplate Behavior [ RunTime:0.001752s ]
+[ 2012-07-25T11:11:47+08:00 ] /gowb/admin.php/Topwords | INFO: Tag[ view_template ] --END-- [ RunTime:0.001996s ]
+[ 2012-07-25T11:11:47+08:00 ] /gowb/admin.php/Topwords | INFO: Tag[ view_parse ] --START--
+[ 2012-07-25T11:11:47+08:00 ] /gowb/admin.php/Topwords | INFO: Run ParseTemplate Behavior [ RunTime:0.022004s ]
+[ 2012-07-25T11:11:47+08:00 ] /gowb/admin.php/Topwords | INFO: Tag[ view_parse ] --END-- [ RunTime:0.022268s ]
+[ 2012-07-25T11:11:47+08:00 ] /gowb/admin.php/Topwords | INFO: Tag[ view_filter ] --START--
+[ 2012-07-25T11:11:47+08:00 ] /gowb/admin.php/Topwords | INFO: Run ContentReplace Behavior [ RunTime:0.000814s ]
+[ 2012-07-25T11:11:47+08:00 ] /gowb/admin.php/Topwords | INFO: Run TokenBuild Behavior [ RunTime:0.000874s ]
+[ 2012-07-25T11:11:47+08:00 ] /gowb/admin.php/Topwords | INFO: Run WriteHtmlCache Behavior [ RunTime:0.000575s ]
+[ 2012-07-25T11:11:47+08:00 ] /gowb/admin.php/Topwords | INFO: Run ShowRuntime Behavior [ RunTime:0.001270s ]
+[ 2012-07-25T11:11:47+08:00 ] /gowb/admin.php/Topwords | INFO: Tag[ view_filter ] --END-- [ RunTime:0.004056s ]
+[ 2012-07-25T11:11:47+08:00 ] /gowb/admin.php/Topwords | INFO: Tag[ view_end ] --START--
+[ 2012-07-25T11:11:47+08:00 ] /gowb/admin.php/Topwords | INFO: Run ShowPageTrace Behavior [ RunTime:0.001265s ]
+[ 2012-07-25T11:11:47+08:00 ] /gowb/admin.php/Topwords | INFO: Tag[ view_end ] --END-- [ RunTime:0.001454s ]
+[ 2012-07-25T11:11:53+08:00 ] /gowb/admin.php/Topwords | INFO: Tag[ route_check ] --START--
+[ 2012-07-25T11:11:53+08:00 ] /gowb/admin.php/Topwords | INFO: Run CheckRoute Behavior [ RunTime:0.001201s ]
+[ 2012-07-25T11:11:53+08:00 ] /gowb/admin.php/Topwords | INFO: Tag[ route_check ] --END-- [ RunTime:0.001420s ]
+[ 2012-07-25T11:11:53+08:00 ] /gowb/admin.php/Topwords | INFO: Tag[ app_begin ] --START--
+[ 2012-07-25T11:11:53+08:00 ] /gowb/admin.php/Topwords | INFO: Run ReadHtmlCache Behavior [ RunTime:0.000980s ]
+[ 2012-07-25T11:11:53+08:00 ] /gowb/admin.php/Topwords | INFO: Tag[ app_begin ] --END-- [ RunTime:0.001163s ]
+[ 2012-07-25T11:11:53+08:00 ] /gowb/admin.php/Topwords | SQL: SHOW COLUMNS FROM `wb_data_top_url` [ RunTime:0.003873s ]
+[ 2012-07-25T11:11:53+08:00 ] /gowb/admin.php/Topwords | SQL: SELECT * FROM `wb_data_top_url`  [ RunTime:0.000458s ]
+[ 2012-07-25T11:11:53+08:00 ] /gowb/admin.php/Topwords | INFO: Tag[ view_template ] --START--
+[ 2012-07-25T11:11:53+08:00 ] /gowb/admin.php/Topwords | INFO: Run LocationTemplate Behavior [ RunTime:0.003961s ]
+[ 2012-07-25T11:11:53+08:00 ] /gowb/admin.php/Topwords | INFO: Tag[ view_template ] --END-- [ RunTime:0.004249s ]
+[ 2012-07-25T11:11:53+08:00 ] /gowb/admin.php/Topwords | INFO: Tag[ view_parse ] --START--
+[ 2012-07-25T11:11:53+08:00 ] /gowb/admin.php/Topwords | INFO: Run ParseTemplate Behavior [ RunTime:0.020206s ]
+[ 2012-07-25T11:11:53+08:00 ] /gowb/admin.php/Topwords | INFO: Tag[ view_parse ] --END-- [ RunTime:0.020412s ]
+[ 2012-07-25T11:11:53+08:00 ] /gowb/admin.php/Topwords | INFO: Tag[ view_filter ] --START--
+[ 2012-07-25T11:11:53+08:00 ] /gowb/admin.php/Topwords | INFO: Run ContentReplace Behavior [ RunTime:0.000817s ]
+[ 2012-07-25T11:11:53+08:00 ] /gowb/admin.php/Topwords | INFO: Run TokenBuild Behavior [ RunTime:0.000883s ]
+[ 2012-07-25T11:11:53+08:00 ] /gowb/admin.php/Topwords | INFO: Run WriteHtmlCache Behavior [ RunTime:0.000530s ]
+[ 2012-07-25T11:11:53+08:00 ] /gowb/admin.php/Topwords | INFO: Run ShowRuntime Behavior [ RunTime:0.000916s ]
+[ 2012-07-25T11:11:53+08:00 ] /gowb/admin.php/Topwords | INFO: Tag[ view_filter ] --END-- [ RunTime:0.003684s ]
+[ 2012-07-25T11:11:53+08:00 ] /gowb/admin.php/Topwords | INFO: Tag[ view_end ] --START--
+[ 2012-07-25T11:11:53+08:00 ] /gowb/admin.php/Topwords | INFO: Run ShowPageTrace Behavior [ RunTime:0.000776s ]
+[ 2012-07-25T11:11:53+08:00 ] /gowb/admin.php/Topwords | INFO: Tag[ view_end ] --END-- [ RunTime:0.001025s ]
+[ 2012-07-25T11:11:53+08:00 ] /gowb/admin.php/Topwords | INFO: Tag[ route_check ] --START--
+[ 2012-07-25T11:11:53+08:00 ] /gowb/admin.php/Topwords | INFO: Run CheckRoute Behavior [ RunTime:0.001543s ]
+[ 2012-07-25T11:11:53+08:00 ] /gowb/admin.php/Topwords | INFO: Tag[ route_check ] --END-- [ RunTime:0.001823s ]
+[ 2012-07-25T11:11:53+08:00 ] /gowb/admin.php/Topwords | INFO: Tag[ app_begin ] --START--
+[ 2012-07-25T11:11:53+08:00 ] /gowb/admin.php/Topwords | INFO: Run ReadHtmlCache Behavior [ RunTime:0.001007s ]
+[ 2012-07-25T11:11:53+08:00 ] /gowb/admin.php/Topwords | INFO: Tag[ app_begin ] --END-- [ RunTime:0.001200s ]
+[ 2012-07-25T11:11:53+08:00 ] /gowb/admin.php/Topwords | SQL: SHOW COLUMNS FROM `wb_data_top_url` [ RunTime:0.004541s ]
+[ 2012-07-25T11:11:53+08:00 ] /gowb/admin.php/Topwords | SQL: SELECT * FROM `wb_data_top_url`  [ RunTime:0.000496s ]
+[ 2012-07-25T11:11:53+08:00 ] /gowb/admin.php/Topwords | INFO: Tag[ view_template ] --START--
+[ 2012-07-25T11:11:53+08:00 ] /gowb/admin.php/Topwords | INFO: Run LocationTemplate Behavior [ RunTime:0.001495s ]
+[ 2012-07-25T11:11:53+08:00 ] /gowb/admin.php/Topwords | INFO: Tag[ view_template ] --END-- [ RunTime:0.001689s ]
+[ 2012-07-25T11:11:53+08:00 ] /gowb/admin.php/Topwords | INFO: Tag[ view_parse ] --START--
+[ 2012-07-25T11:11:53+08:00 ] /gowb/admin.php/Topwords | INFO: Run ParseTemplate Behavior [ RunTime:0.021452s ]
+[ 2012-07-25T11:11:53+08:00 ] /gowb/admin.php/Topwords | INFO: Tag[ view_parse ] --END-- [ RunTime:0.021695s ]
+[ 2012-07-25T11:11:53+08:00 ] /gowb/admin.php/Topwords | INFO: Tag[ view_filter ] --START--
+[ 2012-07-25T11:11:53+08:00 ] /gowb/admin.php/Topwords | INFO: Run ContentReplace Behavior [ RunTime:0.001261s ]
+[ 2012-07-25T11:11:53+08:00 ] /gowb/admin.php/Topwords | INFO: Run TokenBuild Behavior [ RunTime:0.000845s ]
+[ 2012-07-25T11:11:53+08:00 ] /gowb/admin.php/Topwords | INFO: Run WriteHtmlCache Behavior [ RunTime:0.000676s ]
+[ 2012-07-25T11:11:53+08:00 ] /gowb/admin.php/Topwords | INFO: Run ShowRuntime Behavior [ RunTime:0.000923s ]
+[ 2012-07-25T11:11:53+08:00 ] /gowb/admin.php/Topwords | INFO: Tag[ view_filter ] --END-- [ RunTime:0.004239s ]
+[ 2012-07-25T11:11:53+08:00 ] /gowb/admin.php/Topwords | INFO: Tag[ view_end ] --START--
+[ 2012-07-25T11:11:53+08:00 ] /gowb/admin.php/Topwords | INFO: Run ShowPageTrace Behavior [ RunTime:0.000837s ]
+[ 2012-07-25T11:11:53+08:00 ] /gowb/admin.php/Topwords | INFO: Tag[ view_end ] --END-- [ RunTime:0.001019s ]
+[ 2012-07-25T11:12:23+08:00 ] /gowb/admin.php/Topwords | INFO: Tag[ route_check ] --START--
+[ 2012-07-25T11:12:23+08:00 ] /gowb/admin.php/Topwords | INFO: Run CheckRoute Behavior [ RunTime:0.001313s ]
+[ 2012-07-25T11:12:23+08:00 ] /gowb/admin.php/Topwords | INFO: Tag[ route_check ] --END-- [ RunTime:0.001544s ]
+[ 2012-07-25T11:12:23+08:00 ] /gowb/admin.php/Topwords | INFO: Tag[ app_begin ] --START--
+[ 2012-07-25T11:12:23+08:00 ] /gowb/admin.php/Topwords | INFO: Run ReadHtmlCache Behavior [ RunTime:0.002426s ]
+[ 2012-07-25T11:12:23+08:00 ] /gowb/admin.php/Topwords | INFO: Tag[ app_begin ] --END-- [ RunTime:0.002652s ]
+[ 2012-07-25T11:12:23+08:00 ] /gowb/admin.php/Topwords | SQL: SHOW COLUMNS FROM `wb_data_top_url` [ RunTime:0.005012s ]
+[ 2012-07-25T11:12:23+08:00 ] /gowb/admin.php/Topwords | SQL: SELECT * FROM `wb_data_top_url`  [ RunTime:0.000764s ]
+[ 2012-07-25T11:12:23+08:00 ] /gowb/admin.php/Topwords | INFO: Tag[ view_template ] --START--
+[ 2012-07-25T11:12:23+08:00 ] /gowb/admin.php/Topwords | INFO: Run LocationTemplate Behavior [ RunTime:0.001327s ]
+[ 2012-07-25T11:12:23+08:00 ] /gowb/admin.php/Topwords | INFO: Tag[ view_template ] --END-- [ RunTime:0.001613s ]
+[ 2012-07-25T11:12:23+08:00 ] /gowb/admin.php/Topwords | INFO: Tag[ view_parse ] --START--
+[ 2012-07-25T11:12:23+08:00 ] /gowb/admin.php/Topwords | INFO: Run ParseTemplate Behavior [ RunTime:0.020514s ]
+[ 2012-07-25T11:12:23+08:00 ] /gowb/admin.php/Topwords | INFO: Tag[ view_parse ] --END-- [ RunTime:0.020730s ]
+[ 2012-07-25T11:12:23+08:00 ] /gowb/admin.php/Topwords | INFO: Tag[ view_filter ] --START--
+[ 2012-07-25T11:12:23+08:00 ] /gowb/admin.php/Topwords | INFO: Run ContentReplace Behavior [ RunTime:0.001018s ]
+[ 2012-07-25T11:12:23+08:00 ] /gowb/admin.php/Topwords | INFO: Run TokenBuild Behavior [ RunTime:0.000790s ]
+[ 2012-07-25T11:12:23+08:00 ] /gowb/admin.php/Topwords | INFO: Run WriteHtmlCache Behavior [ RunTime:0.000804s ]
+[ 2012-07-25T11:12:23+08:00 ] /gowb/admin.php/Topwords | INFO: Run ShowRuntime Behavior [ RunTime:0.000962s ]
+[ 2012-07-25T11:12:23+08:00 ] /gowb/admin.php/Topwords | INFO: Tag[ view_filter ] --END-- [ RunTime:0.004102s ]
+[ 2012-07-25T11:12:23+08:00 ] /gowb/admin.php/Topwords | INFO: Tag[ view_end ] --START--
+[ 2012-07-25T11:12:23+08:00 ] /gowb/admin.php/Topwords | INFO: Run ShowPageTrace Behavior [ RunTime:0.001098s ]
+[ 2012-07-25T11:12:23+08:00 ] /gowb/admin.php/Topwords | INFO: Tag[ view_end ] --END-- [ RunTime:0.001358s ]
+[ 2012-07-25T11:14:23+08:00 ] /gowb/admin.php/Topwords | INFO: Tag[ route_check ] --START--
+[ 2012-07-25T11:14:23+08:00 ] /gowb/admin.php/Topwords | INFO: Run CheckRoute Behavior [ RunTime:0.002653s ]
+[ 2012-07-25T11:14:23+08:00 ] /gowb/admin.php/Topwords | INFO: Tag[ route_check ] --END-- [ RunTime:0.003810s ]
+[ 2012-07-25T11:14:23+08:00 ] /gowb/admin.php/Topwords | INFO: Tag[ app_begin ] --START--
+[ 2012-07-25T11:14:23+08:00 ] /gowb/admin.php/Topwords | INFO: Run ReadHtmlCache Behavior [ RunTime:0.001129s ]
+[ 2012-07-25T11:14:23+08:00 ] /gowb/admin.php/Topwords | INFO: Tag[ app_begin ] --END-- [ RunTime:0.001310s ]
+[ 2012-07-25T11:14:23+08:00 ] /gowb/admin.php/Topwords | SQL: SHOW COLUMNS FROM `wb_data_top_url` [ RunTime:0.004708s ]
+[ 2012-07-25T11:14:23+08:00 ] /gowb/admin.php/Topwords | SQL: SELECT * FROM `wb_data_top_url`  [ RunTime:0.000713s ]
+[ 2012-07-25T11:14:23+08:00 ] /gowb/admin.php/Topwords | INFO: Tag[ view_template ] --START--
+[ 2012-07-25T11:14:23+08:00 ] /gowb/admin.php/Topwords | INFO: Run LocationTemplate Behavior [ RunTime:0.001601s ]
+[ 2012-07-25T11:14:23+08:00 ] /gowb/admin.php/Topwords | INFO: Tag[ view_template ] --END-- [ RunTime:0.001835s ]
+[ 2012-07-25T11:14:23+08:00 ] /gowb/admin.php/Topwords | INFO: Tag[ view_parse ] --START--
+[ 2012-07-25T11:14:23+08:00 ] /gowb/admin.php/Topwords | INFO: Run ParseTemplate Behavior [ RunTime:0.022545s ]
+[ 2012-07-25T11:14:23+08:00 ] /gowb/admin.php/Topwords | INFO: Tag[ view_parse ] --END-- [ RunTime:0.022748s ]
+[ 2012-07-25T11:14:23+08:00 ] /gowb/admin.php/Topwords | INFO: Tag[ view_filter ] --START--
+[ 2012-07-25T11:14:23+08:00 ] /gowb/admin.php/Topwords | INFO: Run ContentReplace Behavior [ RunTime:0.001027s ]
+[ 2012-07-25T11:14:23+08:00 ] /gowb/admin.php/Topwords | INFO: Run TokenBuild Behavior [ RunTime:0.003430s ]
+[ 2012-07-25T11:14:23+08:00 ] /gowb/admin.php/Topwords | INFO: Run WriteHtmlCache Behavior [ RunTime:0.000861s ]
+[ 2012-07-25T11:14:23+08:00 ] /gowb/admin.php/Topwords | INFO: Run ShowRuntime Behavior [ RunTime:0.001020s ]
+[ 2012-07-25T11:14:23+08:00 ] /gowb/admin.php/Topwords | INFO: Tag[ view_filter ] --END-- [ RunTime:0.007308s ]
+[ 2012-07-25T11:14:23+08:00 ] /gowb/admin.php/Topwords | INFO: Tag[ view_end ] --START--
+[ 2012-07-25T11:14:23+08:00 ] /gowb/admin.php/Topwords | INFO: Run ShowPageTrace Behavior [ RunTime:0.001255s ]
+[ 2012-07-25T11:14:23+08:00 ] /gowb/admin.php/Topwords | INFO: Tag[ view_end ] --END-- [ RunTime:0.001456s ]
+[ 2012-07-25T11:14:33+08:00 ] /gowb/admin.php/Topwords | INFO: Tag[ route_check ] --START--
+[ 2012-07-25T11:14:33+08:00 ] /gowb/admin.php/Topwords | INFO: Run CheckRoute Behavior [ RunTime:0.001270s ]
+[ 2012-07-25T11:14:33+08:00 ] /gowb/admin.php/Topwords | INFO: Tag[ route_check ] --END-- [ RunTime:0.001509s ]
+[ 2012-07-25T11:14:33+08:00 ] /gowb/admin.php/Topwords | INFO: Tag[ app_begin ] --START--
+[ 2012-07-25T11:14:33+08:00 ] /gowb/admin.php/Topwords | INFO: Run ReadHtmlCache Behavior [ RunTime:0.000979s ]
+[ 2012-07-25T11:14:33+08:00 ] /gowb/admin.php/Topwords | INFO: Tag[ app_begin ] --END-- [ RunTime:0.001156s ]
+[ 2012-07-25T11:14:33+08:00 ] /gowb/admin.php/Topwords | SQL: SHOW COLUMNS FROM `wb_data_top_url` [ RunTime:0.003503s ]
+[ 2012-07-25T11:14:33+08:00 ] /gowb/admin.php/Topwords | SQL: SELECT * FROM `wb_data_top_url`  [ RunTime:0.000613s ]
+[ 2012-07-25T11:14:33+08:00 ] /gowb/admin.php/Topwords | INFO: Tag[ view_template ] --START--
+[ 2012-07-25T11:14:33+08:00 ] /gowb/admin.php/Topwords | INFO: Run LocationTemplate Behavior [ RunTime:0.001665s ]
+[ 2012-07-25T11:14:33+08:00 ] /gowb/admin.php/Topwords | INFO: Tag[ view_template ] --END-- [ RunTime:0.002301s ]
+[ 2012-07-25T11:14:33+08:00 ] /gowb/admin.php/Topwords | INFO: Tag[ view_parse ] --START--
+[ 2012-07-25T11:14:33+08:00 ] /gowb/admin.php/Topwords | INFO: Run ParseTemplate Behavior [ RunTime:0.021201s ]
+[ 2012-07-25T11:14:33+08:00 ] /gowb/admin.php/Topwords | INFO: Tag[ view_parse ] --END-- [ RunTime:0.021404s ]
+[ 2012-07-25T11:14:33+08:00 ] /gowb/admin.php/Topwords | INFO: Tag[ view_filter ] --START--
+[ 2012-07-25T11:14:33+08:00 ] /gowb/admin.php/Topwords | INFO: Run ContentReplace Behavior [ RunTime:0.000767s ]
+[ 2012-07-25T11:14:33+08:00 ] /gowb/admin.php/Topwords | INFO: Run TokenBuild Behavior [ RunTime:0.000747s ]
+[ 2012-07-25T11:14:33+08:00 ] /gowb/admin.php/Topwords | INFO: Run WriteHtmlCache Behavior [ RunTime:0.000448s ]
+[ 2012-07-25T11:14:33+08:00 ] /gowb/admin.php/Topwords | INFO: Run ShowRuntime Behavior [ RunTime:0.001186s ]
+[ 2012-07-25T11:14:33+08:00 ] /gowb/admin.php/Topwords | INFO: Tag[ view_filter ] --END-- [ RunTime:0.003737s ]
+[ 2012-07-25T11:14:33+08:00 ] /gowb/admin.php/Topwords | INFO: Tag[ view_end ] --START--
+[ 2012-07-25T11:14:33+08:00 ] /gowb/admin.php/Topwords | INFO: Run ShowPageTrace Behavior [ RunTime:0.000864s ]
+[ 2012-07-25T11:14:33+08:00 ] /gowb/admin.php/Topwords | INFO: Tag[ view_end ] --END-- [ RunTime:0.001050s ]
+[ 2012-07-25T11:14:37+08:00 ] /gowb/admin.php/Topwords | INFO: Tag[ route_check ] --START--
+[ 2012-07-25T11:14:37+08:00 ] /gowb/admin.php/Topwords | INFO: Run CheckRoute Behavior [ RunTime:0.001162s ]
+[ 2012-07-25T11:14:37+08:00 ] /gowb/admin.php/Topwords | INFO: Tag[ route_check ] --END-- [ RunTime:0.001381s ]
+[ 2012-07-25T11:14:37+08:00 ] /gowb/admin.php/Topwords | INFO: Tag[ app_begin ] --START--
+[ 2012-07-25T11:14:37+08:00 ] /gowb/admin.php/Topwords | INFO: Run ReadHtmlCache Behavior [ RunTime:0.000967s ]
+[ 2012-07-25T11:14:37+08:00 ] /gowb/admin.php/Topwords | INFO: Tag[ app_begin ] --END-- [ RunTime:0.001147s ]
+[ 2012-07-25T11:14:37+08:00 ] /gowb/admin.php/Topwords | SQL: SHOW COLUMNS FROM `wb_data_top_url` [ RunTime:0.004084s ]
+[ 2012-07-25T11:14:37+08:00 ] /gowb/admin.php/Topwords | SQL: SELECT * FROM `wb_data_top_url`  [ RunTime:0.000571s ]
+[ 2012-07-25T11:14:37+08:00 ] /gowb/admin.php/Topwords | INFO: Tag[ view_template ] --START--
+[ 2012-07-25T11:14:37+08:00 ] /gowb/admin.php/Topwords | INFO: Run LocationTemplate Behavior [ RunTime:0.001697s ]
+[ 2012-07-25T11:14:37+08:00 ] /gowb/admin.php/Topwords | INFO: Tag[ view_template ] --END-- [ RunTime:0.001915s ]
+[ 2012-07-25T11:14:37+08:00 ] /gowb/admin.php/Topwords | INFO: Tag[ view_parse ] --START--
+[ 2012-07-25T11:14:37+08:00 ] /gowb/admin.php/Topwords | INFO: Run ParseTemplate Behavior [ RunTime:0.018195s ]
+[ 2012-07-25T11:14:37+08:00 ] /gowb/admin.php/Topwords | INFO: Tag[ view_parse ] --END-- [ RunTime:0.018425s ]
+[ 2012-07-25T11:14:37+08:00 ] /gowb/admin.php/Topwords | INFO: Tag[ view_filter ] --START--
+[ 2012-07-25T11:14:37+08:00 ] /gowb/admin.php/Topwords | INFO: Run ContentReplace Behavior [ RunTime:0.000806s ]
+[ 2012-07-25T11:14:37+08:00 ] /gowb/admin.php/Topwords | INFO: Run TokenBuild Behavior [ RunTime:0.000735s ]
+[ 2012-07-25T11:14:37+08:00 ] /gowb/admin.php/Topwords | INFO: Run WriteHtmlCache Behavior [ RunTime:0.000447s ]
+[ 2012-07-25T11:14:37+08:00 ] /gowb/admin.php/Topwords | INFO: Run ShowRuntime Behavior [ RunTime:0.000866s ]
+[ 2012-07-25T11:14:37+08:00 ] /gowb/admin.php/Topwords | INFO: Tag[ view_filter ] --END-- [ RunTime:0.003350s ]
+[ 2012-07-25T11:14:37+08:00 ] /gowb/admin.php/Topwords | INFO: Tag[ view_end ] --START--
+[ 2012-07-25T11:14:37+08:00 ] /gowb/admin.php/Topwords | INFO: Run ShowPageTrace Behavior [ RunTime:0.000732s ]
+[ 2012-07-25T11:14:37+08:00 ] /gowb/admin.php/Topwords | INFO: Tag[ view_end ] --END-- [ RunTime:0.001009s ]
+[ 2012-07-25T11:16:07+08:00 ] /gowb/admin.php/Topwords | INFO: Tag[ route_check ] --START--
+[ 2012-07-25T11:16:07+08:00 ] /gowb/admin.php/Topwords | INFO: Run CheckRoute Behavior [ RunTime:0.001153s ]
+[ 2012-07-25T11:16:07+08:00 ] /gowb/admin.php/Topwords | INFO: Tag[ route_check ] --END-- [ RunTime:0.001367s ]
+[ 2012-07-25T11:16:07+08:00 ] /gowb/admin.php/Topwords | INFO: Tag[ app_begin ] --START--
+[ 2012-07-25T11:16:07+08:00 ] /gowb/admin.php/Topwords | INFO: Run ReadHtmlCache Behavior [ RunTime:0.001118s ]
+[ 2012-07-25T11:16:07+08:00 ] /gowb/admin.php/Topwords | INFO: Tag[ app_begin ] --END-- [ RunTime:0.001327s ]
+[ 2012-07-25T11:16:07+08:00 ] /gowb/admin.php/Topwords | SQL: SHOW COLUMNS FROM `wb_data_top_url` [ RunTime:0.003664s ]
+[ 2012-07-25T11:16:07+08:00 ] /gowb/admin.php/Topwords | SQL: SELECT * FROM `wb_data_top_url`  [ RunTime:0.000686s ]
+[ 2012-07-25T11:16:07+08:00 ] /gowb/admin.php/Topwords | INFO: Tag[ view_template ] --START--
+[ 2012-07-25T11:16:07+08:00 ] /gowb/admin.php/Topwords | INFO: Run LocationTemplate Behavior [ RunTime:0.001553s ]
+[ 2012-07-25T11:16:07+08:00 ] /gowb/admin.php/Topwords | INFO: Tag[ view_template ] --END-- [ RunTime:0.001742s ]
+[ 2012-07-25T11:16:07+08:00 ] /gowb/admin.php/Topwords | INFO: Tag[ view_parse ] --START--
+[ 2012-07-25T11:16:07+08:00 ] /gowb/admin.php/Topwords | INFO: Run ParseTemplate Behavior [ RunTime:0.020666s ]
+[ 2012-07-25T11:16:07+08:00 ] /gowb/admin.php/Topwords | INFO: Tag[ view_parse ] --END-- [ RunTime:0.020867s ]
+[ 2012-07-25T11:16:07+08:00 ] /gowb/admin.php/Topwords | INFO: Tag[ view_filter ] --START--
+[ 2012-07-25T11:16:07+08:00 ] /gowb/admin.php/Topwords | INFO: Run ContentReplace Behavior [ RunTime:0.000764s ]
+[ 2012-07-25T11:16:07+08:00 ] /gowb/admin.php/Topwords | INFO: Run TokenBuild Behavior [ RunTime:0.000830s ]
+[ 2012-07-25T11:16:07+08:00 ] /gowb/admin.php/Topwords | INFO: Run WriteHtmlCache Behavior [ RunTime:0.000571s ]
+[ 2012-07-25T11:16:07+08:00 ] /gowb/admin.php/Topwords | INFO: Run ShowRuntime Behavior [ RunTime:0.000896s ]
+[ 2012-07-25T11:16:07+08:00 ] /gowb/admin.php/Topwords | INFO: Tag[ view_filter ] --END-- [ RunTime:0.003615s ]
+[ 2012-07-25T11:16:07+08:00 ] /gowb/admin.php/Topwords | INFO: Tag[ view_end ] --START--
+[ 2012-07-25T11:16:07+08:00 ] /gowb/admin.php/Topwords | INFO: Run ShowPageTrace Behavior [ RunTime:0.000756s ]
+[ 2012-07-25T11:16:07+08:00 ] /gowb/admin.php/Topwords | INFO: Tag[ view_end ] --END-- [ RunTime:0.000937s ]
+[ 2012-07-25T11:17:51+08:00 ] /gowb/admin.php/Topwords | INFO: Tag[ route_check ] --START--
+[ 2012-07-25T11:17:51+08:00 ] /gowb/admin.php/Topwords | INFO: Run CheckRoute Behavior [ RunTime:0.001612s ]
+[ 2012-07-25T11:17:51+08:00 ] /gowb/admin.php/Topwords | INFO: Tag[ route_check ] --END-- [ RunTime:0.001848s ]
+[ 2012-07-25T11:17:51+08:00 ] /gowb/admin.php/Topwords | INFO: Tag[ app_begin ] --START--
+[ 2012-07-25T11:17:51+08:00 ] /gowb/admin.php/Topwords | INFO: Run ReadHtmlCache Behavior [ RunTime:0.001313s ]
+[ 2012-07-25T11:17:51+08:00 ] /gowb/admin.php/Topwords | INFO: Tag[ app_begin ] --END-- [ RunTime:0.001502s ]
+[ 2012-07-25T11:17:51+08:00 ] /gowb/admin.php/Topwords | SQL: SHOW COLUMNS FROM `wb_data_top_url` [ RunTime:0.003654s ]
+[ 2012-07-25T11:17:51+08:00 ] /gowb/admin.php/Topwords | SQL: SELECT * FROM `wb_data_top_url`  [ RunTime:0.000544s ]
+[ 2012-07-25T11:17:51+08:00 ] /gowb/admin.php/Topwords | INFO: Tag[ view_template ] --START--
+[ 2012-07-25T11:17:51+08:00 ] /gowb/admin.php/Topwords | INFO: Run LocationTemplate Behavior [ RunTime:0.001925s ]
+[ 2012-07-25T11:17:51+08:00 ] /gowb/admin.php/Topwords | INFO: Tag[ view_template ] --END-- [ RunTime:0.002144s ]
+[ 2012-07-25T11:17:51+08:00 ] /gowb/admin.php/Topwords | INFO: Tag[ view_parse ] --START--
+[ 2012-07-25T11:17:51+08:00 ] /gowb/admin.php/Topwords | INFO: Run ParseTemplate Behavior [ RunTime:0.023031s ]
+[ 2012-07-25T11:17:51+08:00 ] /gowb/admin.php/Topwords | INFO: Tag[ view_parse ] --END-- [ RunTime:0.023296s ]
+[ 2012-07-25T11:17:51+08:00 ] /gowb/admin.php/Topwords | INFO: Tag[ view_filter ] --START--
+[ 2012-07-25T11:17:51+08:00 ] /gowb/admin.php/Topwords | INFO: Run ContentReplace Behavior [ RunTime:0.000825s ]
+[ 2012-07-25T11:17:51+08:00 ] /gowb/admin.php/Topwords | INFO: Run TokenBuild Behavior [ RunTime:0.000978s ]
+[ 2012-07-25T11:17:51+08:00 ] /gowb/admin.php/Topwords | INFO: Run WriteHtmlCache Behavior [ RunTime:0.000707s ]
+[ 2012-07-25T11:17:51+08:00 ] /gowb/admin.php/Topwords | INFO: Run ShowRuntime Behavior [ RunTime:0.001038s ]
+[ 2012-07-25T11:17:51+08:00 ] /gowb/admin.php/Topwords | INFO: Tag[ view_filter ] --END-- [ RunTime:0.004080s ]
+[ 2012-07-25T11:17:51+08:00 ] /gowb/admin.php/Topwords | INFO: Tag[ view_end ] --START--
+[ 2012-07-25T11:17:51+08:00 ] /gowb/admin.php/Topwords | INFO: Run ShowPageTrace Behavior [ RunTime:0.001038s ]
+[ 2012-07-25T11:17:51+08:00 ] /gowb/admin.php/Topwords | INFO: Tag[ view_end ] --END-- [ RunTime:0.001229s ]
+[ 2012-07-25T11:21:42+08:00 ] /gowb/admin.php/Topwords | INFO: Tag[ route_check ] --START--
+[ 2012-07-25T11:21:42+08:00 ] /gowb/admin.php/Topwords | INFO: Run CheckRoute Behavior [ RunTime:0.001782s ]
+[ 2012-07-25T11:21:42+08:00 ] /gowb/admin.php/Topwords | INFO: Tag[ route_check ] --END-- [ RunTime:0.002261s ]
+[ 2012-07-25T11:21:42+08:00 ] /gowb/admin.php/Topwords | INFO: Tag[ app_begin ] --START--
+[ 2012-07-25T11:21:42+08:00 ] /gowb/admin.php/Topwords | INFO: Run ReadHtmlCache Behavior [ RunTime:0.001304s ]
+[ 2012-07-25T11:21:42+08:00 ] /gowb/admin.php/Topwords | INFO: Tag[ app_begin ] --END-- [ RunTime:0.001497s ]
+[ 2012-07-25T11:21:42+08:00 ] /gowb/admin.php/Topwords | SQL: SHOW COLUMNS FROM `wb_data_top_url` [ RunTime:0.004329s ]
+[ 2012-07-25T11:21:42+08:00 ] /gowb/admin.php/Topwords | SQL: SELECT * FROM `wb_data_top_url`  [ RunTime:0.000556s ]
+[ 2012-07-25T11:21:42+08:00 ] /gowb/admin.php/Topwords | INFO: Tag[ view_template ] --START--
+[ 2012-07-25T11:21:42+08:00 ] /gowb/admin.php/Topwords | INFO: Run LocationTemplate Behavior [ RunTime:0.001545s ]
+[ 2012-07-25T11:21:42+08:00 ] /gowb/admin.php/Topwords | INFO: Tag[ view_template ] --END-- [ RunTime:0.001740s ]
+[ 2012-07-25T11:21:42+08:00 ] /gowb/admin.php/Topwords | INFO: Tag[ view_parse ] --START--
+[ 2012-07-25T11:21:42+08:00 ] /gowb/admin.php/Topwords | INFO: Run ParseTemplate Behavior [ RunTime:0.024145s ]
+[ 2012-07-25T11:21:42+08:00 ] /gowb/admin.php/Topwords | INFO: Tag[ view_parse ] --END-- [ RunTime:0.024366s ]
+[ 2012-07-25T11:21:42+08:00 ] /gowb/admin.php/Topwords | INFO: Tag[ view_filter ] --START--
+[ 2012-07-25T11:21:42+08:00 ] /gowb/admin.php/Topwords | INFO: Run ContentReplace Behavior [ RunTime:0.001025s ]
+[ 2012-07-25T11:21:42+08:00 ] /gowb/admin.php/Topwords | INFO: Run TokenBuild Behavior [ RunTime:0.000990s ]
+[ 2012-07-25T11:21:42+08:00 ] /gowb/admin.php/Topwords | INFO: Run WriteHtmlCache Behavior [ RunTime:0.000695s ]
+[ 2012-07-25T11:21:42+08:00 ] /gowb/admin.php/Topwords | INFO: Run ShowRuntime Behavior [ RunTime:0.001085s ]
+[ 2012-07-25T11:21:42+08:00 ] /gowb/admin.php/Topwords | INFO: Tag[ view_filter ] --END-- [ RunTime:0.004336s ]
+[ 2012-07-25T11:21:42+08:00 ] /gowb/admin.php/Topwords | INFO: Tag[ view_end ] --START--
+[ 2012-07-25T11:21:42+08:00 ] /gowb/admin.php/Topwords | INFO: Run ShowPageTrace Behavior [ RunTime:0.000983s ]
+[ 2012-07-25T11:21:42+08:00 ] /gowb/admin.php/Topwords | INFO: Tag[ view_end ] --END-- [ RunTime:0.001203s ]
+[ 2012-07-25T11:22:18+08:00 ] /gowb/admin.php/Topwords | INFO: Tag[ route_check ] --START--
+[ 2012-07-25T11:22:18+08:00 ] /gowb/admin.php/Topwords | INFO: Run CheckRoute Behavior [ RunTime:0.004195s ]
+[ 2012-07-25T11:22:18+08:00 ] /gowb/admin.php/Topwords | INFO: Tag[ route_check ] --END-- [ RunTime:0.004421s ]
+[ 2012-07-25T11:22:18+08:00 ] /gowb/admin.php/Topwords | INFO: Tag[ app_begin ] --START--
+[ 2012-07-25T11:22:18+08:00 ] /gowb/admin.php/Topwords | INFO: Run ReadHtmlCache Behavior [ RunTime:0.001717s ]
+[ 2012-07-25T11:22:18+08:00 ] /gowb/admin.php/Topwords | INFO: Tag[ app_begin ] --END-- [ RunTime:0.001948s ]
+[ 2012-07-25T11:22:18+08:00 ] /gowb/admin.php/Topwords | SQL: SHOW COLUMNS FROM `wb_data_top_url` [ RunTime:0.004048s ]
+[ 2012-07-25T11:22:18+08:00 ] /gowb/admin.php/Topwords | SQL: SELECT * FROM `wb_data_top_url`  [ RunTime:0.000587s ]
+[ 2012-07-25T11:22:18+08:00 ] /gowb/admin.php/Topwords | INFO: Tag[ view_template ] --START--
+[ 2012-07-25T11:22:18+08:00 ] /gowb/admin.php/Topwords | INFO: Run LocationTemplate Behavior [ RunTime:0.001518s ]
+[ 2012-07-25T11:22:18+08:00 ] /gowb/admin.php/Topwords | INFO: Tag[ view_template ] --END-- [ RunTime:0.001717s ]
+[ 2012-07-25T11:22:18+08:00 ] /gowb/admin.php/Topwords | INFO: Tag[ view_parse ] --START--
+[ 2012-07-25T11:22:18+08:00 ] /gowb/admin.php/Topwords | INFO: Run ParseTemplate Behavior [ RunTime:0.021404s ]
+[ 2012-07-25T11:22:18+08:00 ] /gowb/admin.php/Topwords | INFO: Tag[ view_parse ] --END-- [ RunTime:0.021666s ]
+[ 2012-07-25T11:22:18+08:00 ] /gowb/admin.php/Topwords | INFO: Tag[ view_filter ] --START--
+[ 2012-07-25T11:22:18+08:00 ] /gowb/admin.php/Topwords | INFO: Run ContentReplace Behavior [ RunTime:0.000841s ]
+[ 2012-07-25T11:22:18+08:00 ] /gowb/admin.php/Topwords | INFO: Run TokenBuild Behavior [ RunTime:0.000788s ]
+[ 2012-07-25T11:22:18+08:00 ] /gowb/admin.php/Topwords | INFO: Run WriteHtmlCache Behavior [ RunTime:0.000569s ]
+[ 2012-07-25T11:22:18+08:00 ] /gowb/admin.php/Topwords | INFO: Run ShowRuntime Behavior [ RunTime:0.000884s ]
+[ 2012-07-25T11:22:18+08:00 ] /gowb/admin.php/Topwords | INFO: Tag[ view_filter ] --END-- [ RunTime:0.003620s ]
+[ 2012-07-25T11:22:18+08:00 ] /gowb/admin.php/Topwords | INFO: Tag[ view_end ] --START--
+[ 2012-07-25T11:22:18+08:00 ] /gowb/admin.php/Topwords | INFO: Run ShowPageTrace Behavior [ RunTime:0.000759s ]
+[ 2012-07-25T11:22:18+08:00 ] /gowb/admin.php/Topwords | INFO: Tag[ view_end ] --END-- [ RunTime:0.000936s ]
+[ 2012-07-25T11:31:58+08:00 ] /gowb/admin.php/Topwords | INFO: Tag[ route_check ] --START--
+[ 2012-07-25T11:31:58+08:00 ] /gowb/admin.php/Topwords | INFO: Run CheckRoute Behavior [ RunTime:0.003076s ]
+[ 2012-07-25T11:31:58+08:00 ] /gowb/admin.php/Topwords | INFO: Tag[ route_check ] --END-- [ RunTime:0.003398s ]
+[ 2012-07-25T11:31:58+08:00 ] /gowb/admin.php/Topwords | INFO: Tag[ app_begin ] --START--
+[ 2012-07-25T11:31:58+08:00 ] /gowb/admin.php/Topwords | INFO: Run ReadHtmlCache Behavior [ RunTime:0.001178s ]
+[ 2012-07-25T11:31:58+08:00 ] /gowb/admin.php/Topwords | INFO: Tag[ app_begin ] --END-- [ RunTime:0.001370s ]
+[ 2012-07-25T11:31:58+08:00 ] /gowb/admin.php/Topwords | SQL: SHOW COLUMNS FROM `wb_data_top_url` [ RunTime:0.003860s ]
+[ 2012-07-25T11:31:58+08:00 ] /gowb/admin.php/Topwords | SQL: SELECT * FROM `wb_data_top_url` ORDER BY id desc  [ RunTime:0.000505s ]
+[ 2012-07-25T11:31:58+08:00 ] /gowb/admin.php/Topwords | INFO: Tag[ view_template ] --START--
+[ 2012-07-25T11:31:58+08:00 ] /gowb/admin.php/Topwords | INFO: Run LocationTemplate Behavior [ RunTime:0.001567s ]
+[ 2012-07-25T11:31:58+08:00 ] /gowb/admin.php/Topwords | INFO: Tag[ view_template ] --END-- [ RunTime:0.001766s ]
+[ 2012-07-25T11:31:58+08:00 ] /gowb/admin.php/Topwords | INFO: Tag[ view_parse ] --START--
+[ 2012-07-25T11:31:58+08:00 ] /gowb/admin.php/Topwords | INFO: Run ParseTemplate Behavior [ RunTime:0.022955s ]
+[ 2012-07-25T11:31:58+08:00 ] /gowb/admin.php/Topwords | INFO: Tag[ view_parse ] --END-- [ RunTime:0.023203s ]
+[ 2012-07-25T11:31:58+08:00 ] /gowb/admin.php/Topwords | INFO: Tag[ view_filter ] --START--
+[ 2012-07-25T11:31:58+08:00 ] /gowb/admin.php/Topwords | INFO: Run ContentReplace Behavior [ RunTime:0.000833s ]
+[ 2012-07-25T11:31:58+08:00 ] /gowb/admin.php/Topwords | INFO: Run TokenBuild Behavior [ RunTime:0.000876s ]
+[ 2012-07-25T11:31:58+08:00 ] /gowb/admin.php/Topwords | INFO: Run WriteHtmlCache Behavior [ RunTime:0.000647s ]
+[ 2012-07-25T11:31:58+08:00 ] /gowb/admin.php/Topwords | INFO: Run ShowRuntime Behavior [ RunTime:0.001035s ]
+[ 2012-07-25T11:31:58+08:00 ] /gowb/admin.php/Topwords | INFO: Tag[ view_filter ] --END-- [ RunTime:0.003904s ]
+[ 2012-07-25T11:31:58+08:00 ] /gowb/admin.php/Topwords | INFO: Tag[ view_end ] --START--
+[ 2012-07-25T11:31:58+08:00 ] /gowb/admin.php/Topwords | INFO: Run ShowPageTrace Behavior [ RunTime:0.001055s ]
+[ 2012-07-25T11:31:58+08:00 ] /gowb/admin.php/Topwords | INFO: Tag[ view_end ] --END-- [ RunTime:0.001255s ]
+[ 2012-07-25T11:32:05+08:00 ] /gowb/admin.php/Topwords | INFO: Tag[ route_check ] --START--
+[ 2012-07-25T11:32:05+08:00 ] /gowb/admin.php/Topwords | INFO: Run CheckRoute Behavior [ RunTime:0.001291s ]
+[ 2012-07-25T11:32:05+08:00 ] /gowb/admin.php/Topwords | INFO: Tag[ route_check ] --END-- [ RunTime:0.001515s ]
+[ 2012-07-25T11:32:05+08:00 ] /gowb/admin.php/Topwords | INFO: Tag[ app_begin ] --START--
+[ 2012-07-25T11:32:05+08:00 ] /gowb/admin.php/Topwords | INFO: Run ReadHtmlCache Behavior [ RunTime:0.000997s ]
+[ 2012-07-25T11:32:05+08:00 ] /gowb/admin.php/Topwords | INFO: Tag[ app_begin ] --END-- [ RunTime:0.001236s ]
+[ 2012-07-25T11:32:05+08:00 ] /gowb/admin.php/Topwords | SQL: SHOW COLUMNS FROM `wb_data_top_url` [ RunTime:0.004001s ]
+[ 2012-07-25T11:32:05+08:00 ] /gowb/admin.php/Topwords | SQL: SELECT * FROM `wb_data_top_url` ORDER BY id asc  [ RunTime:0.000629s ]
+[ 2012-07-25T11:32:05+08:00 ] /gowb/admin.php/Topwords | INFO: Tag[ view_template ] --START--
+[ 2012-07-25T11:32:05+08:00 ] /gowb/admin.php/Topwords | INFO: Run LocationTemplate Behavior [ RunTime:0.001509s ]
+[ 2012-07-25T11:32:05+08:00 ] /gowb/admin.php/Topwords | INFO: Tag[ view_template ] --END-- [ RunTime:0.001703s ]
+[ 2012-07-25T11:32:05+08:00 ] /gowb/admin.php/Topwords | INFO: Tag[ view_parse ] --START--
+[ 2012-07-25T11:32:05+08:00 ] /gowb/admin.php/Topwords | INFO: Run ParseTemplate Behavior [ RunTime:0.021863s ]
+[ 2012-07-25T11:32:05+08:00 ] /gowb/admin.php/Topwords | INFO: Tag[ view_parse ] --END-- [ RunTime:0.022068s ]
+[ 2012-07-25T11:32:05+08:00 ] /gowb/admin.php/Topwords | INFO: Tag[ view_filter ] --START--
+[ 2012-07-25T11:32:05+08:00 ] /gowb/admin.php/Topwords | INFO: Run ContentReplace Behavior [ RunTime:0.001382s ]
+[ 2012-07-25T11:32:05+08:00 ] /gowb/admin.php/Topwords | INFO: Run TokenBuild Behavior [ RunTime:0.000963s ]
+[ 2012-07-25T11:32:05+08:00 ] /gowb/admin.php/Topwords | INFO: Run WriteHtmlCache Behavior [ RunTime:0.000536s ]
+[ 2012-07-25T11:32:05+08:00 ] /gowb/admin.php/Topwords | INFO: Run ShowRuntime Behavior [ RunTime:0.001142s ]
+[ 2012-07-25T11:32:05+08:00 ] /gowb/admin.php/Topwords | INFO: Tag[ view_filter ] --END-- [ RunTime:0.004623s ]
+[ 2012-07-25T11:32:05+08:00 ] /gowb/admin.php/Topwords | INFO: Tag[ view_end ] --START--
+[ 2012-07-25T11:32:05+08:00 ] /gowb/admin.php/Topwords | INFO: Run ShowPageTrace Behavior [ RunTime:0.001043s ]
+[ 2012-07-25T11:32:05+08:00 ] /gowb/admin.php/Topwords | INFO: Tag[ view_end ] --END-- [ RunTime:0.001238s ]
+[ 2012-07-25T11:32:27+08:00 ] /gowb/admin.php/Topwords | INFO: Tag[ route_check ] --START--
+[ 2012-07-25T11:32:27+08:00 ] /gowb/admin.php/Topwords | INFO: Run CheckRoute Behavior [ RunTime:0.001210s ]
+[ 2012-07-25T11:32:27+08:00 ] /gowb/admin.php/Topwords | INFO: Tag[ route_check ] --END-- [ RunTime:0.001430s ]
+[ 2012-07-25T11:32:27+08:00 ] /gowb/admin.php/Topwords | INFO: Tag[ app_begin ] --START--
+[ 2012-07-25T11:32:27+08:00 ] /gowb/admin.php/Topwords | INFO: Run ReadHtmlCache Behavior [ RunTime:0.000985s ]
+[ 2012-07-25T11:32:27+08:00 ] /gowb/admin.php/Topwords | INFO: Tag[ app_begin ] --END-- [ RunTime:0.001163s ]
+[ 2012-07-25T11:32:27+08:00 ] /gowb/admin.php/Topwords | SQL: SHOW COLUMNS FROM `wb_data_top_url` [ RunTime:0.004311s ]
+[ 2012-07-25T11:32:27+08:00 ] /gowb/admin.php/Topwords | SQL: SELECT * FROM `wb_data_top_url` ORDER BY id asc LIMIT 3   [ RunTime:0.000709s ]
+[ 2012-07-25T11:32:27+08:00 ] /gowb/admin.php/Topwords | INFO: Tag[ view_template ] --START--
+[ 2012-07-25T11:32:27+08:00 ] /gowb/admin.php/Topwords | INFO: Run LocationTemplate Behavior [ RunTime:0.001470s ]
+[ 2012-07-25T11:32:27+08:00 ] /gowb/admin.php/Topwords | INFO: Tag[ view_template ] --END-- [ RunTime:0.001673s ]
+[ 2012-07-25T11:32:27+08:00 ] /gowb/admin.php/Topwords | INFO: Tag[ view_parse ] --START--
+[ 2012-07-25T11:32:27+08:00 ] /gowb/admin.php/Topwords | INFO: Run ParseTemplate Behavior [ RunTime:0.023590s ]
+[ 2012-07-25T11:32:27+08:00 ] /gowb/admin.php/Topwords | INFO: Tag[ view_parse ] --END-- [ RunTime:0.023796s ]
+[ 2012-07-25T11:32:27+08:00 ] /gowb/admin.php/Topwords | INFO: Tag[ view_filter ] --START--
+[ 2012-07-25T11:32:27+08:00 ] /gowb/admin.php/Topwords | INFO: Run ContentReplace Behavior [ RunTime:0.001321s ]
+[ 2012-07-25T11:32:27+08:00 ] /gowb/admin.php/Topwords | INFO: Run TokenBuild Behavior [ RunTime:0.000900s ]
+[ 2012-07-25T11:32:27+08:00 ] /gowb/admin.php/Topwords | INFO: Run WriteHtmlCache Behavior [ RunTime:0.000582s ]
+[ 2012-07-25T11:32:27+08:00 ] /gowb/admin.php/Topwords | INFO: Run ShowRuntime Behavior [ RunTime:0.000894s ]
+[ 2012-07-25T11:32:27+08:00 ] /gowb/admin.php/Topwords | INFO: Tag[ view_filter ] --END-- [ RunTime:0.004247s ]
+[ 2012-07-25T11:32:27+08:00 ] /gowb/admin.php/Topwords | INFO: Tag[ view_end ] --START--
+[ 2012-07-25T11:32:27+08:00 ] /gowb/admin.php/Topwords | INFO: Run ShowPageTrace Behavior [ RunTime:0.000745s ]
+[ 2012-07-25T11:32:27+08:00 ] /gowb/admin.php/Topwords | INFO: Tag[ view_end ] --END-- [ RunTime:0.000920s ]
+[ 2012-07-25T11:32:35+08:00 ] /gowb/admin.php/Topwords | INFO: Tag[ route_check ] --START--
+[ 2012-07-25T11:32:35+08:00 ] /gowb/admin.php/Topwords | INFO: Run CheckRoute Behavior [ RunTime:0.001171s ]
+[ 2012-07-25T11:32:35+08:00 ] /gowb/admin.php/Topwords | INFO: Tag[ route_check ] --END-- [ RunTime:0.001385s ]
+[ 2012-07-25T11:32:35+08:00 ] /gowb/admin.php/Topwords | INFO: Tag[ app_begin ] --START--
+[ 2012-07-25T11:32:35+08:00 ] /gowb/admin.php/Topwords | INFO: Run ReadHtmlCache Behavior [ RunTime:0.002196s ]
+[ 2012-07-25T11:32:35+08:00 ] /gowb/admin.php/Topwords | INFO: Tag[ app_begin ] --END-- [ RunTime:0.002428s ]
+[ 2012-07-25T11:32:35+08:00 ] /gowb/admin.php/Topwords | SQL: SHOW COLUMNS FROM `wb_data_top_url` [ RunTime:0.004980s ]
+[ 2012-07-25T11:32:35+08:00 ] /gowb/admin.php/Topwords | SQL: SELECT * FROM `wb_data_top_url` ORDER BY id asc LIMIT 3   [ RunTime:0.000595s ]
+[ 2012-07-25T11:32:35+08:00 ] /gowb/admin.php/Topwords | INFO: Tag[ view_template ] --START--
+[ 2012-07-25T11:32:35+08:00 ] /gowb/admin.php/Topwords | INFO: Run LocationTemplate Behavior [ RunTime:0.002956s ]
+[ 2012-07-25T11:32:35+08:00 ] /gowb/admin.php/Topwords | INFO: Tag[ view_template ] --END-- [ RunTime:0.003218s ]
+[ 2012-07-25T11:32:35+08:00 ] /gowb/admin.php/Topwords | INFO: Tag[ view_parse ] --START--
+[ 2012-07-25T11:32:35+08:00 ] /gowb/admin.php/Topwords | INFO: Run ParseTemplate Behavior [ RunTime:0.019366s ]
+[ 2012-07-25T11:32:35+08:00 ] /gowb/admin.php/Topwords | INFO: Tag[ view_parse ] --END-- [ RunTime:0.019566s ]
+[ 2012-07-25T11:32:35+08:00 ] /gowb/admin.php/Topwords | INFO: Tag[ view_filter ] --START--
+[ 2012-07-25T11:32:35+08:00 ] /gowb/admin.php/Topwords | INFO: Run ContentReplace Behavior [ RunTime:0.000768s ]
+[ 2012-07-25T11:32:35+08:00 ] /gowb/admin.php/Topwords | INFO: Run TokenBuild Behavior [ RunTime:0.000748s ]
+[ 2012-07-25T11:32:35+08:00 ] /gowb/admin.php/Topwords | INFO: Run WriteHtmlCache Behavior [ RunTime:0.000442s ]
+[ 2012-07-25T11:32:35+08:00 ] /gowb/admin.php/Topwords | INFO: Run ShowRuntime Behavior [ RunTime:0.000968s ]
+[ 2012-07-25T11:32:35+08:00 ] /gowb/admin.php/Topwords | INFO: Tag[ view_filter ] --END-- [ RunTime:0.003425s ]
+[ 2012-07-25T11:32:35+08:00 ] /gowb/admin.php/Topwords | INFO: Tag[ view_end ] --START--
+[ 2012-07-25T11:32:35+08:00 ] /gowb/admin.php/Topwords | INFO: Run ShowPageTrace Behavior [ RunTime:0.000749s ]
+[ 2012-07-25T11:32:35+08:00 ] /gowb/admin.php/Topwords | INFO: Tag[ view_end ] --END-- [ RunTime:0.000920s ]
+[ 2012-07-25T11:32:46+08:00 ] /gowb/admin.php/Topwords | INFO: Tag[ route_check ] --START--
+[ 2012-07-25T11:32:46+08:00 ] /gowb/admin.php/Topwords | INFO: Run CheckRoute Behavior [ RunTime:0.005283s ]
+[ 2012-07-25T11:32:46+08:00 ] /gowb/admin.php/Topwords | INFO: Tag[ route_check ] --END-- [ RunTime:0.005600s ]
+[ 2012-07-25T11:32:46+08:00 ] /gowb/admin.php/Topwords | INFO: Tag[ app_begin ] --START--
+[ 2012-07-25T11:32:46+08:00 ] /gowb/admin.php/Topwords | INFO: Run ReadHtmlCache Behavior [ RunTime:0.001161s ]
+[ 2012-07-25T11:32:46+08:00 ] /gowb/admin.php/Topwords | INFO: Tag[ app_begin ] --END-- [ RunTime:0.001445s ]
+[ 2012-07-25T11:32:46+08:00 ] /gowb/admin.php/Topwords | SQL: SHOW COLUMNS FROM `wb_data_top_url` [ RunTime:0.005823s ]
+[ 2012-07-25T11:32:46+08:00 ] /gowb/admin.php/Topwords | SQL: SELECT * FROM `wb_data_top_url` ORDER BY id asc LIMIT 3   [ RunTime:0.000521s ]
+[ 2012-07-25T11:32:46+08:00 ] /gowb/admin.php/Topwords | INFO: Tag[ view_template ] --START--
+[ 2012-07-25T11:32:46+08:00 ] /gowb/admin.php/Topwords | INFO: Run LocationTemplate Behavior [ RunTime:0.001319s ]
+[ 2012-07-25T11:32:46+08:00 ] /gowb/admin.php/Topwords | INFO: Tag[ view_template ] --END-- [ RunTime:0.001576s ]
+[ 2012-07-25T11:32:46+08:00 ] /gowb/admin.php/Topwords | INFO: Tag[ view_parse ] --START--
+[ 2012-07-25T11:32:46+08:00 ] /gowb/admin.php/Topwords | INFO: Run ParseTemplate Behavior [ RunTime:0.022240s ]
+[ 2012-07-25T11:32:46+08:00 ] /gowb/admin.php/Topwords | INFO: Tag[ view_parse ] --END-- [ RunTime:0.022452s ]
+[ 2012-07-25T11:32:46+08:00 ] /gowb/admin.php/Topwords | INFO: Tag[ view_filter ] --START--
+[ 2012-07-25T11:32:46+08:00 ] /gowb/admin.php/Topwords | INFO: Run ContentReplace Behavior [ RunTime:0.001029s ]
+[ 2012-07-25T11:32:46+08:00 ] /gowb/admin.php/Topwords | INFO: Run TokenBuild Behavior [ RunTime:0.003507s ]
+[ 2012-07-25T11:32:46+08:00 ] /gowb/admin.php/Topwords | INFO: Run WriteHtmlCache Behavior [ RunTime:0.000676s ]
+[ 2012-07-25T11:32:46+08:00 ] /gowb/admin.php/Topwords | INFO: Run ShowRuntime Behavior [ RunTime:0.000901s ]
+[ 2012-07-25T11:32:46+08:00 ] /gowb/admin.php/Topwords | INFO: Tag[ view_filter ] --END-- [ RunTime:0.006722s ]
+[ 2012-07-25T11:32:46+08:00 ] /gowb/admin.php/Topwords | INFO: Tag[ view_end ] --START--
+[ 2012-07-25T11:32:46+08:00 ] /gowb/admin.php/Topwords | INFO: Run ShowPageTrace Behavior [ RunTime:0.000864s ]
+[ 2012-07-25T11:32:46+08:00 ] /gowb/admin.php/Topwords | INFO: Tag[ view_end ] --END-- [ RunTime:0.001056s ]
+[ 2012-07-25T11:48:01+08:00 ] /gowb/admin.php/Topwords | INFO: Tag[ route_check ] --START--
+[ 2012-07-25T11:48:01+08:00 ] /gowb/admin.php/Topwords | INFO: Run CheckRoute Behavior [ RunTime:0.001310s ]
+[ 2012-07-25T11:48:01+08:00 ] /gowb/admin.php/Topwords | INFO: Tag[ route_check ] --END-- [ RunTime:0.001530s ]
+[ 2012-07-25T11:48:01+08:00 ] /gowb/admin.php/Topwords | INFO: Tag[ app_begin ] --START--
+[ 2012-07-25T11:48:01+08:00 ] /gowb/admin.php/Topwords | INFO: Run ReadHtmlCache Behavior [ RunTime:0.001170s ]
+[ 2012-07-25T11:48:01+08:00 ] /gowb/admin.php/Topwords | INFO: Tag[ app_begin ] --END-- [ RunTime:0.001356s ]
+[ 2012-07-25T11:48:01+08:00 ] /gowb/admin.php/Topwords | SQL: SHOW COLUMNS FROM `wb_data_top_url` [ RunTime:0.004381s ]
+[ 2012-07-25T11:48:01+08:00 ] /gowb/admin.php/Topwords | SQL: SELECT COUNT(*) AS tp_count FROM `wb_data_top_url` LIMIT 1   [ RunTime:0.000483s ]
+[ 2012-07-25T11:48:01+08:00 ] /gowb/admin.php/Topwords | SQL: SELECT * FROM `wb_data_top_url` ORDER BY id asc LIMIT 0,3   [ RunTime:0.000294s ]
+[ 2012-07-25T11:48:01+08:00 ] /gowb/admin.php/Topwords | INFO: Tag[ view_template ] --START--
+[ 2012-07-25T11:48:01+08:00 ] /gowb/admin.php/Topwords | INFO: Run LocationTemplate Behavior [ RunTime:0.000919s ]
+[ 2012-07-25T11:48:01+08:00 ] /gowb/admin.php/Topwords | INFO: Tag[ view_template ] --END-- [ RunTime:0.001105s ]
+[ 2012-07-25T11:48:01+08:00 ] /gowb/admin.php/Topwords | INFO: Tag[ view_parse ] --START--
+[ 2012-07-25T11:48:01+08:00 ] /gowb/admin.php/Topwords | INFO: Run ParseTemplate Behavior [ RunTime:0.022272s ]
+[ 2012-07-25T11:48:01+08:00 ] /gowb/admin.php/Topwords | INFO: Tag[ view_parse ] --END-- [ RunTime:0.022484s ]
+[ 2012-07-25T11:48:01+08:00 ] /gowb/admin.php/Topwords | INFO: Tag[ view_filter ] --START--
+[ 2012-07-25T11:48:01+08:00 ] /gowb/admin.php/Topwords | INFO: Run ContentReplace Behavior [ RunTime:0.001004s ]
+[ 2012-07-25T11:48:01+08:00 ] /gowb/admin.php/Topwords | INFO: Run TokenBuild Behavior [ RunTime:0.001440s ]
+[ 2012-07-25T11:48:01+08:00 ] /gowb/admin.php/Topwords | INFO: Run WriteHtmlCache Behavior [ RunTime:0.000659s ]
+[ 2012-07-25T11:48:01+08:00 ] /gowb/admin.php/Topwords | INFO: Run ShowRuntime Behavior [ RunTime:0.001086s ]
+[ 2012-07-25T11:48:01+08:00 ] /gowb/admin.php/Topwords | INFO: Tag[ view_filter ] --END-- [ RunTime:0.004777s ]
+[ 2012-07-25T11:48:01+08:00 ] /gowb/admin.php/Topwords | INFO: Tag[ view_end ] --START--
+[ 2012-07-25T11:48:01+08:00 ] /gowb/admin.php/Topwords | INFO: Run ShowPageTrace Behavior [ RunTime:0.001173s ]
+[ 2012-07-25T11:48:01+08:00 ] /gowb/admin.php/Topwords | INFO: Tag[ view_end ] --END-- [ RunTime:0.001366s ]
+[ 2012-07-25T11:48:11+08:00 ] /gowb/admin.php/Topwords?&p=2 | INFO: Tag[ route_check ] --START--
+[ 2012-07-25T11:48:11+08:00 ] /gowb/admin.php/Topwords?&p=2 | INFO: Run CheckRoute Behavior [ RunTime:0.001197s ]
+[ 2012-07-25T11:48:11+08:00 ] /gowb/admin.php/Topwords?&p=2 | INFO: Tag[ route_check ] --END-- [ RunTime:0.001416s ]
+[ 2012-07-25T11:48:11+08:00 ] /gowb/admin.php/Topwords?&p=2 | INFO: Tag[ app_begin ] --START--
+[ 2012-07-25T11:48:11+08:00 ] /gowb/admin.php/Topwords?&p=2 | INFO: Run ReadHtmlCache Behavior [ RunTime:0.001059s ]
+[ 2012-07-25T11:48:11+08:00 ] /gowb/admin.php/Topwords?&p=2 | INFO: Tag[ app_begin ] --END-- [ RunTime:0.001267s ]
+[ 2012-07-25T11:48:11+08:00 ] /gowb/admin.php/Topwords?&p=2 | SQL: SHOW COLUMNS FROM `wb_data_top_url` [ RunTime:0.004118s ]
+[ 2012-07-25T11:48:11+08:00 ] /gowb/admin.php/Topwords?&p=2 | SQL: SELECT COUNT(*) AS tp_count FROM `wb_data_top_url` LIMIT 1   [ RunTime:0.000672s ]
+[ 2012-07-25T11:48:11+08:00 ] /gowb/admin.php/Topwords?&p=2 | SQL: SELECT * FROM `wb_data_top_url` ORDER BY id asc LIMIT 3,3   [ RunTime:0.000576s ]
+[ 2012-07-25T11:48:11+08:00 ] /gowb/admin.php/Topwords?&p=2 | INFO: Tag[ view_template ] --START--
+[ 2012-07-25T11:48:11+08:00 ] /gowb/admin.php/Topwords?&p=2 | INFO: Run LocationTemplate Behavior [ RunTime:0.000918s ]
+[ 2012-07-25T11:48:11+08:00 ] /gowb/admin.php/Topwords?&p=2 | INFO: Tag[ view_template ] --END-- [ RunTime:0.001104s ]
+[ 2012-07-25T11:48:11+08:00 ] /gowb/admin.php/Topwords?&p=2 | INFO: Tag[ view_parse ] --START--
+[ 2012-07-25T11:48:11+08:00 ] /gowb/admin.php/Topwords?&p=2 | INFO: Run ParseTemplate Behavior [ RunTime:0.018891s ]
+[ 2012-07-25T11:48:11+08:00 ] /gowb/admin.php/Topwords?&p=2 | INFO: Tag[ view_parse ] --END-- [ RunTime:0.019108s ]
+[ 2012-07-25T11:48:11+08:00 ] /gowb/admin.php/Topwords?&p=2 | INFO: Tag[ view_filter ] --START--
+[ 2012-07-25T11:48:11+08:00 ] /gowb/admin.php/Topwords?&p=2 | INFO: Run ContentReplace Behavior [ RunTime:0.001038s ]
+[ 2012-07-25T11:48:11+08:00 ] /gowb/admin.php/Topwords?&p=2 | INFO: Run TokenBuild Behavior [ RunTime:0.000976s ]
+[ 2012-07-25T11:48:11+08:00 ] /gowb/admin.php/Topwords?&p=2 | INFO: Run WriteHtmlCache Behavior [ RunTime:0.000663s ]
+[ 2012-07-25T11:48:11+08:00 ] /gowb/admin.php/Topwords?&p=2 | INFO: Run ShowRuntime Behavior [ RunTime:0.001106s ]
+[ 2012-07-25T11:48:11+08:00 ] /gowb/admin.php/Topwords?&p=2 | INFO: Tag[ view_filter ] --END-- [ RunTime:0.004366s ]
+[ 2012-07-25T11:48:11+08:00 ] /gowb/admin.php/Topwords?&p=2 | INFO: Tag[ view_end ] --START--
+[ 2012-07-25T11:48:11+08:00 ] /gowb/admin.php/Topwords?&p=2 | INFO: Run ShowPageTrace Behavior [ RunTime:0.000949s ]
+[ 2012-07-25T11:48:11+08:00 ] /gowb/admin.php/Topwords?&p=2 | INFO: Tag[ view_end ] --END-- [ RunTime:0.001131s ]
+[ 2012-07-25T11:48:14+08:00 ] /gowb/admin.php/Topwords?&p=1 | INFO: Tag[ route_check ] --START--
+[ 2012-07-25T11:48:14+08:00 ] /gowb/admin.php/Topwords?&p=1 | INFO: Run CheckRoute Behavior [ RunTime:0.001171s ]
+[ 2012-07-25T11:48:14+08:00 ] /gowb/admin.php/Topwords?&p=1 | INFO: Tag[ route_check ] --END-- [ RunTime:0.001386s ]
+[ 2012-07-25T11:48:14+08:00 ] /gowb/admin.php/Topwords?&p=1 | INFO: Tag[ app_begin ] --START--
+[ 2012-07-25T11:48:14+08:00 ] /gowb/admin.php/Topwords?&p=1 | INFO: Run ReadHtmlCache Behavior [ RunTime:0.001010s ]
+[ 2012-07-25T11:48:14+08:00 ] /gowb/admin.php/Topwords?&p=1 | INFO: Tag[ app_begin ] --END-- [ RunTime:0.001191s ]
+[ 2012-07-25T11:48:14+08:00 ] /gowb/admin.php/Topwords?&p=1 | SQL: SHOW COLUMNS FROM `wb_data_top_url` [ RunTime:0.004604s ]
+[ 2012-07-25T11:48:14+08:00 ] /gowb/admin.php/Topwords?&p=1 | SQL: SELECT COUNT(*) AS tp_count FROM `wb_data_top_url` LIMIT 1   [ RunTime:0.000444s ]
+[ 2012-07-25T11:48:14+08:00 ] /gowb/admin.php/Topwords?&p=1 | SQL: SELECT * FROM `wb_data_top_url` ORDER BY id asc LIMIT 0,3   [ RunTime:0.000289s ]
+[ 2012-07-25T11:48:14+08:00 ] /gowb/admin.php/Topwords?&p=1 | INFO: Tag[ view_template ] --START--
+[ 2012-07-25T11:48:14+08:00 ] /gowb/admin.php/Topwords?&p=1 | INFO: Run LocationTemplate Behavior [ RunTime:0.000938s ]
+[ 2012-07-25T11:48:14+08:00 ] /gowb/admin.php/Topwords?&p=1 | INFO: Tag[ view_template ] --END-- [ RunTime:0.001129s ]
+[ 2012-07-25T11:48:14+08:00 ] /gowb/admin.php/Topwords?&p=1 | INFO: Tag[ view_parse ] --START--
+[ 2012-07-25T11:48:14+08:00 ] /gowb/admin.php/Topwords?&p=1 | INFO: Run ParseTemplate Behavior [ RunTime:0.017937s ]
+[ 2012-07-25T11:48:14+08:00 ] /gowb/admin.php/Topwords?&p=1 | INFO: Tag[ view_parse ] --END-- [ RunTime:0.018138s ]
+[ 2012-07-25T11:48:14+08:00 ] /gowb/admin.php/Topwords?&p=1 | INFO: Tag[ view_filter ] --START--
+[ 2012-07-25T11:48:14+08:00 ] /gowb/admin.php/Topwords?&p=1 | INFO: Run ContentReplace Behavior [ RunTime:0.000901s ]
+[ 2012-07-25T11:48:14+08:00 ] /gowb/admin.php/Topwords?&p=1 | INFO: Run TokenBuild Behavior [ RunTime:0.002123s ]
+[ 2012-07-25T11:48:14+08:00 ] /gowb/admin.php/Topwords?&p=1 | INFO: Run WriteHtmlCache Behavior [ RunTime:0.000886s ]
+[ 2012-07-25T11:48:14+08:00 ] /gowb/admin.php/Topwords?&p=1 | INFO: Run ShowRuntime Behavior [ RunTime:0.001460s ]
+[ 2012-07-25T11:48:14+08:00 ] /gowb/admin.php/Topwords?&p=1 | INFO: Tag[ view_filter ] --END-- [ RunTime:0.005999s ]
+[ 2012-07-25T11:48:14+08:00 ] /gowb/admin.php/Topwords?&p=1 | INFO: Tag[ view_end ] --START--
+[ 2012-07-25T11:48:14+08:00 ] /gowb/admin.php/Topwords?&p=1 | INFO: Run ShowPageTrace Behavior [ RunTime:0.001108s ]
+[ 2012-07-25T11:48:14+08:00 ] /gowb/admin.php/Topwords?&p=1 | INFO: Tag[ view_end ] --END-- [ RunTime:0.001294s ]
+[ 2012-07-25T11:48:19+08:00 ] /gowb/admin.php/Topwords?&p=1 | INFO: Tag[ route_check ] --START--
+[ 2012-07-25T11:48:19+08:00 ] /gowb/admin.php/Topwords?&p=1 | INFO: Run CheckRoute Behavior [ RunTime:0.001309s ]
+[ 2012-07-25T11:48:19+08:00 ] /gowb/admin.php/Topwords?&p=1 | INFO: Tag[ route_check ] --END-- [ RunTime:0.001592s ]
+[ 2012-07-25T11:48:19+08:00 ] /gowb/admin.php/Topwords?&p=1 | INFO: Tag[ app_begin ] --START--
+[ 2012-07-25T11:48:19+08:00 ] /gowb/admin.php/Topwords?&p=1 | INFO: Run ReadHtmlCache Behavior [ RunTime:0.000984s ]
+[ 2012-07-25T11:48:19+08:00 ] /gowb/admin.php/Topwords?&p=1 | INFO: Tag[ app_begin ] --END-- [ RunTime:0.001166s ]
+[ 2012-07-25T11:48:19+08:00 ] /gowb/admin.php/Topwords?&p=1 | SQL: SHOW COLUMNS FROM `wb_data_top_url` [ RunTime:0.004724s ]
+[ 2012-07-25T11:48:19+08:00 ] /gowb/admin.php/Topwords?&p=1 | SQL: SELECT COUNT(*) AS tp_count FROM `wb_data_top_url` LIMIT 1   [ RunTime:0.000508s ]
+[ 2012-07-25T11:48:19+08:00 ] /gowb/admin.php/Topwords?&p=1 | SQL: SELECT * FROM `wb_data_top_url` ORDER BY id asc LIMIT 0,1   [ RunTime:0.000309s ]
+[ 2012-07-25T11:48:19+08:00 ] /gowb/admin.php/Topwords?&p=1 | INFO: Tag[ view_template ] --START--
+[ 2012-07-25T11:48:19+08:00 ] /gowb/admin.php/Topwords?&p=1 | INFO: Run LocationTemplate Behavior [ RunTime:0.001028s ]
+[ 2012-07-25T11:48:19+08:00 ] /gowb/admin.php/Topwords?&p=1 | INFO: Tag[ view_template ] --END-- [ RunTime:0.001220s ]
+[ 2012-07-25T11:48:19+08:00 ] /gowb/admin.php/Topwords?&p=1 | INFO: Tag[ view_parse ] --START--
+[ 2012-07-25T11:48:19+08:00 ] /gowb/admin.php/Topwords?&p=1 | INFO: Run ParseTemplate Behavior [ RunTime:0.018075s ]
+[ 2012-07-25T11:48:19+08:00 ] /gowb/admin.php/Topwords?&p=1 | INFO: Tag[ view_parse ] --END-- [ RunTime:0.018313s ]
+[ 2012-07-25T11:48:19+08:00 ] /gowb/admin.php/Topwords?&p=1 | INFO: Tag[ view_filter ] --START--
+[ 2012-07-25T11:48:19+08:00 ] /gowb/admin.php/Topwords?&p=1 | INFO: Run ContentReplace Behavior [ RunTime:0.000980s ]
+[ 2012-07-25T11:48:19+08:00 ] /gowb/admin.php/Topwords?&p=1 | INFO: Run TokenBuild Behavior [ RunTime:0.000969s ]
+[ 2012-07-25T11:48:19+08:00 ] /gowb/admin.php/Topwords?&p=1 | INFO: Run WriteHtmlCache Behavior [ RunTime:0.000642s ]
+[ 2012-07-25T11:48:19+08:00 ] /gowb/admin.php/Topwords?&p=1 | INFO: Run ShowRuntime Behavior [ RunTime:0.001292s ]
+[ 2012-07-25T11:48:19+08:00 ] /gowb/admin.php/Topwords?&p=1 | INFO: Tag[ view_filter ] --END-- [ RunTime:0.004439s ]
+[ 2012-07-25T11:48:19+08:00 ] /gowb/admin.php/Topwords?&p=1 | INFO: Tag[ view_end ] --START--
+[ 2012-07-25T11:48:19+08:00 ] /gowb/admin.php/Topwords?&p=1 | INFO: Run ShowPageTrace Behavior [ RunTime:0.001331s ]
+[ 2012-07-25T11:48:19+08:00 ] /gowb/admin.php/Topwords?&p=1 | INFO: Tag[ view_end ] --END-- [ RunTime:0.001522s ]
+[ 2012-07-25T11:48:22+08:00 ] /gowb/admin.php/Topwords?&p=2 | INFO: Tag[ route_check ] --START--
+[ 2012-07-25T11:48:22+08:00 ] /gowb/admin.php/Topwords?&p=2 | INFO: Run CheckRoute Behavior [ RunTime:0.001160s ]
+[ 2012-07-25T11:48:22+08:00 ] /gowb/admin.php/Topwords?&p=2 | INFO: Tag[ route_check ] --END-- [ RunTime:0.001377s ]
+[ 2012-07-25T11:48:22+08:00 ] /gowb/admin.php/Topwords?&p=2 | INFO: Tag[ app_begin ] --START--
+[ 2012-07-25T11:48:22+08:00 ] /gowb/admin.php/Topwords?&p=2 | INFO: Run ReadHtmlCache Behavior [ RunTime:0.000991s ]
+[ 2012-07-25T11:48:22+08:00 ] /gowb/admin.php/Topwords?&p=2 | INFO: Tag[ app_begin ] --END-- [ RunTime:0.001174s ]
+[ 2012-07-25T11:48:22+08:00 ] /gowb/admin.php/Topwords?&p=2 | SQL: SHOW COLUMNS FROM `wb_data_top_url` [ RunTime:0.003523s ]
+[ 2012-07-25T11:48:22+08:00 ] /gowb/admin.php/Topwords?&p=2 | SQL: SELECT COUNT(*) AS tp_count FROM `wb_data_top_url` LIMIT 1   [ RunTime:0.000660s ]
+[ 2012-07-25T11:48:22+08:00 ] /gowb/admin.php/Topwords?&p=2 | SQL: SELECT * FROM `wb_data_top_url` ORDER BY id asc LIMIT 1,1   [ RunTime:0.000499s ]
+[ 2012-07-25T11:48:22+08:00 ] /gowb/admin.php/Topwords?&p=2 | INFO: Tag[ view_template ] --START--
+[ 2012-07-25T11:48:22+08:00 ] /gowb/admin.php/Topwords?&p=2 | INFO: Run LocationTemplate Behavior [ RunTime:0.000932s ]
+[ 2012-07-25T11:48:22+08:00 ] /gowb/admin.php/Topwords?&p=2 | INFO: Tag[ view_template ] --END-- [ RunTime:0.001123s ]
+[ 2012-07-25T11:48:22+08:00 ] /gowb/admin.php/Topwords?&p=2 | INFO: Tag[ view_parse ] --START--
+[ 2012-07-25T11:48:22+08:00 ] /gowb/admin.php/Topwords?&p=2 | INFO: Run ParseTemplate Behavior [ RunTime:0.019523s ]
+[ 2012-07-25T11:48:22+08:00 ] /gowb/admin.php/Topwords?&p=2 | INFO: Tag[ view_parse ] --END-- [ RunTime:0.019764s ]
+[ 2012-07-25T11:48:22+08:00 ] /gowb/admin.php/Topwords?&p=2 | INFO: Tag[ view_filter ] --START--
+[ 2012-07-25T11:48:22+08:00 ] /gowb/admin.php/Topwords?&p=2 | INFO: Run ContentReplace Behavior [ RunTime:0.000874s ]
+[ 2012-07-25T11:48:22+08:00 ] /gowb/admin.php/Topwords?&p=2 | INFO: Run TokenBuild Behavior [ RunTime:0.001073s ]
+[ 2012-07-25T11:48:22+08:00 ] /gowb/admin.php/Topwords?&p=2 | INFO: Run WriteHtmlCache Behavior [ RunTime:0.000668s ]
+[ 2012-07-25T11:48:22+08:00 ] /gowb/admin.php/Topwords?&p=2 | INFO: Run ShowRuntime Behavior [ RunTime:0.001108s ]
+[ 2012-07-25T11:48:22+08:00 ] /gowb/admin.php/Topwords?&p=2 | INFO: Tag[ view_filter ] --END-- [ RunTime:0.004333s ]
+[ 2012-07-25T11:48:22+08:00 ] /gowb/admin.php/Topwords?&p=2 | INFO: Tag[ view_end ] --START--
+[ 2012-07-25T11:48:22+08:00 ] /gowb/admin.php/Topwords?&p=2 | INFO: Run ShowPageTrace Behavior [ RunTime:0.001006s ]
+[ 2012-07-25T11:48:22+08:00 ] /gowb/admin.php/Topwords?&p=2 | INFO: Tag[ view_end ] --END-- [ RunTime:0.001188s ]
+[ 2012-07-25T11:48:29+08:00 ] /gowb/admin.php/Topwords?&p=3 | INFO: Tag[ route_check ] --START--
+[ 2012-07-25T11:48:29+08:00 ] /gowb/admin.php/Topwords?&p=3 | INFO: Run CheckRoute Behavior [ RunTime:0.001734s ]
+[ 2012-07-25T11:48:29+08:00 ] /gowb/admin.php/Topwords?&p=3 | INFO: Tag[ route_check ] --END-- [ RunTime:0.001976s ]
+[ 2012-07-25T11:48:29+08:00 ] /gowb/admin.php/Topwords?&p=3 | INFO: Tag[ app_begin ] --START--
+[ 2012-07-25T11:48:29+08:00 ] /gowb/admin.php/Topwords?&p=3 | INFO: Run ReadHtmlCache Behavior [ RunTime:0.001056s ]
+[ 2012-07-25T11:48:29+08:00 ] /gowb/admin.php/Topwords?&p=3 | INFO: Tag[ app_begin ] --END-- [ RunTime:0.001251s ]
+[ 2012-07-25T11:48:29+08:00 ] /gowb/admin.php/Topwords?&p=3 | SQL: SHOW COLUMNS FROM `wb_data_top_url` [ RunTime:0.004173s ]
+[ 2012-07-25T11:48:29+08:00 ] /gowb/admin.php/Topwords?&p=3 | SQL: SELECT COUNT(*) AS tp_count FROM `wb_data_top_url` LIMIT 1   [ RunTime:0.000452s ]
+[ 2012-07-25T11:48:29+08:00 ] /gowb/admin.php/Topwords?&p=3 | SQL: SELECT * FROM `wb_data_top_url` ORDER BY id asc LIMIT 2,1   [ RunTime:0.000461s ]
+[ 2012-07-25T11:48:29+08:00 ] /gowb/admin.php/Topwords?&p=3 | INFO: Tag[ view_template ] --START--
+[ 2012-07-25T11:48:29+08:00 ] /gowb/admin.php/Topwords?&p=3 | INFO: Run LocationTemplate Behavior [ RunTime:0.001005s ]
+[ 2012-07-25T11:48:29+08:00 ] /gowb/admin.php/Topwords?&p=3 | INFO: Tag[ view_template ] --END-- [ RunTime:0.001196s ]
+[ 2012-07-25T11:48:29+08:00 ] /gowb/admin.php/Topwords?&p=3 | INFO: Tag[ view_parse ] --START--
+[ 2012-07-25T11:48:29+08:00 ] /gowb/admin.php/Topwords?&p=3 | INFO: Run ParseTemplate Behavior [ RunTime:0.024249s ]
+[ 2012-07-25T11:48:29+08:00 ] /gowb/admin.php/Topwords?&p=3 | INFO: Tag[ view_parse ] --END-- [ RunTime:0.024475s ]
+[ 2012-07-25T11:48:29+08:00 ] /gowb/admin.php/Topwords?&p=3 | INFO: Tag[ view_filter ] --START--
+[ 2012-07-25T11:48:29+08:00 ] /gowb/admin.php/Topwords?&p=3 | INFO: Run ContentReplace Behavior [ RunTime:0.001017s ]
+[ 2012-07-25T11:48:29+08:00 ] /gowb/admin.php/Topwords?&p=3 | INFO: Run TokenBuild Behavior [ RunTime:0.001123s ]
+[ 2012-07-25T11:48:29+08:00 ] /gowb/admin.php/Topwords?&p=3 | INFO: Run WriteHtmlCache Behavior [ RunTime:0.000810s ]
+[ 2012-07-25T11:48:29+08:00 ] /gowb/admin.php/Topwords?&p=3 | INFO: Run ShowRuntime Behavior [ RunTime:0.001134s ]
+[ 2012-07-25T11:48:29+08:00 ] /gowb/admin.php/Topwords?&p=3 | INFO: Tag[ view_filter ] --END-- [ RunTime:0.005632s ]
+[ 2012-07-25T11:48:29+08:00 ] /gowb/admin.php/Topwords?&p=3 | INFO: Tag[ view_end ] --START--
+[ 2012-07-25T11:48:29+08:00 ] /gowb/admin.php/Topwords?&p=3 | INFO: Run ShowPageTrace Behavior [ RunTime:0.002174s ]
+[ 2012-07-25T11:48:29+08:00 ] /gowb/admin.php/Topwords?&p=3 | INFO: Tag[ view_end ] --END-- [ RunTime:0.002399s ]
+[ 2012-07-25T11:48:30+08:00 ] /gowb/admin.php/Topwords?&p=4 | INFO: Tag[ route_check ] --START--
+[ 2012-07-25T11:48:30+08:00 ] /gowb/admin.php/Topwords?&p=4 | INFO: Run CheckRoute Behavior [ RunTime:0.001248s ]
+[ 2012-07-25T11:48:30+08:00 ] /gowb/admin.php/Topwords?&p=4 | INFO: Tag[ route_check ] --END-- [ RunTime:0.001470s ]
+[ 2012-07-25T11:48:30+08:00 ] /gowb/admin.php/Topwords?&p=4 | INFO: Tag[ app_begin ] --START--
+[ 2012-07-25T11:48:30+08:00 ] /gowb/admin.php/Topwords?&p=4 | INFO: Run ReadHtmlCache Behavior [ RunTime:0.000992s ]
+[ 2012-07-25T11:48:30+08:00 ] /gowb/admin.php/Topwords?&p=4 | INFO: Tag[ app_begin ] --END-- [ RunTime:0.001171s ]
+[ 2012-07-25T11:48:30+08:00 ] /gowb/admin.php/Topwords?&p=4 | SQL: SHOW COLUMNS FROM `wb_data_top_url` [ RunTime:0.006959s ]
+[ 2012-07-25T11:48:30+08:00 ] /gowb/admin.php/Topwords?&p=4 | SQL: SELECT COUNT(*) AS tp_count FROM `wb_data_top_url` LIMIT 1   [ RunTime:0.000471s ]
+[ 2012-07-25T11:48:30+08:00 ] /gowb/admin.php/Topwords?&p=4 | SQL: SELECT * FROM `wb_data_top_url` ORDER BY id asc LIMIT 3,1   [ RunTime:0.000305s ]
+[ 2012-07-25T11:48:30+08:00 ] /gowb/admin.php/Topwords?&p=4 | INFO: Tag[ view_template ] --START--
+[ 2012-07-25T11:48:30+08:00 ] /gowb/admin.php/Topwords?&p=4 | INFO: Run LocationTemplate Behavior [ RunTime:0.000950s ]
+[ 2012-07-25T11:48:30+08:00 ] /gowb/admin.php/Topwords?&p=4 | INFO: Tag[ view_template ] --END-- [ RunTime:0.001242s ]
+[ 2012-07-25T11:48:30+08:00 ] /gowb/admin.php/Topwords?&p=4 | INFO: Tag[ view_parse ] --START--
+[ 2012-07-25T11:48:30+08:00 ] /gowb/admin.php/Topwords?&p=4 | INFO: Run ParseTemplate Behavior [ RunTime:0.017992s ]
+[ 2012-07-25T11:48:30+08:00 ] /gowb/admin.php/Topwords?&p=4 | INFO: Tag[ view_parse ] --END-- [ RunTime:0.018204s ]
+[ 2012-07-25T11:48:30+08:00 ] /gowb/admin.php/Topwords?&p=4 | INFO: Tag[ view_filter ] --START--
+[ 2012-07-25T11:48:30+08:00 ] /gowb/admin.php/Topwords?&p=4 | INFO: Run ContentReplace Behavior [ RunTime:0.001039s ]
+[ 2012-07-25T11:48:30+08:00 ] /gowb/admin.php/Topwords?&p=4 | INFO: Run TokenBuild Behavior [ RunTime:0.004385s ]
+[ 2012-07-25T11:48:30+08:00 ] /gowb/admin.php/Topwords?&p=4 | INFO: Run WriteHtmlCache Behavior [ RunTime:0.000692s ]
+[ 2012-07-25T11:48:30+08:00 ] /gowb/admin.php/Topwords?&p=4 | INFO: Run ShowRuntime Behavior [ RunTime:0.001597s ]
+[ 2012-07-25T11:48:30+08:00 ] /gowb/admin.php/Topwords?&p=4 | INFO: Tag[ view_filter ] --END-- [ RunTime:0.008263s ]
+[ 2012-07-25T11:48:30+08:00 ] /gowb/admin.php/Topwords?&p=4 | INFO: Tag[ view_end ] --START--
+[ 2012-07-25T11:48:30+08:00 ] /gowb/admin.php/Topwords?&p=4 | INFO: Run ShowPageTrace Behavior [ RunTime:0.001065s ]
+[ 2012-07-25T11:48:30+08:00 ] /gowb/admin.php/Topwords?&p=4 | INFO: Tag[ view_end ] --END-- [ RunTime:0.001251s ]
+[ 2012-07-25T13:19:38+08:00 ] /gowb/admin.php/Topwords/add | INFO: Tag[ route_check ] --START--
+[ 2012-07-25T13:19:38+08:00 ] /gowb/admin.php/Topwords/add | INFO: Run CheckRoute Behavior [ RunTime:0.001435s ]
+[ 2012-07-25T13:19:38+08:00 ] /gowb/admin.php/Topwords/add | INFO: Tag[ route_check ] --END-- [ RunTime:0.001649s ]
+[ 2012-07-25T13:19:38+08:00 ] /gowb/admin.php/Topwords/add | INFO: Tag[ app_begin ] --START--
+[ 2012-07-25T13:19:38+08:00 ] /gowb/admin.php/Topwords/add | INFO: Run ReadHtmlCache Behavior [ RunTime:0.002170s ]
+[ 2012-07-25T13:19:38+08:00 ] /gowb/admin.php/Topwords/add | INFO: Tag[ app_begin ] --END-- [ RunTime:0.002389s ]
+[ 2012-07-25T13:19:58+08:00 ] /gowb/admin.php/Topwords/add | INFO: Tag[ route_check ] --START--
+[ 2012-07-25T13:19:58+08:00 ] /gowb/admin.php/Topwords/add | INFO: Run CheckRoute Behavior [ RunTime:0.001181s ]
+[ 2012-07-25T13:19:58+08:00 ] /gowb/admin.php/Topwords/add | INFO: Tag[ route_check ] --END-- [ RunTime:0.001397s ]
+[ 2012-07-25T13:19:58+08:00 ] /gowb/admin.php/Topwords/add | INFO: Tag[ app_begin ] --START--
+[ 2012-07-25T13:19:58+08:00 ] /gowb/admin.php/Topwords/add | INFO: Run ReadHtmlCache Behavior [ RunTime:0.000972s ]
+[ 2012-07-25T13:19:58+08:00 ] /gowb/admin.php/Topwords/add | INFO: Tag[ app_begin ] --END-- [ RunTime:0.001151s ]
+[ 2012-07-25T13:20:21+08:00 ] /gowb/admin.php/Topwords/add | INFO: Tag[ route_check ] --START--
+[ 2012-07-25T13:20:21+08:00 ] /gowb/admin.php/Topwords/add | INFO: Run CheckRoute Behavior [ RunTime:0.001370s ]
+[ 2012-07-25T13:20:21+08:00 ] /gowb/admin.php/Topwords/add | INFO: Tag[ route_check ] --END-- [ RunTime:0.001609s ]
+[ 2012-07-25T13:20:21+08:00 ] /gowb/admin.php/Topwords/add | INFO: Tag[ app_begin ] --START--
+[ 2012-07-25T13:20:21+08:00 ] /gowb/admin.php/Topwords/add | INFO: Run ReadHtmlCache Behavior [ RunTime:0.001007s ]
+[ 2012-07-25T13:20:21+08:00 ] /gowb/admin.php/Topwords/add | INFO: Tag[ app_begin ] --END-- [ RunTime:0.001183s ]
+[ 2012-07-25T13:20:21+08:00 ] /gowb/admin.php/Topwords/add | INFO: Tag[ view_template ] --START--
+[ 2012-07-25T13:20:21+08:00 ] /gowb/admin.php/Topwords/add | INFO: Run LocationTemplate Behavior [ RunTime:0.000999s ]
+[ 2012-07-25T13:20:21+08:00 ] /gowb/admin.php/Topwords/add | INFO: Tag[ view_template ] --END-- [ RunTime:0.003115s ]
+[ 2012-07-25T13:20:21+08:00 ] /gowb/admin.php/Topwords/add | INFO: Tag[ view_parse ] --START--
+[ 2012-07-25T13:20:21+08:00 ] /gowb/admin.php/Topwords/add | INFO: Run ParseTemplate Behavior [ RunTime:0.015470s ]
+[ 2012-07-25T13:20:21+08:00 ] /gowb/admin.php/Topwords/add | INFO: Tag[ view_parse ] --END-- [ RunTime:0.015673s ]
+[ 2012-07-25T13:20:21+08:00 ] /gowb/admin.php/Topwords/add | INFO: Tag[ view_filter ] --START--
+[ 2012-07-25T13:20:21+08:00 ] /gowb/admin.php/Topwords/add | INFO: Run ContentReplace Behavior [ RunTime:0.000893s ]
+[ 2012-07-25T13:20:21+08:00 ] /gowb/admin.php/Topwords/add | INFO: Run TokenBuild Behavior [ RunTime:0.000936s ]
+[ 2012-07-25T13:20:21+08:00 ] /gowb/admin.php/Topwords/add | INFO: Run WriteHtmlCache Behavior [ RunTime:0.000651s ]
+[ 2012-07-25T13:20:21+08:00 ] /gowb/admin.php/Topwords/add | INFO: Run ShowRuntime Behavior [ RunTime:0.001196s ]
+[ 2012-07-25T13:20:21+08:00 ] /gowb/admin.php/Topwords/add | INFO: Tag[ view_filter ] --END-- [ RunTime:0.004197s ]
+[ 2012-07-25T13:20:21+08:00 ] /gowb/admin.php/Topwords/add | INFO: Tag[ view_end ] --START--
+[ 2012-07-25T13:20:21+08:00 ] /gowb/admin.php/Topwords/add | INFO: Run ShowPageTrace Behavior [ RunTime:0.001078s ]
+[ 2012-07-25T13:20:21+08:00 ] /gowb/admin.php/Topwords/add | INFO: Tag[ view_end ] --END-- [ RunTime:0.001274s ]
+[ 2012-07-25T16:41:57+08:00 ] /gowb/admin.php/Topwords | INFO: Tag[ route_check ] --START--
+[ 2012-07-25T16:41:57+08:00 ] /gowb/admin.php/Topwords | INFO: Run CheckRoute Behavior [ RunTime:0.001829s ]
+[ 2012-07-25T16:41:57+08:00 ] /gowb/admin.php/Topwords | INFO: Tag[ route_check ] --END-- [ RunTime:0.002070s ]
+[ 2012-07-25T16:41:57+08:00 ] /gowb/admin.php/Topwords | INFO: Tag[ app_begin ] --START--
+[ 2012-07-25T16:41:57+08:00 ] /gowb/admin.php/Topwords | INFO: Run ReadHtmlCache Behavior [ RunTime:0.001544s ]
+[ 2012-07-25T16:41:57+08:00 ] /gowb/admin.php/Topwords | INFO: Tag[ app_begin ] --END-- [ RunTime:0.001734s ]
+[ 2012-07-25T16:41:57+08:00 ] /gowb/admin.php/Topwords | SQL: SHOW COLUMNS FROM `wb_data_top_url` [ RunTime:0.005992s ]
+[ 2012-07-25T16:41:57+08:00 ] /gowb/admin.php/Topwords | SQL: SELECT COUNT(*) AS tp_count FROM `wb_data_top_url` LIMIT 1   [ RunTime:0.000480s ]
+[ 2012-07-25T16:41:57+08:00 ] /gowb/admin.php/Topwords | SQL: SELECT * FROM `wb_data_top_url` ORDER BY id asc LIMIT 0,3   [ RunTime:0.000363s ]
+[ 2012-07-25T16:41:57+08:00 ] /gowb/admin.php/Topwords | INFO: Tag[ view_template ] --START--
+[ 2012-07-25T16:41:57+08:00 ] /gowb/admin.php/Topwords | INFO: Run LocationTemplate Behavior [ RunTime:0.001752s ]
+[ 2012-07-25T16:41:57+08:00 ] /gowb/admin.php/Topwords | INFO: Tag[ view_template ] --END-- [ RunTime:0.001946s ]
+[ 2012-07-25T16:41:57+08:00 ] /gowb/admin.php/Topwords | INFO: Tag[ view_parse ] --START--
+[ 2012-07-25T16:41:57+08:00 ] /gowb/admin.php/Topwords | INFO: Run ParseTemplate Behavior [ RunTime:0.024759s ]
+[ 2012-07-25T16:41:57+08:00 ] /gowb/admin.php/Topwords | INFO: Tag[ view_parse ] --END-- [ RunTime:0.024960s ]
+[ 2012-07-25T16:41:57+08:00 ] /gowb/admin.php/Topwords | INFO: Tag[ view_filter ] --START--
+[ 2012-07-25T16:41:57+08:00 ] /gowb/admin.php/Topwords | INFO: Run ContentReplace Behavior [ RunTime:0.000994s ]
+[ 2012-07-25T16:41:57+08:00 ] /gowb/admin.php/Topwords | INFO: Run TokenBuild Behavior [ RunTime:0.001028s ]
+[ 2012-07-25T16:41:57+08:00 ] /gowb/admin.php/Topwords | INFO: Run WriteHtmlCache Behavior [ RunTime:0.000593s ]
+[ 2012-07-25T16:41:57+08:00 ] /gowb/admin.php/Topwords | INFO: Run ShowRuntime Behavior [ RunTime:0.001101s ]
+[ 2012-07-25T16:41:57+08:00 ] /gowb/admin.php/Topwords | INFO: Tag[ view_filter ] --END-- [ RunTime:0.004234s ]
+[ 2012-07-25T16:41:57+08:00 ] /gowb/admin.php/Topwords | INFO: Tag[ view_end ] --START--
+[ 2012-07-25T16:41:57+08:00 ] /gowb/admin.php/Topwords | INFO: Run ShowPageTrace Behavior [ RunTime:0.000984s ]
+[ 2012-07-25T16:41:57+08:00 ] /gowb/admin.php/Topwords | INFO: Tag[ view_end ] --END-- [ RunTime:0.001162s ]
+[ 2012-07-25T16:42:29+08:00 ] /gowb/admin.php/Index | INFO: Tag[ route_check ] --START--
+[ 2012-07-25T16:42:29+08:00 ] /gowb/admin.php/Index | INFO: Run CheckRoute Behavior [ RunTime:0.001353s ]
+[ 2012-07-25T16:42:29+08:00 ] /gowb/admin.php/Index | INFO: Tag[ route_check ] --END-- [ RunTime:0.001573s ]
+[ 2012-07-25T16:42:29+08:00 ] /gowb/admin.php/Index | INFO: Tag[ app_begin ] --START--
+[ 2012-07-25T16:42:29+08:00 ] /gowb/admin.php/Index | INFO: Run ReadHtmlCache Behavior [ RunTime:0.001183s ]
+[ 2012-07-25T16:42:29+08:00 ] /gowb/admin.php/Index | INFO: Tag[ app_begin ] --END-- [ RunTime:0.001369s ]
+[ 2012-07-25T16:42:29+08:00 ] /gowb/admin.php/Index | INFO: Tag[ view_template ] --START--
+[ 2012-07-25T16:42:29+08:00 ] /gowb/admin.php/Index | INFO: Run LocationTemplate Behavior [ RunTime:0.001494s ]
+[ 2012-07-25T16:42:29+08:00 ] /gowb/admin.php/Index | INFO: Tag[ view_template ] --END-- [ RunTime:0.001712s ]
+[ 2012-07-25T16:42:29+08:00 ] /gowb/admin.php/Index | INFO: Tag[ view_parse ] --START--
+[ 2012-07-25T16:42:29+08:00 ] /gowb/admin.php/Index | INFO: Run ParseTemplate Behavior [ RunTime:0.027456s ]
+[ 2012-07-25T16:42:29+08:00 ] /gowb/admin.php/Index | INFO: Tag[ view_parse ] --END-- [ RunTime:0.027669s ]
+[ 2012-07-25T16:42:29+08:00 ] /gowb/admin.php/Index | INFO: Tag[ view_filter ] --START--
+[ 2012-07-25T16:42:29+08:00 ] /gowb/admin.php/Index | INFO: Run ContentReplace Behavior [ RunTime:0.000909s ]
+[ 2012-07-25T16:42:29+08:00 ] /gowb/admin.php/Index | INFO: Run TokenBuild Behavior [ RunTime:0.000964s ]
+[ 2012-07-25T16:42:29+08:00 ] /gowb/admin.php/Index | INFO: Run WriteHtmlCache Behavior [ RunTime:0.000542s ]
+[ 2012-07-25T16:42:29+08:00 ] /gowb/admin.php/Index | INFO: Run ShowRuntime Behavior [ RunTime:0.001163s ]
+[ 2012-07-25T16:42:29+08:00 ] /gowb/admin.php/Index | INFO: Tag[ view_filter ] --END-- [ RunTime:0.004104s ]
+[ 2012-07-25T16:42:29+08:00 ] /gowb/admin.php/Index | INFO: Tag[ view_end ] --START--
+[ 2012-07-25T16:42:29+08:00 ] /gowb/admin.php/Index | INFO: Run ShowPageTrace Behavior [ RunTime:0.001080s ]
+[ 2012-07-25T16:42:29+08:00 ] /gowb/admin.php/Index | INFO: Tag[ view_end ] --END-- [ RunTime:0.001309s ]
+[ 2012-07-25T16:42:30+08:00 ] /gowb/admin.php/Topwords | INFO: Tag[ route_check ] --START--
+[ 2012-07-25T16:42:30+08:00 ] /gowb/admin.php/Topwords | INFO: Run CheckRoute Behavior [ RunTime:0.001608s ]
+[ 2012-07-25T16:42:30+08:00 ] /gowb/admin.php/Topwords | INFO: Tag[ route_check ] --END-- [ RunTime:0.001840s ]
+[ 2012-07-25T16:42:30+08:00 ] /gowb/admin.php/Topwords | INFO: Tag[ app_begin ] --START--
+[ 2012-07-25T16:42:30+08:00 ] /gowb/admin.php/Topwords | INFO: Run ReadHtmlCache Behavior [ RunTime:0.001219s ]
+[ 2012-07-25T16:42:30+08:00 ] /gowb/admin.php/Topwords | INFO: Tag[ app_begin ] --END-- [ RunTime:0.001411s ]
+[ 2012-07-25T16:42:30+08:00 ] /gowb/admin.php/Topwords | SQL: SHOW COLUMNS FROM `wb_data_top_url` [ RunTime:0.006680s ]
+[ 2012-07-25T16:42:30+08:00 ] /gowb/admin.php/Topwords | SQL: SELECT COUNT(*) AS tp_count FROM `wb_data_top_url` LIMIT 1   [ RunTime:0.000546s ]
+[ 2012-07-25T16:42:30+08:00 ] /gowb/admin.php/Topwords | SQL: SELECT * FROM `wb_data_top_url` ORDER BY id asc LIMIT 0,3   [ RunTime:0.000384s ]
+[ 2012-07-25T16:42:30+08:00 ] /gowb/admin.php/Topwords | INFO: Tag[ view_template ] --START--
+[ 2012-07-25T16:42:30+08:00 ] /gowb/admin.php/Topwords | INFO: Run LocationTemplate Behavior [ RunTime:0.001475s ]
+[ 2012-07-25T16:42:30+08:00 ] /gowb/admin.php/Topwords | INFO: Tag[ view_template ] --END-- [ RunTime:0.001669s ]
+[ 2012-07-25T16:42:30+08:00 ] /gowb/admin.php/Topwords | INFO: Tag[ view_parse ] --START--
+[ 2012-07-25T16:42:30+08:00 ] /gowb/admin.php/Topwords | INFO: Run ParseTemplate Behavior [ RunTime:0.021120s ]
+[ 2012-07-25T16:42:30+08:00 ] /gowb/admin.php/Topwords | INFO: Tag[ view_parse ] --END-- [ RunTime:0.021322s ]
+[ 2012-07-25T16:42:30+08:00 ] /gowb/admin.php/Topwords | INFO: Tag[ view_filter ] --START--
+[ 2012-07-25T16:42:30+08:00 ] /gowb/admin.php/Topwords | INFO: Run ContentReplace Behavior [ RunTime:0.000976s ]
+[ 2012-07-25T16:42:30+08:00 ] /gowb/admin.php/Topwords | INFO: Run TokenBuild Behavior [ RunTime:0.001002s ]
+[ 2012-07-25T16:42:30+08:00 ] /gowb/admin.php/Topwords | INFO: Run WriteHtmlCache Behavior [ RunTime:0.000588s ]
+[ 2012-07-25T16:42:30+08:00 ] /gowb/admin.php/Topwords | INFO: Run ShowRuntime Behavior [ RunTime:0.001077s ]
+[ 2012-07-25T16:42:30+08:00 ] /gowb/admin.php/Topwords | INFO: Tag[ view_filter ] --END-- [ RunTime:0.004170s ]
+[ 2012-07-25T16:42:30+08:00 ] /gowb/admin.php/Topwords | INFO: Tag[ view_end ] --START--
+[ 2012-07-25T16:42:30+08:00 ] /gowb/admin.php/Topwords | INFO: Run ShowPageTrace Behavior [ RunTime:0.003099s ]
+[ 2012-07-25T16:42:30+08:00 ] /gowb/admin.php/Topwords | INFO: Tag[ view_end ] --END-- [ RunTime:0.003322s ]

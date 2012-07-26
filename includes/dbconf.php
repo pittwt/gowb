@@ -1,11 +1,10 @@
 <?php
-$dbConf=include './config.inc.php';
 
-$host = $dbConf['DB_HOST'];//mysql数据库服务器,比如localhost:3306
-$user = $dbConf['DB_USER']; 		//mysql数据库默认用户名
-$pwd = $dbConf['DB_PWD'];		//mysql数据库默认密码
-$db = $dbConf['DB_NAME']; 	//默认数据库名
-$db_prefix = $dbConf['DB_PREFIX']; //表前缀
+$host = "localhost:3306";//mysql数据库服务器,比如localhost:3306
+$user = "root"; 		//mysql数据库默认用户名
+$pwd = "root";		//mysql数据库默认密码
+$db = "wbdata"; 	//默认数据库名
+$db_prefix = "wb_"; //表前缀
 
 /*
  * 定义表

@@ -14,8 +14,9 @@ class Spider{
 	public $url = null;
 	public $content = null;
 	
-	function __construct($url){
-		$this->setUrl($url);
+	function __construct($url=NULL){
+		if(!is_null($url))
+			$this->setUrl($url);
 	}
 	
 	public function setUrl($url) {
@@ -23,9 +24,9 @@ class Spider{
 	}
 	
 	public function _rand() {
-		$length=26;		
+		$length=26;
 		$chars = "0123456789abcdefghijklmnopqrstuvwxyz";		
-		$max = strlen($chars) - 1;		
+		$max = strlen($chars) - 1;	
 		mt_srand((double)microtime() * 1000000);		
 		$string = '';
 		for($i = 0; $i < $length; $i++) {
@@ -39,14 +40,14 @@ class Spider{
 	 *	获取网页内容
 	 */
 	public function openUrl(){
-		$ch = curl_init();
+		/*$ch = curl_init();
 		curl_setopt ($ch,CURLOPT_URL,$this->url);
 		curl_setopt($ch,CURLOPT_RETURNTRANSFER,true);
 		curl_setopt($ch,CURLOPT_USERAGENT,"Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; SV1; .NET CLR 1.1.4322; .NET CLR 2.0.50727)");
 		curl_setopt($ch,CURLOPT_COOKIE,$this->_rand());
 		$res = curl_exec($ch);
-		curl_close ($ch);
-		return $res;
+		curl_close ($ch);*/
+		return file_get_contents($this->url);
 	}
 	
 	/*
@@ -111,18 +112,17 @@ class Spider{
 	 */
 	public function getSearchWeiboAll() {
 		
-		$page = $this->getSerachPagenum();
-		
-		$Alldata = array();
+		//$page = $this->getSerachPagenum();
+		//$Alldata = array();
 		//echo $page;exit;
-		for($i=1; $i<=$page; $i++) {
-			$url = $this->url.'&page='.$i;
+		//for($i=1; $i<=$page; $i++) {
+			//$url = $this->url.'&page='.$i;
 			//echo $url."<br>";
-			$content = $this->openUrl($url);
+			$content = $this->openUrl($this->url);
 			$content = $this->getSearchWeibo($this->getSweibo($content));
-			$Alldata = array_merge($Alldata, $content);
-		}
-		return $Alldata;
+			//$content = array_merge($Alldata, $content);
+		//}
+		return $content;
 	}
 	
 	/*
@@ -181,7 +181,7 @@ class Spider{
 		
 		$search = array(',', '+');
 		$replace = array('', '');
-		$number = $this->getData($content, '>找到', '条结果<');
+		$number = $this->getData($content, '>\u627e\u5230', '\u6761\u7ed3\u679c<');
 		//echo $this->url."**  $number<br>".$content;exit;
 		return str_replace($search, $replace, $number);
 	}

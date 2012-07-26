@@ -14,26 +14,24 @@ $db = new mysql($host, $user, $pwd, $db, '', 'UTF8');
 $crons = new Crons();
 
 //获取需要执行url
-$sql = "select * from `$t_data_top_url` where `status` = 1 order by id";
+$sql = "select * from `$t_data_top_url` where `phpfile` = '". basename(__FILE__) ."' and `status` = 1 order by id";
 $data = $db->findall($sql);
 $list = $crons->getRunlist($data, time());
 
-//echo date('Y-m-d H:i:s', $list[0]['nextrun'])."<br>";
-//echo date('Y-m-d H:i:s', $crons->nextRuntime($list[0]['week'], $list[0]['day'], $list[0]['hour'], $list[0]['minute'], $list[0]['nextrun']));
-//echo "<br>";
-//print_r($list);exit;
 
 //错误信息
 $error_info = '';
-//日志信息
-$log_info = '';
 
 if(!empty($list)) {
+	$spider = new Spider();
 	foreach($list as $item) {
+		//日志信息
+		$log_info = '';
+		
 		$url = $item['url'];
 		
 		//获取页面数据
-		$spider = new Spider($url);
+		$spider->setUrl($url);
 		$data = $spider->openUrl();
 		$data = $spider->getData($data, '<table cellspacing="0" cellpadding="0" class="box_Show_z box_zs">', '</table>');
 					
@@ -57,26 +55,27 @@ if(!empty($list)) {
 			);
 			$source_id = 0;
 			if($source_id = $db->insert($t_data_top_source, $source)){
-				$log_info .= $t_data_log.', ';
+				$log_info .= $t_data_top_source.', ';
 			}else{
-				echo '添加来源错误， ';
+				//echo '添加来源错误， ';
 				$error_info .= '添加来源错误， ';
 			}
 			
 			//添加采集数据
 			$items = array();
 			$num = 0;
+			$table = $db_prefix . $item['table'];
 			foreach($keyWords as $key=>$value){
 				$items['source_id'] = $source_id;
 				$items['key_words'] = $value;
 				$items['number'] = $number[$key];
 				$items['add_time'] = time();
-				if($db->insert($t_data_top_hourly,$items)){
+				if($db->insert($table,$items)){
 					$num++;
 				}
 			}
 			if($num>0){
-				$log_info .= $t_data_top_hourly . "($num)columns, ";
+				$log_info .= $table . "($num)columns, ";
 			}else{
 				echo '写入数据错误';
 				$error_info .= '写入数据错误， ';

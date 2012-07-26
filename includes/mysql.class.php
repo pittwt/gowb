@@ -210,7 +210,7 @@ class mysql {
     public function update($table, $update_items, $condition) {
 		$items = $this->get_update_item($update_items);
 		$sql = "UPDATE $table SET $items WHERE $condition";
-        echo $sql."<br>"; //exit();
+        //echo $sql."<br>"; //exit();
         if ($this->query($sql)) {
 			return true;
         } else {

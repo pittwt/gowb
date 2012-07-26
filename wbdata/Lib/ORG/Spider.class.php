@@ -39,14 +39,14 @@ class Spider{
 	 *	获取网页内容
 	 */
 	public function openUrl(){
-		$ch = curl_init();
+		/*$ch = curl_init();
 		curl_setopt ($ch,CURLOPT_URL,$this->url);
 		curl_setopt($ch,CURLOPT_RETURNTRANSFER,true);
 		curl_setopt($ch,CURLOPT_USERAGENT,"Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; SV1; .NET CLR 1.1.4322; .NET CLR 2.0.50727)");
 		curl_setopt($ch,CURLOPT_COOKIE,$this->_rand());
 		$res = curl_exec($ch);
-		curl_close ($ch);
-		return $res;
+		curl_close ($ch);*/
+		return file_get_contents($this->url);
 	}
 	
 	/*

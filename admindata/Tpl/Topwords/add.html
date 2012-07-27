@@ -2,15 +2,30 @@
 <div class="cbody b-box blank10">
 	<include file="Public:sidebar" />
 	<div class="b-area-w f_r" style="width:80%;float:right;">
+		<form>
 		<table>
-			<tr><td>add</td><td><input type="text" name=""></td></tr>
+			<tr><td>类型</td><td>
+				<select name="type">
+					<option value="0">定时</option>
+					<option value="1">实时</option>
+				</select>
+			</td></tr>
 			<tr><td>链接地址</td><td><input type="text" name=""></td></tr>
-			<tr><td>描述</td><td><input type="text" name=""></td></tr>
-			<tr><td>对应表</td><td><input type="text" name=""></td></tr>
-			<tr><td>状态</td><td><input type="text" name=""></td></tr>
-			<tr><td>操作</td><td><input type="text" name=""></td></tr>
+			<tr><td>对应表</td><td>data_top_<input type="text" name=""></td></tr>
+			<tr><td>状态</td><td>
+				<select name="status">
+					<option value="1">开启</option>
+					<option value="0">关闭</option>
+				</select>
+			</td></tr>
+			<tr><td>周</td><td><input type="text" name="" value="0">每次执行间隔时间 默认0</td></tr>
+			<tr><td>天</td><td><input type="text" name="" value="0">每次执行间隔时间 默认0</td></tr>
+			<tr><td>小时</td><td><input type="text" name="" value="0">每次执行间隔时间 默认0</td></tr>
+			<tr><td>分钟</td><td><input type="text" name="" value="15">每次执行间隔时间 默认15 不得小于15分钟</td></tr>
+			<tr><td>描述</td><td><textarea name="detail" cols="50" rows="3"></textarea></td></tr>
 			<tr><td colspan="2"><input type="submit" value="添加"></td></tr>
 		</table>
+		</form>
 	</div>
 	<div class="clear" style="clear:both;"></div>
 </div>

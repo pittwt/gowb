@@ -68,7 +68,7 @@ foreach($clist as $item) {
 		}
 	}
 }
-//print_r($insert_list);//exit;
+
 //写入搜索微博数据
 foreach ($insert_list as $value) {
 	$items = array(
@@ -89,10 +89,5 @@ foreach ($insert_list as $value) {
 exit;
 
 
-
-
-//print_r($spider->getSearchWeibo($content));
-//echo $content;
-//file_put_contents('zz.txt', $content);
 
 

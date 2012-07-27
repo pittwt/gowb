@@ -16,6 +16,7 @@ header
 	<li><a href="__APP__/Topwords">热词榜</a></li>
 </ul>
 	<div class="b-area-w f_r" style="width:80%;float:right;">
+	<a href="__URL__/add">添加</a>
 		<table style="border: 1px solid #888888;border-collapse: collapse; margin-top: 10px;">
 			<tr>
 				<td>Id</td>

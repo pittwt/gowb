@@ -1,5 +1,5 @@
 <?php
-class PublicAction extends Action{
+class PublicAction extends BaseAction{
 	//***************************************************************************
 	public function index(){
 		$this->redirect('Public/login');
@@ -15,53 +15,60 @@ class PublicAction extends Action{
     }
     
     
-//***************************************************************************   
 	//检查登录是否成功，成功则跳转到留言页面。失败返回到登录页面
     public function checkLogin(){
-    	if(empty($_POST['username'])){
-    		$this->error('用户名不能为空');
-    	} elseif(empty($_POST['password'])) {
-    		$this->error('密码不能为空');
-    	} elseif(empty($_POST['verify'])) {
-    		$this->error('验证码不能为空');
+    	if(empty($_REQUEST['username'])){
+    		$this->error['error'] = '1001';
+    	} elseif(empty($_REQUEST['password'])) {
+    		$this->error['error'] = '1002';
+    		/*$this->error('密码不能为空');*/
+    	} elseif(empty($_REQUEST['verify'])) {
+    		$this->error['error'] = '1003';
+    	}
+
+     	if($this->error['error']) {
+    		$this->err(($this->error));
     	}
     	
-    	/*echo $_SESSION['verify']."<br>";
-    	echo md5($_POST['verify'])."<br>";
-    	print_r($_POST);exit;*/
     	/**
     	 * 验证用户名 密码 验证码是否正确
     	 */
     	//1、获取用户输入的内容
-    	$username = $_POST['username'];
-    	$password = md5($_POST['password']);
-    	$verify   = md5($_POST['verify']);
+    	$username = $_REQUEST['username'];
+    	$password = md5($_REQUEST['password']);
+    	$verify   = md5($_REQUEST['verify']);
     	
     	if($verify != $_SESSION['verify']) {
-    		$this->error('验证码错误！');
+    		/*$this->error('验证码错误！');*/
+    		$this->error['error'] = '1004';
     	} else {
     		//2、实例化模型
 	    	$User=M('User');
 	    	$auth = $User->where("username='". $username ."' and password='". $password ."'")->select();
 	    
 	    	if(!empty($auth)){
-	    		//d当成功跳转默认成功也
+	    		//当成功跳转默认成功页
 	    		$_SESSION[C('USER_AUTH_KEY')]	=	$auth[0]['id'];
 	    		$_SESSION['email']				=	$auth[0]['email'];
            	 	$_SESSION['loginusername']		=	$auth[0]['username'];
-	    		
-	    		$this->assign("jumpUrl","__APP__/Index");
-	    		$this->success("登录成功");
+	    		//$this->assign("jumpUrl","__APP__/Index");
+	    		//登录成功
+	    		$this->error['error'] = '1';
+	    		$this->error['uid'] = $auth[0]['id'];
+				$this->error['username'] = $auth[0]['username'];
+				$this->error['email'] = $auth[0]['email'];
+				$this->error['lastlogin_time'] = $auth[0]['lastlogin_time'];
+	    		//$this->success("登录成功");
 	    	}else{
-	    		//失败跳转到失败也
-	    		$this->error("登录失败","__APP__/Public/login");
+	    		$this->error['error'] .= "1005";
+	    		//失败跳转到失败
+	    		//$this->error("登录失败","__APP__/Public/login");
 	    	}
     	}
-    
-    	
+    	$this->err($this->error);
     }
     
-// 用户登出
+	// 用户登出
     public function logout()
     {
         if(isset($_SESSION[C('USER_AUTH_KEY')])) {
@@ -76,11 +83,10 @@ class PublicAction extends Action{
     }
     
     
-//***************************************************************************
     //检查是否注册成功，成功跳转到登录页面，失败还在注册页面
     function add(){
     	/**
-    	 *验证是否注册成功的方法
+    	 * 验证是否注册成功的方法
     	 *
     	 */
     	if(md5($_POST['verify'])!=$_SESSION['verify']){
@@ -92,7 +98,6 @@ class PublicAction extends Action{
     		
     	if($user->create()){
     
-    		//session("qqname")
     		//执行插入操作，执行成功后，返回新插入的数据库的ID
     		if($user->add()){
     			$this->success("注册成功",login);
@@ -102,11 +107,9 @@ class PublicAction extends Action{
     	}else{
     		//把错误信息提示给用户看
     		$this->error($user->getError());
-
     	}
     
     }
-//***************************************************************************
     
     
     //生成图片验证码
@@ -114,11 +117,7 @@ class PublicAction extends Action{
     	$type	 =	 isset($_GET['type'])?$_GET['type']:'gif';
         import("@.ORG.Util.Image");
         Image::buildImageVerify(4,1,$type);
-    }
-//***************************************************************************
-    
-    
-  
+    }    
 
 	
 }

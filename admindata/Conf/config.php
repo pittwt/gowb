@@ -10,7 +10,7 @@ $Conf=array(
 	'USER_AUTH_KEY'     =>	'authId',	// 用户认证SESSION标记
 	'SESSION_AUTO_START'=>	true,
     'USER_AUTH_ON'      =>	true,
-		
+	'WB_SEARCH_URL'		=>  'http://s.weibo.com/weibo/'
 );
 return array_merge($dbConf,$Conf);
 

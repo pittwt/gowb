@@ -1,11 +1,27 @@
 <?php
 class BaseAction extends Action{
+	public $error = array('error'=>'','errmsg'=>'');
+	public $errmsg = array(
+		'0' => '添加失败',
+		'1001' => '用户名不能为空',
+		'1002' => '密码不能为空',
+		'1003' => '验证码不能为空',
+		'1004' => '验证码错误',
+		'1005' => '用户名或密码错误',
+		'1006' => '参数不完整',
+		'1007' => '没有列表内容',
+		'1008' => '参数格式不正确'
+	);
+	
+	
 	function _initialize(){
-		if(!isset($_SESSION[C('USER_AUTH_KEY')])){
-			//重定向
-			//echo C('USER_AUTH_GATEWAY');exit;
-			redirect(PHP_FILE .C('USER_AUTH_GATEWAY'));
-		}
+
+	}
+	
+	
+	public function err($data) {
+		echo json_encode($data);
+		exit;
 	}
 }
 ?>

@@ -10,6 +10,7 @@ define('APP_NAME','admindata');
 define('APP_PATH','./admindata/');
 
 define('APP_DEBUG', true);
+error_reporting(1);
 
 require THINK_PATH.'ThinkPHP.php';
 

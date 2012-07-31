@@ -1,15 +1,10 @@
 <?php
-class TopwordsAction extends CommonAction{
-	
-	function _initialize(){
-		import("ORG.Util.Page");
-		import("ORG.Util.Input");
-	}
+class SearchwordsAction extends CommonAction{
 
 	public function index(){
 		
 		$Model = M('DataTopUrl');
-		
+		import("ORG.Util.Page");
 		$count = $Model->count();
 		$p = new Page($count, 3);
 		$topWords = $Model->limit($p->firstRow .','. $p->listRows)->order('id asc')->select();
@@ -22,12 +17,11 @@ class TopwordsAction extends CommonAction{
     
     /**
      * 
-     * 添加热词任务
+     * 添加搜索任务
      */
     public function add() {
-    	
-    	$data['url'] = Input::getVar($_REQUEST['url']);
-    	$data['type'] = intval($_REQUEST['type']);
+    	import("ORG.Util.Input");
+    	$data['keywords'] = Input::getVar($_REQUEST['keywords']);
     	$data['detail'] = Input::getVar($_REQUEST['detail']);
     	$data['table'] = Input::getVar($_REQUEST['table']);
     	$data['status'] = intval($_REQUEST['status']);
@@ -36,19 +30,24 @@ class TopwordsAction extends CommonAction{
     	$data['hour'] = intval($_REQUEST['hour']);
     	$data['minute'] = intval($_REQUEST['minute']);
     	
+    	$data['type'] = 0;
+    	$data['url'] = C('WB_SEARCH_URL');
+    	if(!$data['week'] && !$data['day'] && !$data['hour'] && !$data['minute']) {
+    		$data['status'] = 0;
+    	}
+    	//最小间隔15分钟
     	if(!$data['week'] && !$data['day'] && !$data['hour']) {
 	    	//最小间隔5分钟
-	    	if($data['minute'] > 0 && $data['minute'] < 5) {
-	    		$data['minute'] = 5;
+	    	if($data['minute'] > 0 && $data['minute'] < 15) {
+	    		$data['minute'] = 15;
 	    	}
 	    	if($data['minute'] == 0) {
 	    		$data['status'] = 0;
 	    	}
     	}
     	
-    	
     	//
-    	if(!empty($data['url']) && !empty($data['table']) && !empty($data['detail'])) {
+    	if(!empty($data['keywords']) && !empty($data['table']) && !empty($data['detail'])) {
     		$top = M('DataTopUrl');
 	    	if($top->data($data)->add()){
 	    		$this->error['error'] = 1;
@@ -61,33 +60,6 @@ class TopwordsAction extends CommonAction{
     	}
     	
     	$this->err($this->error);
-    }
-    
-    public function editstatus() {
-    	if(isset($_REQUEST['id']) && isset($_REQUEST['status'])){
-    		$data['id'] = intval($_REQUEST['id']);
-    		$data['status'] = intval($_REQUEST['status']);
-    	} else {
-    		$this->error['error'] = '1006';
-    	}
-    	$this->err($this->error);
-    	
-    }
-    
-    public function insert() {
-    	echo $_POST['url'];
-    }
-    
-    public function update() {
-    	
-    }
-    
-    public function edit() {
-    	
-    }
-	
-    public function delete() {
-    	
     }
     
 

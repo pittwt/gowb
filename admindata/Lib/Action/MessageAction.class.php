@@ -1,5 +1,5 @@
 <?php
-class MessageAction extends BaseAction{
+class MessageAction extends CommonAction{
 
 	public function fabiao(){
 		

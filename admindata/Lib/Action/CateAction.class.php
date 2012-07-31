@@ -1,6 +1,6 @@
 <?php
 // 本类由系统自动生成，仅供测试用途
-class CateAction extends BaseAction {
+class CateAction extends CommonAction {
 
 	public function index(){
         //实例化自定义模型    M是实例化基础模型

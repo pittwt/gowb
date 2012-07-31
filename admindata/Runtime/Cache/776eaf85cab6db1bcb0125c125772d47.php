@@ -16,6 +16,7 @@ header
 	<li><a href="__APP__/Topwords">热词榜</a></li>
 </ul>
 	<div class="b-area-w f_r" style="width:80%;float:right;">
+		<form method="post" action="__URL__/insert">
 		<table>
 			<tr><td>类型</td><td>
 				<select name="type">
@@ -23,7 +24,7 @@ header
 					<option value="1">实时</option>
 				</select>
 			</td></tr>
-			<tr><td>链接地址</td><td><input type="text" name=""></td></tr>
+			<tr><td>链接地址</td><td><input type="text" name="url"></td></tr>
 			<tr><td>对应表</td><td>data_top_<input type="text" name=""></td></tr>
 			<tr><td>状态</td><td>
 				<select name="status">
@@ -38,6 +39,7 @@ header
 			<tr><td>描述</td><td><textarea name="detail" cols="50" rows="3"></textarea></td></tr>
 			<tr><td colspan="2"><input type="submit" value="添加"></td></tr>
 		</table>
+		</form>
 	</div>
 	<div class="clear" style="clear:both;"></div>
 </div>

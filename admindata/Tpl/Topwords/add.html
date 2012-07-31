@@ -2,7 +2,7 @@
 <div class="cbody b-box blank10">
 	<include file="Public:sidebar" />
 	<div class="b-area-w f_r" style="width:80%;float:right;">
-		<form>
+		<form method="post" action="__URL__/insert">
 		<table>
 			<tr><td>类型</td><td>
 				<select name="type">
@@ -10,7 +10,7 @@
 					<option value="1">实时</option>
 				</select>
 			</td></tr>
-			<tr><td>链接地址</td><td><input type="text" name=""></td></tr>
+			<tr><td>链接地址</td><td><input type="text" name="url"></td></tr>
 			<tr><td>对应表</td><td>data_top_<input type="text" name=""></td></tr>
 			<tr><td>状态</td><td>
 				<select name="status">

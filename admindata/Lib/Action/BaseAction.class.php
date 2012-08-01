@@ -3,6 +3,7 @@ class BaseAction extends Action{
 	public $error = array('error'=>'','errmsg'=>'');
 	public $errmsg = array(
 		'0' => '添加失败',
+		'1000' => '没有登录',
 		'1001' => '用户名不能为空',
 		'1002' => '密码不能为空',
 		'1003' => '验证码不能为空',
@@ -19,7 +20,7 @@ class BaseAction extends Action{
 	}
 	
 	
-	public function err($data) {
+	public function ajaxerr($data) {
 		echo json_encode($data);
 		exit;
 	}

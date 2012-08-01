@@ -27,7 +27,7 @@ class PublicAction extends BaseAction{
     	}
 
      	if($this->error['error']) {
-    		$this->err(($this->error));
+    		$this->ajaxerr(($this->error));
     	}
     	
     	/**
@@ -65,7 +65,7 @@ class PublicAction extends BaseAction{
 	    		//$this->error("登录失败","__APP__/Public/login");
 	    	}
     	}
-    	$this->err($this->error);
+    	$this->ajaxerr($this->error);
     }
     
 	// 用户登出

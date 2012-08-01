@@ -59,7 +59,7 @@ class SearchwordsAction extends CommonAction{
     		$this->error['error'] = '1006';
     	}
     	
-    	$this->err($this->error);
+    	$this->ajaxerr($this->error);
     }
     
 

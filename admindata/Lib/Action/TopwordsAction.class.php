@@ -8,8 +8,7 @@ class TopwordsAction extends CommonAction{
 
 	public function index(){
 		
-		$Model = M('DataTopUrl');
-		
+		$Model = M('DataTopUrl');		
 		$count = $Model->count();
 		$p = new Page($count, 3);
 		$topWords = $Model->limit($p->firstRow .','. $p->listRows)->order('id asc')->select();
@@ -46,7 +45,6 @@ class TopwordsAction extends CommonAction{
 	    	}
     	}
     	
-    	
     	//
     	if(!empty($data['url']) && !empty($data['table']) && !empty($data['detail'])) {
     		$top = M('DataTopUrl');
@@ -60,36 +58,65 @@ class TopwordsAction extends CommonAction{
     		$this->error['error'] = '1006';
     	}
     	
-    	$this->err($this->error);
+    	$this->ajaxerr($this->error);
     }
     
+    /**
+     * 
+     * 启动/暂定任务
+     */
     public function editstatus() {
     	if(isset($_REQUEST['id']) && isset($_REQUEST['status'])){
+    		$top = M('DataTopUrl');
     		$data['id'] = intval($_REQUEST['id']);
     		$data['status'] = intval($_REQUEST['status']);
+    		if($top->data($data)->save()) {
+    			$this->error['error'] = 1;
+    		} else {
+    			$this->error['error'] = 0;
+    		}
+    		
     	} else {
     		$this->error['error'] = '1006';
     	}
-    	$this->err($this->error);
+    	$this->ajaxerr($this->error);
     	
     }
     
-    public function insert() {
-    	echo $_POST['url'];
+    /**
+     * 
+     * 获取任务列表
+     */
+    public function tasklist() {
+    	$group = Input::getVar($_REQUEST['group']);
+    	if(!empty($group)) {
+    		$top = M('DataTopUrl');
+    		if($list = $top->where("groups = '". $group ."'")->select()) {
+    			$this->error['error'] = 1;
+    			$this->error['total'] = count($list);
+    			$data = array();
+    			foreach($list as $key=>$vlaue) {
+    				$data[$key]['detail'] = $vlaue['detail'];
+    				$data[$key]['status'] = $vlaue['status'];
+    				$data[$key]['lastrun'] = $vlaue['lastrun'];
+    				$data[$key]['nextrun'] = $vlaue['nextrun'];
+	    			if($group == 'key') {
+	    				$data[$key]['url'] = $vlaue['url'];
+	    			} else {
+	    				$data[$key]['keywords'] = $vlaue['keywords'];
+	    			}
+    			}
+    			
+    			$this->error['rows'] = $data;
+    		}
+    		//print_r($this->error);
+    	} else {
+    		$this->error['error'] = '1006'; 
+    	}
+    	$this->ajaxerr($this->error);
     }
     
-    public function update() {
-    	
-    }
-    
-    public function edit() {
-    	
-    }
-	
-    public function delete() {
-    	
-    }
-    
+   
 
 	
 }

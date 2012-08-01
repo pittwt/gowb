@@ -95,11 +95,11 @@ class TopwordsAction extends CommonAction{
     			$this->error['error'] = 1;
     			$this->error['total'] = count($list);
     			$data = array();
-    			foreach($list as $key=>$vlaue) {
-    				$data[$key]['detail'] = $vlaue['detail'];
-    				$data[$key]['status'] = $vlaue['status'];
-    				$data[$key]['lastrun'] = $vlaue['lastrun'];
-    				$data[$key]['nextrun'] = $vlaue['nextrun'];
+    			foreach($list as $key=>$value) {
+    				$data[$key]['detail'] = $value['detail'];
+    				$data[$key]['status'] = $value['status'];
+    				$data[$key]['lastrun'] = $this->gdtime($value['lastrun']);
+    				$data[$key]['nextrun'] = $this->gdtime($value['nextrun']);
 	    			if($group == 'key') {
 	    				$data[$key]['url'] = $vlaue['url'];
 	    			} else {
@@ -109,14 +109,38 @@ class TopwordsAction extends CommonAction{
     			
     			$this->error['rows'] = $data;
     		}
-    		//print_r($this->error);
     	} else {
     		$this->error['error'] = '1006'; 
     	}
     	$this->ajaxerr($this->error);
     }
     
-   
+    /**
+     * 
+     * 获取任务详情(搜索)
+     */
+	public function taskinfo() {
+		$taskid = intval($_REQUEST['taskid']);
+		if($taskid) {
+			$top = M('DataTopUrl');
+			$info = $top->where("id = ".$taskid ." and groups = 'search'")->select();
+			if(!empty($info[0])) {
+				$this->error['error'] = 1;
+				$this->error['detail'] = $info[0]['detail'];
+				$this->error['keywords'] = $info[0]['keywords'];
+				$this->error['table'] = $info[0]['table'];
+				$this->error['status'] = $info[0]['status'];
+				$this->error['lastrun'] = $this->gdtime($info[0]['lastrun']);
+				$this->error['nextrun'] = $this->gdtime($info[0]['nextrun']);
+			} else {
+				$this->error['error'] = '1008';
+			}
+		} else {
+			$this->error['error'] = '1006';
+		}
+		print_r($this->error);
+		$this->ajaxerr($this->error);
+	}
 
 	
 }

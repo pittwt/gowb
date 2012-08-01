@@ -11,7 +11,7 @@ class BaseAction extends Action{
 		'1005' => '用户名或密码错误',
 		'1006' => '参数不完整',
 		'1007' => '没有列表内容',
-		'1008' => '参数格式不正确'
+		'1008' => '参数不正确'
 	);
 	
 	
@@ -23,6 +23,14 @@ class BaseAction extends Action{
 	public function ajaxerr($data) {
 		echo json_encode($data);
 		exit;
+	}
+	
+	public function gdtime($time) {
+		
+		if(!empty($time)){
+			$time = date("Y-m-d H:i:s", $time);
+		}
+		return $time;
 	}
 }
 ?>

@@ -72,7 +72,7 @@ foreach($clist as $item) {
 //写入搜索微博数据
 foreach ($insert_list as $value) {
 	$items = array(
-		'username'	=> $value['username'],
+		'weibo_username'	=> $value['username'],
 		'weibo_content'	=> $value['weibo_content'],
 		'weibo_time'	=> $value['weibo_time'],
 		'forward_num'	=> $value['forward_num'],

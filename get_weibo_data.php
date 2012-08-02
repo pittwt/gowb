@@ -14,10 +14,9 @@ $db = new mysql($host, $user, $pwd, $db, '', 'UTF8');
 $crons = new Crons();
 
 //获取需要执行url
-$sql = "select * from `$t_data_top_url` where `phpfile` = '". basename(__FILE__) ."' and `status` = 1 order by id";
+$sql = "select * from `$t_data_top_url` where `groups` = 'key' and `status` = 1 order by id";
 $data = $db->findall($sql);
 $list = $crons->getRunlist($data, time());
-
 
 //错误信息
 $error_info = '';
@@ -33,7 +32,7 @@ if(!empty($list)) {
 		//获取页面数据
 		$spider->setUrl($url);
 		$data = $spider->openUrl();
-		$data = $spider->getData($data, '<table cellspacing="0" cellpadding="0" class="box_Show_z box_zs">', '</table>');
+		$data = $spider->getData($data, '<table cellspacing="0" cellpadding="0" class="box_Show_z box_zs"', '</table>');
 					
 		if($data){
 			$keyWords = $spider->getTextDataAll($data, '<span class=\"zw_topic\"><[^>]+>', '</[^>]+></span>');

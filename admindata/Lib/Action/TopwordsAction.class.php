@@ -7,11 +7,13 @@ class TopwordsAction extends CommonAction{
 	}
 
 	public function index(){
-		
+		$pageSize = isset($_REQUEST['pageSize']) ? intval($_REQUEST['pageSize']) : 2;
+		//$_GET['p'] = isset($_REQUEST['pageSize']) ? intval($_REQUEST['pageSize']) : 1;
 		$Model = M('DataTopUrl');		
 		$count = $Model->count();
-		$p = new Page($count, 3);
+		$p = new Page($count, $pageSize);
 		$topWords = $Model->limit($p->firstRow .','. $p->listRows)->order('id asc')->select();
+		print_r($topWords);
 		$page = $p->show();
 		$this->assign("page", $page);
 		$this->assign('topWords', $topWords);
@@ -65,7 +67,7 @@ class TopwordsAction extends CommonAction{
      * 
      * 启动/暂定任务
      */
-    public function editstatus() {
+    public function editStatus() {
     	if(isset($_REQUEST['id']) && isset($_REQUEST['status'])){
     		$top = M('DataTopUrl');
     		$data['id'] = intval($_REQUEST['id']);
@@ -87,7 +89,7 @@ class TopwordsAction extends CommonAction{
      * 
      * 获取任务列表
      */
-    public function tasklist() {
+    public function taskList() {
     	$group = Input::getVar($_REQUEST['group']);
     	if(!empty($group)) {
     		$top = M('DataTopUrl');
@@ -119,7 +121,7 @@ class TopwordsAction extends CommonAction{
      * 
      * 获取任务详情(搜索)
      */
-	public function taskinfo() {
+	public function taskInfo() {
 		$taskid = intval($_REQUEST['taskid']);
 		if($taskid) {
 			$top = M('DataTopUrl');

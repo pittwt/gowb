@@ -11,7 +11,7 @@ class DataAction extends CommonAction{
 	 * 
 	 * 添加标签
 	 */
-	public function addtag() {
+	public function addTag() {
 		$tag_name = Input::getVar($_REQUEST['tag_name']);
 		if(!empty($tag_name)) {
 			$data = array(
@@ -33,7 +33,7 @@ class DataAction extends CommonAction{
 	 * 
 	 * 获取标签列表
 	 */
-	public function taglist() {
+	public function tagList() {
 		$tag = M('Tags');
 		$list = $tag->select();
 		if(!empty($list)) {
@@ -59,7 +59,7 @@ class DataAction extends CommonAction{
 	 * 
 	 * 删除标签
 	 */
-	public function tagdelete() {
+	public function tagDelete() {
 		$tag_id = intval($_REQUEST['tag_id']);
 		if($tag_id) {
 			$tag = M('Tags');

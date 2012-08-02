@@ -32,5 +32,15 @@ class BaseAction extends Action{
 		}
 		return $time;
 	}
+	
+	Public function printr($array) {
+		echo "<pre>";
+		print_r($array);
+		echo "<pre>";
+	}
+	
+	
+	
+	
 }
 ?>

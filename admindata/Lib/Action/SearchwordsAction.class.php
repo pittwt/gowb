@@ -19,40 +19,22 @@ class SearchwordsAction extends CommonAction{
      * 
      * 添加搜索任务
      */
-    public function add() {
-    	import("ORG.Util.Input");
-    	$data['keywords'] = Input::getVar($_REQUEST['keywords']);
-    	$data['detail'] = Input::getVar($_REQUEST['detail']);
-    	$data['table'] = Input::getVar($_REQUEST['table']);
-    	$data['status'] = intval($_REQUEST['status']);
-    	$data['week'] = intval($_REQUEST['week']);
-    	$data['day'] = intval($_REQUEST['day']);
-    	$data['hour'] = intval($_REQUEST['hour']);
-    	$data['minute'] = intval($_REQUEST['minute']);
+    public function searchData() {
+    	$taskid = intval($_REQUEST['taskid']);
     	
-    	$data['type'] = 0;
-    	$data['url'] = C('WB_SEARCH_URL');
-    	if(!$data['week'] && !$data['day'] && !$data['hour'] && !$data['minute']) {
-    		$data['status'] = 0;
-    	}
-    	//最小间隔15分钟
-    	if(!$data['week'] && !$data['day'] && !$data['hour']) {
-	    	//最小间隔5分钟
-	    	if($data['minute'] > 0 && $data['minute'] < 15) {
-	    		$data['minute'] = 15;
-	    	}
-	    	if($data['minute'] == 0) {
-	    		$data['status'] = 0;
-	    	}
-    	}
-    	
-    	//
-    	if(!empty($data['keywords']) && !empty($data['table']) && !empty($data['detail'])) {
+    	if($taskid) {
     		$top = M('DataTopUrl');
-	    	if($top->data($data)->add()){
-	    		$this->error['error'] = 1;
+    		$rows = $top->where("id = $taskid and groups = 'search'")->select();
+    		//$this->printr($rows);
+	    	if(!empty($rows[0])) {
+	    		$sql = "select * from `".C('DB_PREFIX').$rows[0]['table']."`";
+	    		echo $sql;
+	    		$model = M();
+	    		$field = "weibo_username, weibo_content, weibo_time";
+	    		$list = $model->->field($field)->query($sql);
+	    		$this->printr($list);
 	    	} else {
-	    		$this->error['error'] = 0;
+	    		$this->error['error'] = '1008';
 	    	}
     	} else {
     		//参数不完整

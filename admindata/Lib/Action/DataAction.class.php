@@ -12,6 +12,7 @@ class DataAction extends CommonAction{
 	 * 添加标签
 	 */
 	public function addTag() {
+		import("ORG.Util.Input");
 		$tag_name = Input::getVar($_REQUEST['tag_name']);
 		if(!empty($tag_name)) {
 			$data = array(
@@ -34,6 +35,7 @@ class DataAction extends CommonAction{
 	 * 获取标签列表
 	 */
 	public function tagList() {
+		import("ORG.Util.Page");
 		$tag = M('Tags');
 		$list = $tag->select();
 		if(!empty($list)) {
@@ -72,5 +74,32 @@ class DataAction extends CommonAction{
 		$this->ajaxerr($this->error);
 	}
 	
+	/**
+	 * 
+	 * 查询热词有效数据列表
+	 */
+	public function dataTopList() {
+		import("ORG.Util.Page");
+		import("ORG.Util.Input");
+		$topwords = Input::getVar($_REQUEST['topwords']);
+		
+		
+	}
+	
+	/**
+	 * 
+	 * 添加搜索关键词标签
+	 */
+	public function addKeywordsTag() {
+		
+	}
 }
+
+
+
+
+
+
+
+
 ?>

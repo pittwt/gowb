@@ -16,12 +16,13 @@ class BaseAction extends Action{
 	
 	
 	function _initialize(){
-
+		
 	}
 	
 	
 	public function ajaxerr($data) {
-		echo json_encode($data);
+		echo "[".json_encode($data)."]";
+		//echo json_encode($data);
 		exit;
 	}
 	
@@ -36,7 +37,7 @@ class BaseAction extends Action{
 	Public function printr($array) {
 		echo "<pre>";
 		print_r($array);
-		echo "<pre>";
+		echo "</pre>";
 	}
 	
 	

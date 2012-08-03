@@ -1,6 +1,6 @@
 <?php
 class PublicAction extends BaseAction{
-	//***************************************************************************
+	
 	public function index(){
 		$this->redirect('Public/login');
     }
@@ -37,7 +37,7 @@ class PublicAction extends BaseAction{
     	$username = $_REQUEST['username'];
     	$password = md5($_REQUEST['password']);
     	$verify   = md5($_REQUEST['verify']);
-    	
+    	file_put_contents('a.txt', json_decode($_REQUEST));
     	if($verify != $_SESSION['verify']) {
     		/*$this->error('验证码错误！');*/
     		$this->error['error'] = '1004';

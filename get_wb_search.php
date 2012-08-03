@@ -68,7 +68,7 @@ foreach($clist as $item) {
 		}
 	}
 }
-
+//print_r($Alldata);exit;
 //写入搜索微博数据
 foreach ($insert_list as $value) {
 	$items = array(

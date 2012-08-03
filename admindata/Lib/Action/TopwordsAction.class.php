@@ -1,24 +1,20 @@
 <?php
 class TopwordsAction extends CommonAction{
 	
-	function _initialize(){
-		import("ORG.Util.Page");
-		import("ORG.Util.Input");
-	}
 
 	public function index(){
+		import("ORG.Util.Page");
+		import("ORG.Util.Input");
 		$pageSize = isset($_REQUEST['pageSize']) ? intval($_REQUEST['pageSize']) : 2;
 		//$_GET['p'] = isset($_REQUEST['pageSize']) ? intval($_REQUEST['pageSize']) : 1;
 		$Model = M('DataTopUrl');		
 		$count = $Model->count();
 		$p = new Page($count, $pageSize);
 		$topWords = $Model->limit($p->firstRow .','. $p->listRows)->order('id asc')->select();
-		print_r($topWords);
 		$page = $p->show();
 		$this->assign("page", $page);
 		$this->assign('topWords', $topWords);
 		$this->display("index");
-		
     }
     
     /**
@@ -26,7 +22,7 @@ class TopwordsAction extends CommonAction{
      * 添加热词任务
      */
     public function add() {
-    	
+    	import("ORG.Util.Input");
     	$data['url'] = Input::getVar($_REQUEST['url']);
     	$data['type'] = intval($_REQUEST['type']);
     	$data['detail'] = Input::getVar($_REQUEST['detail']);
@@ -90,6 +86,8 @@ class TopwordsAction extends CommonAction{
      * 获取任务列表
      */
     public function taskList() {
+    	import("ORG.Util.Page");
+    	import("ORG.Util.Input");
     	$group = Input::getVar($_REQUEST['group']);
     	if(!empty($group)) {
     		$top = M('DataTopUrl');
@@ -122,7 +120,7 @@ class TopwordsAction extends CommonAction{
      * 获取任务详情(搜索)
      */
 	public function taskInfo() {
-		$taskid = intval($_REQUEST['taskid']);
+		$taskid = intval($_REQUEST['task_id']);
 		if($taskid) {
 			$top = M('DataTopUrl');
 			$info = $top->where("id = ".$taskid ." and groups = 'search'")->select();
@@ -140,7 +138,6 @@ class TopwordsAction extends CommonAction{
 		} else {
 			$this->error['error'] = '1006';
 		}
-		print_r($this->error);
 		$this->ajaxerr($this->error);
 	}
 

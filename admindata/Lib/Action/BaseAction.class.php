@@ -15,11 +15,6 @@ class BaseAction extends Action{
 	);
 	
 	
-	function _initialize(){
-		
-	}
-	
-	
 	public function ajaxerr($data) {
 		echo "[".json_encode($data)."]";
 		//echo json_encode($data);

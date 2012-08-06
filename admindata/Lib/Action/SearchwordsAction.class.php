@@ -39,8 +39,9 @@ class SearchwordsAction extends CommonAction{
 				$page = $p->show();
 				if(!empty($list)) {
 					$this->error['error'] = 1;
+					$this->error['count'] = $count;
 					$this->error['total'] = count($list);
-					$this->error['p'] = isset($_REQUEST['p']) ? $_REQUEST['p'] : 10;
+					$this->error['p'] = isset($_REQUEST['p']) ? $_REQUEST['p'] : 1;
 					$this->error['pageSize'] = $pageSize;
 					$this->error['rows'] = $list;
 				} else {

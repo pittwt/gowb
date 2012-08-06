@@ -97,7 +97,6 @@ class SearchwordsAction extends CommonAction{
     		} else {
     			$this->error['error'] = '1008';
     		}
-    		$this->printr($list);
     		
     	} else {
     		//参数不完整

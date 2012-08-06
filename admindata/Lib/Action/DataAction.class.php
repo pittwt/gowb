@@ -72,6 +72,52 @@ class DataAction extends CommonAction{
 	
 	/**
 	 * 
+	 * 获取/查询关键词有效数据列表
+	 */
+	public function dataKeyList() {
+		$task_id = intval($_REQUEST['task_id']);
+    	$pageSize = isset($_REQUEST['rows']) ? $_REQUEST['rows'] : 30;
+    	
+    	if($task_id) {
+    		import("ORG.Util.Page");
+    		$top = M('DataTopUrl');
+    		$rows = $top->where("id = $task_id and groups = 'search'")->select();
+	    	if(!empty($rows[0])) {
+	    		$model = M();
+	    		$table = C('DB_PREFIX').$rows[0]['table'];
+	    		$count = $model->table($table)->count();
+	    		$p = new Page($count, $pageSize);
+	    		
+	    		$field = "keywords_id, weibo_username, weibo_content, weibo_time";
+	    		$list = $model->table($table)->field($field)->limit($p->firstRow .','. $p->listRows)->order("keywords_id desc")->select();
+				$page = $p->show();
+				if(!empty($list)) {
+					$this->error['error'] = 1;
+					$this->error['count'] = $count;
+					$this->error['total'] = count($list);
+					$this->error['p'] = isset($_REQUEST['p']) ? $_REQUEST['p'] : 1;
+					$this->error['pageSize'] = $pageSize;
+					$this->error['rows'] = $list;
+				} else {
+					$this->error['error'] = 0;
+				}
+				
+				//echo "<div>".$page."</div>";
+	    		//$this->printr($list);
+
+	    	} else {
+	    		$this->error['error'] = '1008';
+	    	}
+    	} else { 
+    		//参数不完整
+    		$this->error['error'] = '1006';
+    	}
+    	
+    	$this->ajaxerr($this->error);
+	}
+	
+	/**
+	 * 
 	 * 查询热词有效数据列表
 	 */
 	public function dataTopList() {
@@ -79,12 +125,63 @@ class DataAction extends CommonAction{
 		import("ORG.Util.Input");
 		$task_id = intval($_REQUEST['task_id']);
 		$topwords = Input::getVar($_REQUEST['topwords']);
+		$pageSize = isset($_REQUEST['rows']) ? intval($_REQUEST['rows']) : 30;
 		
-    	$top = M('DataTopUrl');
-    	$rows = $top->where("id = '". $task_id ."' and groups = 'key'")->select();
-    	$this->printr($rows);
-		$model = M();
-		
+    	
+		if($task_id) {
+			$top = M('DataTopUrl');
+	    	$rows = $top->where("id = '". $task_id ."' and groups = 'key'")->select();
+	    	//$this->printr($rows);
+			$model = M();
+			$table = C('DB_PREFIX').$rows[0]['table'];
+			
+			//获取单个热词所有次数
+			if($topwords) {
+				$data = $model->table($table)->where("key_words = '".$topwords."'")->order("add_time asc")->select();
+				//去除连续两次相同的值
+				$result = array();
+				$tmp = '';
+				foreach ($data as $value) {
+					if($tmp == $value['number']) {
+						continue;
+					}else {
+						$tmp = $value['number'];
+						$result[] = $value;
+					}
+				}
+				//print_r($result);
+				
+				if(!empty($data)) {
+					$this->error['error'] = 1;
+					$this->error['total'] = count($data);
+					$this->error['rows'] = $data;
+				} else {
+					$this->error['error'] = 0;
+				}
+				
+			} else {
+				//获取所有热词
+				$count = $model->table($table)->count();
+				$p = new Page($count, $pageSize);
+				$data = $model->table($table)->distinct(true)->field('key_words')->limit($p->firstRow .','. $p->listRows)->order("id desc")->select();
+				
+				if($data) {
+					$this->error['error'] = 1;
+					$this->error['total'] = count($data);
+					$this->error['count'] = $count;
+					$this->error['rows']  = $data;
+					$this->error['p'] = isset($_REQUEST['p']) ? $_REQUEST['p'] : 1;
+					$this->error['pageSize'] = $pageSize;
+				} else {
+					$this->error['error'] = 0;
+				}
+			}
+			
+		} else {
+			//参数不完整
+    		$this->error['error'] = '1006';
+		}
+		$this->ajaxerr($this->error);
 	}
 	
 	/**
@@ -223,8 +320,7 @@ class DataAction extends CommonAction{
 		
 	}
 	
-	
-	
+
 	
 }
 

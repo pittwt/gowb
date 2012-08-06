@@ -22,7 +22,7 @@ class SearchwordsAction extends CommonAction{
     public function searchData() {
     	
     	$task_id = intval($_REQUEST['task_id']);
-    	$pageSize = isset($_REQUEST['pageSize']) ? $_REQUEST['pageSize'] : 10;
+    	$pageSize = isset($_REQUEST['rows']) ? $_REQUEST['rows'] : 30;
     	
     	if($task_id) {
     		import("ORG.Util.Page");
@@ -36,12 +36,13 @@ class SearchwordsAction extends CommonAction{
 	    		
 	    		$field = "keywords_id, weibo_username, weibo_content, weibo_time";
 	    		$list = $model->table($table)->field($field)->limit($p->firstRow .','. $p->listRows)->order("keywords_id desc")->select();
-				$page = $p->show();
+				//$page = $p->show();
 				if(!empty($list)) {
 					$this->error['error'] = 1;
+					$this->error['count'] = $count;
 					$this->error['total'] = count($list);
-					$this->error['p'] = isset($_REQUEST['p']) ? $_REQUEST['p'] : 10;
-					$this->error['pageSize'] = $pageSize;
+					$this->error['p'] = isset($_REQUEST['p']) ? $_REQUEST['p'] : 1;
+					//$this->error['pageSize'] = $pageSize;
 					$this->error['rows'] = $list;
 				} else {
 					$this->error['error'] = 0;

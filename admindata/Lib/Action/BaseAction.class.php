@@ -1,6 +1,6 @@
 <?php
 class BaseAction extends Action{
-	public $error = array('error'=>'','errmsg'=>'');
+	public $error = array('error'=>''/*,'errmsg'=>''*/);
 	public $errmsg = array(
 		'0' => '添加失败',
 		'1000' => '没有登录',
@@ -15,14 +15,9 @@ class BaseAction extends Action{
 	);
 	
 	
-	function _initialize(){
-		
-	}
-	
-	
 	public function ajaxerr($data) {
-		echo "[".json_encode($data)."]";
-		//echo json_encode($data);
+		//echo "[".json_encode($data)."]";
+		echo json_encode($data);
 		exit;
 	}
 	

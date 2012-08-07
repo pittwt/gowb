@@ -126,7 +126,6 @@ class DataAction extends CommonAction{
 		$task_id = intval($_REQUEST['task_id']);
 		$topwords = Input::getVar($_REQUEST['topwords']);
 		$pageSize = isset($_REQUEST['rows']) ? intval($_REQUEST['rows']) : 30;
-		
     	
 		if($task_id) {
 			$top = M('DataTopUrl');
@@ -139,6 +138,7 @@ class DataAction extends CommonAction{
 			if($topwords) {
 				$data = $model->table($table)->where("key_words = '".$topwords."'")->order("add_time asc")->select();
 				//去除连续两次相同的值
+
 				$result = array();
 				$tmp = '';
 				foreach ($data as $value) {
@@ -149,22 +149,22 @@ class DataAction extends CommonAction{
 						$result[] = $value;
 					}
 				}
-				//print_r($result);
 				
 				if(!empty($data)) {
 					$this->error['error'] = 1;
-					$this->error['total'] = count($data);
-					$this->error['rows'] = $data;
+					$this->error['total'] = count($result);
+					$this->error['rows'] = $result;
 				} else {
 					$this->error['error'] = 0;
 				}
-				
+
 			} else {
 				//获取所有热词
 				$count = $model->table($table)->count();
 				$p = new Page($count, $pageSize);
 				$data = $model->table($table)->distinct(true)->field('key_words')->limit($p->firstRow .','. $p->listRows)->order("id desc")->select();
-				
+				//$page = $p->show();
+
 				if($data) {
 					$this->error['error'] = 1;
 					$this->error['total'] = count($data);
@@ -175,6 +175,8 @@ class DataAction extends CommonAction{
 				} else {
 					$this->error['error'] = 0;
 				}
+
+				//$this->printr($data);
 			}
 			
 		} else {

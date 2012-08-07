@@ -125,7 +125,11 @@ class DataAction extends CommonAction{
 		import("ORG.Util.Input");
 		$task_id = intval($_REQUEST['task_id']);
 		$topwords = Input::getVar($_REQUEST['topwords']);
+<<<<<<< HEAD
 		$pageSize = isset($_REQUEST['rows']) ? intval($_REQUEST['rows']) : 30;
+=======
+		$pageSize = isset($_REQUEST['pageSize']) ? intval($_REQUEST['pageSize']) : 30;
+>>>>>>> 7778f202d148ca3cbd5b864155ad5ff622115288
 		
     	
 		if($task_id) {
@@ -139,6 +143,7 @@ class DataAction extends CommonAction{
 			if($topwords) {
 				$data = $model->table($table)->where("key_words = '".$topwords."'")->order("add_time asc")->select();
 				//去除连续两次相同的值
+<<<<<<< HEAD
 				$result = array();
 				$tmp = '';
 				foreach ($data as $value) {
@@ -150,6 +155,9 @@ class DataAction extends CommonAction{
 					}
 				}
 				//print_r($result);
+=======
+				
+>>>>>>> 7778f202d148ca3cbd5b864155ad5ff622115288
 				
 				if(!empty($data)) {
 					$this->error['error'] = 1;
@@ -158,13 +166,21 @@ class DataAction extends CommonAction{
 				} else {
 					$this->error['error'] = 0;
 				}
+<<<<<<< HEAD
 				
+=======
+				$this->printr($data);
+>>>>>>> 7778f202d148ca3cbd5b864155ad5ff622115288
 			} else {
 				//获取所有热词
 				$count = $model->table($table)->count();
 				$p = new Page($count, $pageSize);
 				$data = $model->table($table)->distinct(true)->field('key_words')->limit($p->firstRow .','. $p->listRows)->order("id desc")->select();
+<<<<<<< HEAD
 				
+=======
+				//$page = $p->show();
+>>>>>>> 7778f202d148ca3cbd5b864155ad5ff622115288
 				if($data) {
 					$this->error['error'] = 1;
 					$this->error['total'] = count($data);
@@ -175,7 +191,13 @@ class DataAction extends CommonAction{
 				} else {
 					$this->error['error'] = 0;
 				}
+<<<<<<< HEAD
 			}
+=======
+				//$this->printr($data);
+			}
+
+>>>>>>> 7778f202d148ca3cbd5b864155ad5ff622115288
 			
 		} else {
 			//参数不完整

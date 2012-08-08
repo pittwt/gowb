@@ -175,8 +175,6 @@ class DataAction extends CommonAction{
 				} else {
 					$this->error['error'] = 0;
 				}
-
-				//$this->printr($data);
 			}
 			
 		} else {

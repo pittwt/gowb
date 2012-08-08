@@ -32,6 +32,7 @@ class TopwordsAction extends CommonAction{
     	$data['day'] = intval($_REQUEST['day']);
     	$data['hour'] = intval($_REQUEST['hour']);
     	$data['minute'] = intval($_REQUEST['minute']);
+    	$data['groups'] = 'key';
     	
     	if(!$data['week'] && !$data['day'] && !$data['hour']) {
 	    	//最小间隔5分钟
@@ -96,6 +97,7 @@ class TopwordsAction extends CommonAction{
     			$this->error['total'] = count($list);
     			$data = array();
     			foreach($list as $key=>$value) {
+    				$data[$key]['task_id'] = $value['id'];
     				$data[$key]['detail'] = $value['detail'];
     				$data[$key]['status'] = $value['status'];
     				$data[$key]['lastrun'] = $this->gdtime($value['lastrun']);
@@ -141,6 +143,35 @@ class TopwordsAction extends CommonAction{
 		$this->ajaxerr($this->error);
 	}
 
-	
+	/**
+     * 
+     * 获取任务详情(搜索)
+     */
+	public function taskEdit() {
+		import("ORG.Util.Input");
+		$data['id'] = intval($_REQUEST['task_id']);
+		$data['url'] = isset($_REQUEST['url']) ? Input::getVar($_REQUEST['url']) : C('WB_SEARCH_URL') ;
+		$data['keywords'] = Input::getVar($_REQUEST['url']);
+    	$data['type'] = intval($_REQUEST['type']);
+    	$data['detail'] = Input::getVar($_REQUEST['detail']);
+    	$data['table'] = Input::getVar($_REQUEST['table']);
+    	$data['status'] = intval($_REQUEST['status']);
+    	$data['week'] = intval($_REQUEST['week']);
+    	$data['day'] = intval($_REQUEST['day']);
+    	$data['hour'] = intval($_REQUEST['hour']);
+    	$data['minute'] = intval($_REQUEST['minute']);
+		
+		if($_REQUEST['task_id']) {
+			$top = M('DataTopUrl');
+    		if($top->data($data)->save()) {
+    			$this->error['error'] = 1;
+    		} else {
+    			$this->error['error'] = 0;
+    		}
+		} else {
+			$this->error['error'] = '1006';
+		}
+		$this->ajaxerr($this->error);
+	}	
 }
 ?>

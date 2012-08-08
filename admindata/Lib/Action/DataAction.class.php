@@ -317,7 +317,13 @@ class DataAction extends CommonAction{
 	 * 查询热词统计数据（上升最快等）
 	 */
 	public function topwordsRank() {
-		
+		$time = time();
+		$datetime = date("Y-m-d H:00:00", $time);
+		echo $time."<br>";
+		echo $datetime."<br>";
+		$day = strtotime($datetime);
+		echo $day."<br>";
+		echo date("Y-m-d H:i:s", $day+60*60-1);
 	}
 	
 

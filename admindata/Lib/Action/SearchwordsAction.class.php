@@ -106,6 +106,48 @@ class SearchwordsAction extends CommonAction{
     	
     	$this->ajaxerr($this->error);
     }
-
+	
+/**
+     * 
+     * 添加搜索任务
+     */
+    public function add() {
+    	import("ORG.Util.Input");
+    	$data['url'] = C('WB_SEARCH_URL');
+    	$data['keywords'] = Input::getVar($_REQUEST['keywords']);
+    	$data['detail'] = Input::getVar($_REQUEST['detail']);
+    	$data['table'] = Input::getVar($_REQUEST['table']);
+    	$data['status'] = intval($_REQUEST['status']);
+    	$data['week'] = intval($_REQUEST['week']);
+    	$data['day'] = intval($_REQUEST['day']);
+    	$data['hour'] = intval($_REQUEST['hour']);
+    	$data['minute'] = intval($_REQUEST['minute']);
+    	$data['groups'] = 'search';
+    	
+    	if(!$data['week'] && !$data['day'] && !$data['hour']) {
+	    	//最小间隔15分钟
+	    	if($data['minute'] > 0 && $data['minute'] < 15) {
+	    		$data['minute'] = 15;
+	    	}
+	    	if($data['minute'] == 0) {
+	    		$data['status'] = 0;
+	    	}
+    	}
+    	
+    	//
+    	if(!empty($data['url']) && !empty($data['table']) && !empty($data['detail'])) {
+    		$top = M('DataTopUrl');
+	    	if($top->data($data)->add()){
+	    		$this->error['error'] = 1;
+	    	} else {
+	    		$this->error['error'] = 0;
+	    	}
+    	} else {
+    		//参数不完整
+    		$this->error['error'] = '1006';
+    	}
+    	
+    	$this->ajaxerr($this->error);
+    }
 }
 ?>

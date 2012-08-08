@@ -18,6 +18,7 @@ $t_error_log = $db_prefix . "error_data_log";
 $t_search_keywords = $db_prefix . "search_keywords";
 $t_search_keywords_url = $db_prefix . "search_keywords_url";
 $t_search_keywords_wanhao = $db_prefix . "search_keywords_wanhao";
+$t_topwords_statistic = $db_prefix . "topwords_statistic";
 
 date_default_timezone_set('Asia/Shanghai');
 

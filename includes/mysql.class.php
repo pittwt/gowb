@@ -153,9 +153,11 @@ class mysql {
     }
 	
 	//获取一条
-    public function findone($table) {
-        $row = $this->query("SELECT * FROM $table limit 1");
-		return $this->fetch_array($row);
+    public function findone($sql) {
+        $rs=array();
+        $result = $this->query($sql);
+		$row=mysql_fetch_array($result);
+		return $row;
     }
  
     //简化查询select

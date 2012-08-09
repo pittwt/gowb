@@ -323,7 +323,7 @@ class DataAction extends CommonAction{
 		echo $datetime."<br>";
 		$day = strtotime($datetime);
 		echo $day."<br>";
-		echo date("Y-m-d H:i:s", $day+60*60-1);
+		echo date("Y-m-d H:i:s", '1344419703');
 	}
 	
 

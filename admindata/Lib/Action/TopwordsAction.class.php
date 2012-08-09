@@ -103,9 +103,10 @@ class TopwordsAction extends CommonAction{
     				$data[$key]['lastrun'] = $this->gdtime($value['lastrun']);
     				$data[$key]['nextrun'] = $this->gdtime($value['nextrun']);
 	    			if($group == 'key') {
-	    				$data[$key]['url'] = $vlaue['url'];
+	    				$data[$key]['url'] = $value['url'];
+	    				$data[$key]['type'] = $value['type'];
 	    			} else {
-	    				$data[$key]['keywords'] = $vlaue['keywords'];
+	    				$data[$key]['keywords'] = $value['keywords'];
 	    			}
     			}
     			
@@ -122,18 +123,30 @@ class TopwordsAction extends CommonAction{
      * 获取任务详情(搜索)
      */
 	public function taskInfo() {
+		import("ORG.Util.Input");
 		$taskid = intval($_REQUEST['task_id']);
+		//$group = Input::getVar($_REQUEST['group']);
+		
 		if($taskid) {
 			$top = M('DataTopUrl');
-			$info = $top->where("id = ".$taskid ." and groups = 'search'")->select();
+			$info = $top->where("id = ".$taskid /*." and groups = '". $group ."'"*/)->select();
 			if(!empty($info[0])) {
 				$this->error['error'] = 1;
 				$this->error['detail'] = $info[0]['detail'];
-				$this->error['keywords'] = $info[0]['keywords'];
 				$this->error['table'] = $info[0]['table'];
 				$this->error['status'] = $info[0]['status'];
-				$this->error['lastrun'] = $this->gdtime($info[0]['lastrun']);
-				$this->error['nextrun'] = $this->gdtime($info[0]['nextrun']);
+				$this->error['week'] = $info[0]['week'];
+				$this->error['day'] = $info[0]['day'];
+				$this->error['hour'] = $info[0]['hour'];
+				$this->error['minute'] = $info[0]['minute'];
+				
+				if($info[0]['groups'] == 'key') {
+					$this->error['url'] = $info[0]['url'];
+					$this->error['type'] = $info[0]['type'];
+				}
+				if($info[0]['groups'] == 'search') {
+					$this->error['keywords'] = $info[0]['keywords'];
+				}	
 			} else {
 				$this->error['error'] = '1008';
 			}
@@ -145,14 +158,20 @@ class TopwordsAction extends CommonAction{
 
 	/**
      * 
-     * 获取任务详情(搜索)
+     * 修改任务
      */
 	public function taskEdit() {
 		import("ORG.Util.Input");
 		$data['id'] = intval($_REQUEST['task_id']);
-		$data['url'] = isset($_REQUEST['url']) ? Input::getVar($_REQUEST['url']) : C('WB_SEARCH_URL') ;
-		$data['keywords'] = Input::getVar($_REQUEST['url']);
-    	$data['type'] = intval($_REQUEST['type']);
+		$data['groups'] = Input::getVar($_REQUEST['group']);
+		if($data['groups'] == 'key') {
+			$data['type'] = intval($_REQUEST['type']);
+			$data['url'] = Input::getVar($_REQUEST['url']);
+		}
+		if($data['groups'] == 'search') {
+			$data['keywords'] = Input::getVar($_REQUEST['url']);
+		}
+		
     	$data['detail'] = Input::getVar($_REQUEST['detail']);
     	$data['table'] = Input::getVar($_REQUEST['table']);
     	$data['status'] = intval($_REQUEST['status']);

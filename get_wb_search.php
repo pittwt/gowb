@@ -20,17 +20,18 @@ $slist = $db->findall($sql);
 
 $spider = new Spider();
 if(!empty($slist)) {
-	
 	foreach($slist as $list) {
 		//新浪微博搜索链接 
 		$url = $list['url'].urlencode(urlencode($list['keywords']));
 		$spider->setUrl($url);
 		//搜索结果页数
 		$pages = intval($spider->getSerachPagenum());
-
+		
+		//$insert = array();
 		for($i=1; $i<=$pages; $i++) {
 			$items = array(
 				'search_url' => $url."&page=".$i,
+				'task_id' => $list['id'],
 				'table'	=> $list['table'],
 				'add_time' => time(),
 				'status' => 0
@@ -50,43 +51,85 @@ if(!empty($slist)) {
 	}
 }
 
-//获取50条搜索地址
-$sql = "SELECT * FROM `$t_search_keywords_url` WHERE status = 0 ORDER BY add_time ASC, id ASC LIMIT 0, 2";
+//获取20条搜索地址
+$sql = "SELECT * FROM `$t_search_keywords_url` WHERE status = 0 ORDER BY add_time ASC, id ASC LIMIT 0, 20";
 $clist = $db->findall($sql);
 
 $insert_list = array();
+$num_list = array();
 foreach($clist as $item) {
 	$spider->setUrl($item['search_url']);
 	$Alldata = $spider->getSearchWeiboAll();
 	//查看获取的微博数据是否已存在
 	foreach ($Alldata as $value) {
-		$sql = "SELECT * FROM `". $db_prefix . $item['table'] ."` WHERE username = '". $value['username'] ."' AND weibo_time = ".$value['weibo_time'];
+		$sql = "SELECT * FROM `". $db_prefix . $item['table'] ."` WHERE weibo_username = '". $value['username'] ."' AND weibo_time = ".$value['weibo_time'];
 		$row = $db->findall($sql);
+		echo $sql."<be>";
 		if(empty($row)) {
 			$value['table'] = $db_prefix . $item['table'];
 			$insert_list[] = $value;
+		} else {
+			//更新评论数 转发数
+			$value['keywords_id'] = $row[0]['keywords_id'];
+			$value['table'] = $db_prefix . $item['table'];
+			$num_list[] = $value;
 		}
 	}
 }
 
+/*print_r($insert_list);
+print_r($num_list);
+exit;*/
+
 //写入搜索微博数据
-foreach ($insert_list as $value) {
-	$items = array(
-		'weibo_username'	=> $value['username'],
-		'weibo_content'	=> $value['weibo_content'],
-		'weibo_time'	=> $value['weibo_time'],
-		'forward_num'	=> $value['forward_num'],
-		'comment_num'	=> $value['comment_num'],
-		'weibo_thumbimg'	=> $value['weibo_thumbimg'],
-		'weibo_middleimg'	=> $value['weibo_middleimg'],
-		'weibo_largeimg'	=> $value['weibo_largeimg'],
-	);
-	if($id = $db->insert($value['table'],$items))
-		echo $id."<br>";
+if(!empty($insert_list)) {
+	foreach ($insert_list as $value) {
+		$items = array(
+			'weibo_username'	=> $value['username'],
+			'weibo_content'		=> $value['weibo_content'],
+			'weibo_time'		=> $value['weibo_time'],
+			'weibo_thumbimg'	=> $value['weibo_thumbimg'],
+			'weibo_middleimg'	=> $value['weibo_middleimg'],
+			'weibo_largeimg'	=> $value['weibo_largeimg'],
+		);
+		$id = $db->insert($value['table'], $items);
+		//if($id = $db->insert($value['table'], $items))
+		//	echo $id."<br>";
+		//评论数 转发数
+		if($id) {
+			$num  = array(
+				'keywords_id'	=> $id,
+				'forward_num'	=> $value['forward_num'],
+				'comment_num'	=> $value['comment_num'],
+				'update_time'	=> date("Y-m-d H:i:s", time())
+			);
+			$db->insert($value['table']."_num", $num);
+		}
+	}
+}
+
+//已经存在的数据 更新评论数 转发数
+if(!empty($num_list)) {
+	foreach ($num_list as $value) {
+		$num  = array(
+			'keywords_id'	=> $value['keywords_id'],
+			'forward_num'	=> $value['forward_num'],
+			'comment_num'	=> $value['comment_num'],
+			'update_time'	=> date("Y-m-d H:i:s", time())
+		);
+		if($db->insert($value['table']."_num", $num))
+			echo "更新num成功<br>";
+	}
 }
 
 
-exit;
+//print_r($clist);
+//更新搜索地址状态
+$time = date("Y-m-d H:i:s", time());
+foreach ($clist as $value) {
+	$sql = "update `$t_search_keywords_url` set run_time = '". $time ."', status = 1 where id = ". $value['id'];
+	$db->query($sql);
+}
 
 
 

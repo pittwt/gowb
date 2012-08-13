@@ -55,6 +55,55 @@ class DataAction extends CommonAction{
 	
 	/**
 	 * 
+	 * 修改标签
+	 */
+	public function tagEdit() {
+		import("ORG.Util.Input");
+		$tag_id = intval($_REQUEST['tag_id']);
+		$tag_name = Input::getVar($_REQUEST['tag_name']);
+
+		if($tag_id) {
+			$tag = M('Tags');
+			$data = array(
+				'tag_id' => $tag_id,
+				'tag_name' => $tag_name
+			);
+    		if($tag->data($data)->save()) {
+    			$this->error['error'] = 1;
+    		} else {
+    			$this->error['error'] = 0;
+    		}
+		} else {
+			$this->error['error'] = '1006';
+		}
+		$this->ajaxerr($this->error);
+	}
+	
+	/**
+	 * 
+	 * 获取标签详情
+	 */
+	public function tagInfo() {
+		echo date('Y-m-d H:i:s',1343360023);
+		$tag_id = intval($_REQUEST['tag_id']);
+		if($tag_id) {
+			$tag = M('Tags');
+			$info = $tag->where("tag_id = $tag_id")->select();
+			if(!empty($info)){
+				$this->error['error'] = 1;
+				$this->error['tag_id'] = $info[0]['tag_id'];
+				$this->error['tag_name'] = $info[0]['tag_name'];
+			} else {
+				$this->error['error'] = 0;
+			}
+		} else {
+			$this->error['error'] = '1006';
+		}
+		$this->ajaxerr($this->error);
+	}
+	
+	/**
+	 * 
 	 * 删除标签
 	 */
 	public function tagDelete() {
@@ -138,7 +187,6 @@ class DataAction extends CommonAction{
 			if($topwords) {
 				$data = $model->table($table)->where("key_words = '".$topwords."'")->order("add_time asc")->select();
 				//去除连续两次相同的值
-
 				$result = array();
 				$tmp = '';
 				foreach ($data as $value) {

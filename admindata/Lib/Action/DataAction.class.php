@@ -36,6 +36,8 @@ class DataAction extends CommonAction{
 	 */
 	public function tagList() {
 		import("ORG.Util.Page");
+		import("ORG.Util.Input");
+		$way = Input::getVar($_REQUEST['way']);
 		$tag = M('Tags');
 		$list = $tag->select();
 		if(!empty($list)) {
@@ -47,7 +49,10 @@ class DataAction extends CommonAction{
 			}*/
 			$this->error['total'] = count($list);
 			$this->error['rows'] = $list;
-			//print_r($list);
+			//生成下拉菜单
+    		if($way == "select"){
+    			$this->error = $list;
+    		}
 		}
 		
 		$this->ajaxerr($this->error);
@@ -279,32 +284,46 @@ class DataAction extends CommonAction{
 	public function keywordsCount() {
 		import("ORG.Util.Input");
 		$task_id = intval($_REQUEST['task_id']);
-		$tag_id = intval($_REQUEST['tag_id']);
 		$start_time = Input::getVar($_REQUEST['start_time']);
 		$end_time = Input::getVar($_REQUEST['end_time']);
-
+/*echo strtotime('10/8/2012 02:03:56')."<br>";
+echo date("Y-m-d H:i:s",1349633036)."<br>";
+echo $start_time."<br>";
+echo strtotime($start_time)."<br>";
+echo date("Y-m-d H:i:s", $start_time)."<br>";
+echo date("Y-m-d H:i:s", $end_time)."<br>";*/
 		if($task_id) {
 			import("ORG.Util.Page");
     		$top = M('DataTopUrl');
     		$rows = $top->where("id = ".$task_id." and groups = 'search'")->select();
     		
 			$where = '1=1';
-			if($tag_id) {
+			/*if($tag_id) {
 				$where .= " and tag_id like '%". $tag_id .",%'";
+			}*/
+			if($start_time) {
+				$where .= ' and weibo_time > '.strtotime($start_time);
 			}
 			if($start_time) {
-				$where .= ' and add_time > '.strtotime($start_time);
-			}
-			if($start_time) {
-				$where .= ' and add_time < '.strtotime($end_time);
+				$where .= ' and weibo_time < '.strtotime($end_time);
 			}
 			$model = M();
 			$table = C('DB_PREFIX').$rows[0]['table'];
-			$count = $model->table($table)->where($where)->count();
+			$tag = M('Tags');
+			$list = $tag->select();
+			$result = array();
+			foreach ($list as $key=>$value) {
+				$result[$key]['tag_name'] = $value['tag_name'];
+				//$where .= " and tag_id like '%". $value['tag_id'] .",%'";
+				$result[$key]['count'] = $model->table($table)->where($where." and tag_id like '%". $value['tag_id'] .",%'")->count();
+				//echo $model->getLastSql()."<br>";
+			}
 			
-			if(!empty($count)) {
+			//print_r($result);exit;
+			if(!empty($result)) {
 				$this->error['error'] = 1;
-				$this->error['count'] = $count;
+				$this->error['total'] = count($result);
+				$this->error['rows'] = $result;
 			} else {
 				$this->error['error'] = 0;
 			}
@@ -365,20 +384,53 @@ class DataAction extends CommonAction{
 	 * 查询热词统计数据（上升最快等）
 	 */
 	public function topwordsRank() {
-		echo date("Y-m-d H:i:s", '1344565539');exit;
 		import("ORG.Util.Input");
 		import("ORG.Util.Page");
-		$time = intval($_REQUEST['time']);
-		$method = Input::getVar($_REQUEST['method']);
 		
-		if(!empty($time) && !empty($method)) {
+		
+		if(isset($_REQUEST['time']) && isset($_REQUEST['method'])) {
+			$task_id = intval($_REQUEST['task_id']);
+			$pageSize = isset($_REQUEST['rows']) ? intval($_REQUEST['rows']) : 30;
+    		$_GET['p'] = isset($_REQUEST['page']) ? intval($_REQUEST['page']) : 1;
+    	
+			$time = intval($_REQUEST['time']);
+			$method = Input::getVar($_REQUEST['method']);
+			$model = M();
+			$table = C('DB_PREFIX').'statistic_topwords';
+			$count = $model->table($table)->where("type = $time and task_id = $task_id")->count();
+			$p = new Page($count, $pageSize);
 			if($method == 'up') {
-				
+				$field = "key_words, min_number, max_number";
+				$list = $model->table($table)->where("type = $time and task_id = $task_id")->limit($p->firstRow .','. $p->listRows)->order("up_value desc")->select();
+				/*$page = $p->show();
+				echo $page."<p>";
+				foreach ($list as $value) {
+					echo $value['id']."=>".$value['key_words']."=>".$value['up_value']."<br>";
+				}*/
+				if(!empty($list)) {
+					$this->error['error'] = 1;
+					$this->error['total'] = $count;
+					$this->error['rows'] = $list;
+				} else {
+					$this->error['error'] = 0;
+				}
 			}
-			if($method == 'long') {
-				
+			if($method == 'num') {
+				$field = "key_words";
+				$list = $model->table($table)->field($field)->where("type = $time and task_id = $task_id")->limit($p->firstRow .','. $p->listRows)->order("count desc")->select();
+				if(!empty($list)) {
+					$this->error['error'] = 1;
+					$this->error['total'] = $count;
+					$this->error['rows'] = $list;
+				} else {
+					$this->error['error'] = 0;
+				}
 			}
+			//print_r($list);
+		} else {
+			$this->error['error'] = '1006';
 		}
+		$this->ajaxerr($this->error);
 	}
 	
 

@@ -90,6 +90,8 @@ class TopwordsAction extends CommonAction{
     	import("ORG.Util.Page");
     	import("ORG.Util.Input");
     	$group = Input::getVar($_REQUEST['group']);
+    	$way = Input::getVar($_REQUEST['way']);
+    	
     	if(!empty($group)) {
     		$top = M('DataTopUrl');
     		if($list = $top->where("groups = '". $group ."'")->select()) {
@@ -109,8 +111,12 @@ class TopwordsAction extends CommonAction{
 	    				$data[$key]['keywords'] = $value['keywords'];
 	    			}
     			}
-    			
     			$this->error['rows'] = $data;
+    			//生成下拉菜单
+    			if($way == "select"){
+    				$this->error = $data;
+    			}
+    			
     		}
     	} else {
     		$this->error['error'] = '1006'; 

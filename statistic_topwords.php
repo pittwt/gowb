@@ -21,7 +21,7 @@ $list = array_sort($list, 'add_time');
 $statistic = get_statistic($list);
 //if($statistic){
 //	foreach ($statistic as $value) {
-//		$db->insert($t_topwords_statistic, $value);
+//		$db->insert($t_statistic_topwords, $value);
 //	}	
 //}
 print_r($statistic);
@@ -69,7 +69,7 @@ if($statistic){
 		if(is_array($items)){
 			foreach ($items as $value) {
 				//写入每天的热词
-				$db->insert($t_topwords_statistic, $value);
+				$db->insert($t_statistic_topwords, $value);
 			}
 		}
 	}
@@ -87,7 +87,7 @@ foreach ($ids as $value) {
 }*/
 
 //统计每周的数据
-$sql = "select * from `$t_topwords_statistic` where `type` = 0 and weekly_stats = 0";
+$sql = "select * from `$t_statistic_topwords` where `type` = 0 and weekly_stats = 0";
 $week = $db->findall($sql);
 //按关键词分组
 $week = array_order($week, 'key_words');

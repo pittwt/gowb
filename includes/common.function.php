@@ -94,7 +94,7 @@ function get_timestamp($time, $type='d') {
  * 获取每天的热词统计结果
  */
 function get_statistic($list, $task_id=0, $type=0) {
-	global $db, $t_topwords_statistic;
+	global $db, $t_statistic_topwords;
 	
 	$array_one = array_slice($list, 0, 1);
 	$array_end = end($list);
@@ -161,7 +161,7 @@ function get_statistic($list, $task_id=0, $type=0) {
 			} else {
 				
 				//查看 是否已存在该记录
-				$sql = "select * from `$t_topwords_statistic` where `min_time` = '". $new_array['min_time'] ."' and `type` = '". $new_array['type']."' and `key_words` = '". $new_array['key_words']  ."'";
+				$sql = "select * from `$t_statistic_topwords` where `min_time` = '". $new_array['min_time'] ."' and `type` = '". $new_array['type']."' and `key_words` = '". $new_array['key_words']  ."'";
 				$row = $db->findone($sql);
 				if(empty($row)) {
 					$statistic[] = $new_array;
@@ -184,7 +184,7 @@ function get_statistic($list, $task_id=0, $type=0) {
 			$new_array['up_value'] = $new_array['max_number']-$new_array['min_number'];
 		}
 		//查看 是否已存在该记录
-		$sql = "select * from `$t_topwords_statistic` where `min_time` = '". $new_array['min_time'] ."' and `type` = '". $new_array['type']."' and `key_words` = '". $new_array['key_words']  ."'";
+		$sql = "select * from `$t_statistic_topwords` where `min_time` = '". $new_array['min_time'] ."' and `type` = '". $new_array['type']."' and `key_words` = '". $new_array['key_words']  ."'";
 		$row = $db->findone($sql);
 		if(empty($row)) {
 			$statistic[] = $new_array;
@@ -202,7 +202,7 @@ function get_statistic($list, $task_id=0, $type=0) {
  * 获取每周热词统计结果
  */
 function get_weekly_stats($list, $task_id=0, $type=0) {
-	global $db, $t_topwords_statistic;
+	global $db, $t_statistic_topwords;
 	
 	$array_one = array_slice($list, 0, 1);
 	$array_end = end($list);

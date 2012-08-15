@@ -86,22 +86,70 @@ foreach ($ids as $value) {
 	
 }*/
 
-//统计每周的数据
-$sql = "select * from `$t_statistic_topwords` where `type` = 0 and weekly_stats = 0";
-$week = $db->findall($sql);
-//按关键词分组
-$week = array_order($week, 'key_words');
-if(!empty($week)) {
-	foreach ($week as $items) {
-		
+
+//统计每周 每月的数据
+$mandw = array();
+$sql = "select * from `$t_statistic_conf` where type in (1, 2) and nextrun <=".time()." order by type asc";
+$rows = $db->findall($sql);
+foreach ($rows as $row) {
+	
+	if($row['type'] == 1) {
+		$sql = "select * from `$t_statistic_topwords` where `type` = 0 and weekly_stats = 0";
+	} elseif ($row['type'] == 2) {
+		$sql = "select * from `$t_statistic_topwords` where `type` = 0 and monthly_stats = 0";
 	}
+	$week = $db->findall($sql);
+
+	/*$sql = "select * from `$t_statistic_topwords` where `type` = 0 and weekly_stats = 0";
+	$week = $db->findall($sql);*/
+	
+	//按关键词分组
+	$week = array_order($week, 'key_words');
+	
+	$week_statistic = array();
+	$week_ids = '';
+	if(!empty($week)) {
+		foreach ($week as $items) {
+			$result = get_statistics($items, 0, $row['type']);
+			if(!empty($result['result'])) {
+				$week_statistic[] = $result['result'];
+			}
+			if(!empty($result['id'])) {
+				$week_ids .= $result['id'];
+			}
+		}
+	}
+	
+	//写入数据
+	foreach ($week_statistic as $value) {
+		if(is_array($value)) {
+			foreach ($value as $val) {
+				//print_r($val);
+				//写入热词
+				$db->insert($t_statistic_topwords, $val);
+			}
+		}
+	}
+	
+	//更新状态
+	if(!empty($week_ids)) {
+		if($row['type'] == 1) {
+			$sql = "update ".$t_statistic_topwords." set weekly_stats = 1 where id in (".substr($week_ids, 0, -1).")";
+		} elseif ($row['type'] == 2) {
+			$sql = "update ".$t_statistic_topwords." set monthly_stats = 1 where id in (".substr($week_ids, 0, -1).")";
+		}
+		if($db->query($sql)) {
+			echo $row['type']." update succeed<br>";
+		}
+	}
+	
+	//更新下次执行时间
+	$now = time();
+	$nexttime = get_timestamp($now, $row['type'], 1);
+	$sql = "update `$t_statistic_conf` set nextrun = ".$nexttime[0].", lastrun = $now where id = ".$row['id'];
+	//$db->query($sql);
+	
 }
-
-
-//统计每月的数据
-
-
-
 
 
 

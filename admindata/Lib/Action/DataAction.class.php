@@ -339,13 +339,16 @@ echo date("Y-m-d H:i:s", $end_time)."<br>";*/
 	 */
 	public function keywordsRank() {
 		import("ORG.Util.Input");
+		
+		$pageSize = isset($_REQUEST['rows']) ? $_REQUEST['rows'] : 30;
+		$_GET['p'] = isset($_REQUEST['page']) ? $_REQUEST['page'] : 1;
 		$task_id = intval($_REQUEST['task_id']);
 		$tag_id = intval($_REQUEST['tag_id']);
 		$start_time = Input::getVar($_REQUEST['start_time']);
 		$end_time = Input::getVar($_REQUEST['end_time']);
 
 		if($task_id) {
-			//import("ORG.Util.Page");
+			import("ORG.Util.Page");
     		$top = M('DataTopUrl');
     		$rows = $top->where("id = ".$task_id." and groups = 'search'")->select();
     		
@@ -362,9 +365,13 @@ echo date("Y-m-d H:i:s", $end_time)."<br>";*/
 			$model = M();
 			$table = C('DB_PREFIX').$rows[0]['table'];
 			$field = "weibo_username, weibo_content, weibo_time";
-			$list = $model->table($table)->field($field)->where($where)->select();
+			$count = $model->table($table)->where($where)->count();
+			
+			$p = new Page($count, $pageSize);
+			$list = $model->table($table)->field($field)->where($where)->limit($p->firstRow .','. $p->listRows)->select();
 			$list = $this->arrtime($list, 'weibo_time');
-			//$this->printr($list);
+			$page = $p->show();
+		
 			
 			if(!empty($list)) {
 				$this->error['error'] = 1;

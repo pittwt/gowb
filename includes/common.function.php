@@ -180,6 +180,21 @@ function get_statistic($list, $task_id=0, $type=0) {
 				}
 				$new_array = $array;
 			}
+			//当天开始第一个
+			//最小次数   最小次数的时间小于最大次数的时间
+			if($new_array['min_number'] == 0 || $value['number'] < $new_array['min_number']) {
+				$new_array['min_number'] = $value['number'];
+				$new_array['min_time'] = $value['add_time'];
+				$new_array['min_t'] = date("Y-m-d H:i:s", $value['add_time']);
+			}
+			//最大次数
+			if($value['number'] > $new_array['max_number']) {
+				$new_array['max_number'] = $value['number'];
+				$new_array['max_time'] = $value['add_time'];
+				$new_array['max_t'] = date("Y-m-d H:i:s", $value['add_time']);
+			}
+			//次数
+			$new_array['count']++;
 		}
 		
 	}
@@ -237,11 +252,9 @@ function get_statistics($list, $task_id=0, $type=0) {
 	//统计结果
 	$statistic = array();
 	$new_array = $array;
-//echo count($list)."<br>";
 	$count = count($list);
 	for ($i=0; $i<$count; $i++) {
 		$value = $list[$i];
-		//print_r($value);
 		//跳过执行当前时间段开始的时间
 		$nowtime = get_timestamp(time(), $type);
 		if($value['min_time'] >= $nowtime[0]) {
@@ -250,15 +263,9 @@ function get_statistics($list, $task_id=0, $type=0) {
 		$times = 0;
 		$id .= $value['id'] . ",";
 
-//echo get_date($time_start).")(";
-//echo get_date($time_end)."<br>";
-//echo get_date($time_end)."<br>";
-		//计算每天
-//echo "**".get_date($time_start)."**".get_date($time_end)."**  "; 
+		//计算每个时间段
 		if($value['min_time'] >= $time_start && $value['min_time'] <= $time_end) {
-//echo get_date($value['min_time'])."++<br>";
 			//最小次数   最小次数的时间小于最大次数的时间
-			//echo $new_array['min_number']."**".$value['min_number']."**<br>";
 			if($new_array['min_number'] == 0 || $value['min_number'] < $new_array['min_number'] /*&& $new_array['min_time'] <= $new_array['max_time']*/) {
 				$new_array['min_number'] = $value['min_number'];
 				$new_array['min_time'] = $value['min_time'];
@@ -272,9 +279,7 @@ function get_statistics($list, $task_id=0, $type=0) {
 			}
 			//次数
 			$new_array['count'] += $value['count'];
-//echo "[[".$value['count']."]]";
 		} else {
-//echo get_date($value['min_time'])."--<br>";
 			$nexttime = get_timestamp($time_start, $type, 1);
 			$time_start = $nexttime[0];
 			$time_end = $nexttime[1];
@@ -304,12 +309,8 @@ function get_statistics($list, $task_id=0, $type=0) {
 			}
 			$i--;
 		}
-//		echo "<hr>";
 	}
-//	echo $type."<br>";
-//	echo date("Y-m-d H:i:s", 1343904305);
-//print_r($new_array);
-//print_r($value);
+
 	//最后一个时间段的数据
 	if($new_array['min_number']) {
 		$new_array['key_words'] = $value['key_words'];
@@ -331,8 +332,7 @@ function get_statistics($list, $task_id=0, $type=0) {
 		}
 	}
 
-//print_r($statistic);
-//exit;
+
 	$result = array(
 		'result' => $statistic,
 		'id'	 => $id

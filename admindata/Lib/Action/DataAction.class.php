@@ -396,10 +396,10 @@ echo date("Y-m-d H:i:s", $end_time)."<br>";*/
 		
 		
 		if(isset($_REQUEST['time']) && isset($_REQUEST['method'])) {
-			$task_id = intval($_REQUEST['task_id']);
 			$pageSize = isset($_REQUEST['rows']) ? intval($_REQUEST['rows']) : 30;
     		$_GET['p'] = isset($_REQUEST['page']) ? intval($_REQUEST['page']) : 1;
-    	
+    		
+    		$task_id = intval($_REQUEST['task_id']);
 			$time = intval($_REQUEST['time']);
 			$method = Input::getVar($_REQUEST['method']);
 			$model = M();
@@ -408,14 +408,16 @@ echo date("Y-m-d H:i:s", $end_time)."<br>";*/
 			$p = new Page($count, $pageSize);
 			if($method == 'up') {
 				$field = "key_words, min_number, max_number";
-				$list = $model->table($table)->where("type = $time and task_id = $task_id")->limit($p->firstRow .','. $p->listRows)->order("up_value desc")->select();
+				$list = $model->table($table)->field($field)->where("type = $time and task_id = $task_id")->limit($p->firstRow .','. $p->listRows)->order("up_value desc")->select();
 				/*$page = $p->show();
-				echo $page."<p>";
-				foreach ($list as $value) {
+				echo $page."<p>";*/
+			/*	foreach ($list as $value) {
 					echo $value['id']."=>".$value['key_words']."=>".$value['up_value']."<br>";
 				}*/
+				//print_r($list);
 				if(!empty($list)) {
 					$this->error['error'] = 1;
+					$this->error['page'] = $_GET['p'];
 					$this->error['total'] = $count;
 					$this->error['rows'] = $list;
 				} else {
@@ -424,9 +426,10 @@ echo date("Y-m-d H:i:s", $end_time)."<br>";*/
 			}
 			if($method == 'num') {
 				$field = "key_words";
-				$list = $model->table($table)->field($field)->where("type = $time and task_id = $task_id")->limit($p->firstRow .','. $p->listRows)->order("count desc")->select();
+				$list = $model->table($table)->field($field)->field($field)->where("type = $time and task_id = $task_id")->limit($p->firstRow .','. $p->listRows)->order("count desc")->select();
 				if(!empty($list)) {
 					$this->error['error'] = 1;
+					$this->error['page'] = $_GET['p'];
 					$this->error['total'] = $count;
 					$this->error['rows'] = $list;
 				} else {

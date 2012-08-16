@@ -115,7 +115,7 @@ function get_statistic($list, $task_id=0, $type=0) {
 	
 	$hour_list = array();
 	$array = array(
-		'min_number' => 100000,
+		'min_number' => 0,
 		'max_number' => 0,
 		'min_time' => 0,
 		'max_time' => 0,
@@ -126,7 +126,9 @@ function get_statistic($list, $task_id=0, $type=0) {
 	//统计结果
 	$statistic = array();
 	$new_array = $array;
+
 	foreach ($list as $value) {
+		
 		//跳过执行当天零点开始的时间
 		$today = day_start(time());
 		if($value['add_time'] >= $today) {
@@ -137,17 +139,18 @@ function get_statistic($list, $task_id=0, $type=0) {
 
 		//计算每天
 		if($value['add_time'] >= $day_start && $value['add_time'] <= $day_end) {
+			
 			//最小次数   最小次数的时间小于最大次数的时间
-			if($value['number'] < $new_array['min_number'] /*&& $new_array['min_time'] <= $new_array['max_time']*/) {
+			if($new_array['min_number'] == 0 || $value['number'] < $new_array['min_number'] /*&& $new_array['min_time'] <= $new_array['max_time']*/) {
 				$new_array['min_number'] = $value['number'];
 				$new_array['min_time'] = $value['add_time'];
-				//$new_array['min_t'] = date("Y-m-d H:i:s", $value['add_time']);
+				$new_array['min_t'] = date("Y-m-d H:i:s", $value['add_time']);
 			}
 			//最大次数
 			if($value['number'] > $new_array['max_number']) {
 				$new_array['max_number'] = $value['number'];
 				$new_array['max_time'] = $value['add_time'];
-				//$new_array['max_t'] = date("Y-m-d H:i:s", $value['add_time']);
+				$new_array['max_t'] = date("Y-m-d H:i:s", $value['add_time']);
 			}
 			//次数
 			$new_array['count']++;
@@ -169,7 +172,6 @@ function get_statistic($list, $task_id=0, $type=0) {
 				$new_array = $array;
 				continue;
 			} else {
-				
 				//查看 是否已存在该记录
 				$sql = "select * from `$t_statistic_topwords` where `min_time` = '". $new_array['min_time'] ."' and `type` = '". $new_array['type']."' and `key_words` = '". $new_array['key_words']  ."'";
 				$row = $db->findone($sql);
@@ -182,7 +184,7 @@ function get_statistic($list, $task_id=0, $type=0) {
 		
 	}
 	//最后一天的数据
-	if(!empty($new_array)) {
+	if($new_array['min_number']) {
 		$new_array['key_words'] = $value['key_words'];
 		$new_array['task_id'] = $task_id;
 		$new_array['type'] = $type;
@@ -217,15 +219,10 @@ function get_statistics($list, $task_id=0, $type=0) {
 	$array_one = array_slice($list, 0, 1);
 	$array_end = end($list);
 	
-	//print_r($array_one);
-	//print_r($array_end);
 	$start_time = $array_one[0]['min_time'];
 	$timestamp = get_timestamp($start_time, $type);
 	$time_start =  $timestamp[0];
 	$time_end = $timestamp[1];
-	/*echo $start_time."<br>";
-	echo $time_start." ". date("Y-m-d H:i:s", $time_start)."<br>";
-	echo $time_end." ". date("Y-m-d H:i:s", $time_end)."<br>";*/
 	
 	$hour_list = array();
 	$array = array(
@@ -240,37 +237,47 @@ function get_statistics($list, $task_id=0, $type=0) {
 	//统计结果
 	$statistic = array();
 	$new_array = $array;
-	foreach ($list as $value) {
+//echo count($list)."<br>";
+	$count = count($list);
+	for ($i=0; $i<$count; $i++) {
+		$value = $list[$i];
+		//print_r($value);
 		//跳过执行当前时间段开始的时间
 		$nowtime = get_timestamp(time(), $type);
-		/*echo $type."<br>";
-		echo date("Y-m-d H:i:s", $nowtime[0]);exit;*/
 		if($value['min_time'] >= $nowtime[0]) {
 			continue;
 		}
 		$times = 0;
 		$id .= $value['id'] . ",";
 
+//echo get_date($time_start).")(";
+//echo get_date($time_end)."<br>";
+//echo get_date($time_end)."<br>";
 		//计算每天
-		if($value['min_number'] >= $time_start && $value['min_number'] <= $time_end) {
+//echo "**".get_date($time_start)."**".get_date($time_end)."**  "; 
+		if($value['min_time'] >= $time_start && $value['min_time'] <= $time_end) {
+//echo get_date($value['min_time'])."++<br>";
 			//最小次数   最小次数的时间小于最大次数的时间
+			//echo $new_array['min_number']."**".$value['min_number']."**<br>";
 			if($new_array['min_number'] == 0 || $value['min_number'] < $new_array['min_number'] /*&& $new_array['min_time'] <= $new_array['max_time']*/) {
 				$new_array['min_number'] = $value['min_number'];
 				$new_array['min_time'] = $value['min_time'];
-				//$new_array['min_t'] = date("Y-m-d H:i:s", $value['add_time']);
+				$new_array['min_t'] = date("Y-m-d H:i:s", $value['min_time']);
 			}
 			//最大次数
-			if($value['max_number'] > $new_array['max_number']) {
+			if($value['max_time'] > $new_array['max_time']) {
 				$new_array['max_number'] = $value['max_number'];
 				$new_array['max_time'] = $value['max_time'];
-				//$new_array['max_t'] = date("Y-m-d H:i:s", $value['add_time']);
+				$new_array['max_t'] = date("Y-m-d H:i:s", $value['max_time']);
 			}
 			//次数
 			$new_array['count'] += $value['count'];
+//echo "[[".$value['count']."]]";
 		} else {
+//echo get_date($value['min_time'])."--<br>";
 			$nexttime = get_timestamp($time_start, $type, 1);
 			$time_start = $nexttime[0];
-			$time_end = $nexttime[0];
+			$time_end = $nexttime[1];
 			$new_array['key_words'] = $value['key_words'];
 			$new_array['task_id'] = isset($value['task_id']) ? $value['task_id'] : $task_id;
 			$new_array['type'] = $type;
@@ -286,20 +293,25 @@ function get_statistics($list, $task_id=0, $type=0) {
 				$new_array = $array;
 				continue;
 			} else {
-				
 				//查看 是否已存在该记录
 				$sql = "select * from `$t_statistic_topwords` where `min_time` = '". $new_array['min_time'] ."' and `type` = '". $new_array['type']."' and `key_words` = '". $new_array['key_words']  ."'";
 				$row = $db->findone($sql);
 				if(empty($row)) {
+					
 					$statistic[] = $new_array;
 				}
 				$new_array = $array;
 			}
+			$i--;
 		}
-		
+//		echo "<hr>";
 	}
+//	echo $type."<br>";
+//	echo date("Y-m-d H:i:s", 1343904305);
+//print_r($new_array);
+//print_r($value);
 	//最后一个时间段的数据
-	if(!empty($new_array)) {
+	if($new_array['min_number']) {
 		$new_array['key_words'] = $value['key_words'];
 		$new_array['task_id'] = isset($value['task_id']) ? $value['task_id'] : $task_id;;
 		$new_array['type'] = $type;
@@ -310,6 +322,7 @@ function get_statistics($list, $task_id=0, $type=0) {
 		} else {
 			$new_array['up_value'] = $new_array['max_number']-$new_array['min_number'];
 		}
+		
 		//查看 是否已存在该记录
 		$sql = "select * from `$t_statistic_topwords` where `min_time` = '". $new_array['min_time'] ."' and `type` = '". $new_array['type']."' and `key_words` = '". $new_array['key_words']  ."'";
 		$row = $db->findone($sql);
@@ -317,6 +330,9 @@ function get_statistics($list, $task_id=0, $type=0) {
 			$statistic[] = $new_array;
 		}
 	}
+
+//print_r($statistic);
+//exit;
 	$result = array(
 		'result' => $statistic,
 		'id'	 => $id
@@ -324,12 +340,8 @@ function get_statistics($list, $task_id=0, $type=0) {
 	return $result;
 }
 
-/**
- * 
- * 获取每月热词统计结果
- */
-function get_monthly_stats($list, $task_id=0, $type=0) {
-	
+function get_date($time) {
+	return date("Y-m-d H:i:s", $time);
 }
 
 

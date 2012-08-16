@@ -9,7 +9,7 @@ set_time_limit(0);
 
 $db = new mysql($host, $user, $pwd, $db, '', 'UTF8');
 
-//test start
+//test start //////////////////////////////////////////////////////
 //获取每天的热词
 /*$sql = "select * from `$t_data_top_hourly` where `key_words` = '宋承宪'";
 echo $sql;
@@ -26,66 +26,78 @@ $statistic = get_statistic($list);
 //}
 print_r($statistic);
 exit;*/
-//test end
-/*
-//获取所有热词任务
-$sql = "select * from `$t_data_top_url` where `groups` = 'key'";
-$tables = $db->findall($sql);
-//print_r($tables);exit;
-$statistic = array();
-$ids = array();
-$i=0;
-//统计每天的数据
-if(!empty($tables)) {
-	foreach ($tables as $value) {
-		//获取热词
-		$sql = "select * from `". $db_prefix . $value['table'] ."` where `stats` = 0 order by key_words desc";
-		$list = $db->findall($sql);
-		
-		$ids[$i]['table'] = $db_prefix . $value['table'];
-		$ids[$i]['id'] = '';
-		//按关键词分组
-		$list = array_order($list, 'key_words');
-		if(!empty($list)) {
-			foreach ($list as $items) {
-				$items = array_sort($items, 'add_time');
-				//获取统计每天的数据
-				$result = get_statistic($items, $value['id'], 0);
-				if(!empty($result['result'])) {
-					$statistic[] = $result['result'];
-				}
-				if(!empty($result['id'])) {
-					$ids[$i]['id'] .= $result['id'];
+//test end /////////////////////////////////////////////////////////
+
+//获取每天的统计时间
+$sql = "select * from `$t_statistic_conf` where type = 0";
+$days = $db->findone($sql);
+
+if($days['nextrun'] < time()) {
+	
+	//获取所有热词任务
+	$sql = "select * from `$t_data_top_url` where `groups` = 'key'";
+	$tables = $db->findall($sql);
+	//print_r($tables);exit;
+	$statistic = array();
+	$ids = array();
+	$i=0;
+	//统计每天的数据
+	if(!empty($tables)) {
+		foreach ($tables as $value) {
+			//获取热词
+			$sql = "select * from `". $db_prefix . $value['table'] ."` where `stats` = 0 order by key_words desc";
+			$list = $db->findall($sql);
+			
+			$ids[$i]['table'] = $db_prefix . $value['table'];
+			$ids[$i]['id'] = '';
+			//按关键词分组
+			$list = array_order($list, 'key_words');
+			if(!empty($list)) {
+				foreach ($list as $items) {
+					$items = array_sort($items, 'add_time');
+					//获取统计每天的数据
+					$result = get_statistic($items, $value['id'], 0);
+					if(!empty($result['result'])) {
+						$statistic[] = $result['result'];
+					}
+					if(!empty($result['id'])) {
+						$ids[$i]['id'] .= $result['id'];
+					}
 				}
 			}
-		}
-		$i++;
-	}
-}
-
-//写入每天的统计数据
-if($statistic){
-	foreach ($statistic as $items) {
-		if(is_array($items)){
-			foreach ($items as $value) {
-				//写入每天的热词
-				$db->insert($t_statistic_topwords, $value);
-			}
-		}
-	}
-}
-
-//更新统计状态
-foreach ($ids as $value) {
-	if(!empty($value['id'])){
-		$sql = "update ".$value['table']." set stats = 1 where id in (".substr($value['id'], 0, -1).")";
-		if($db->query($sql)) {
-			echo "update succeed<br>";
+			$i++;
 		}
 	}
 	
-}*/
-
+	//写入每天的统计数据
+	if($statistic){
+		foreach ($statistic as $items) {
+			if(is_array($items)){
+				foreach ($items as $value) {
+					//写入每天的热词
+					$db->insert($t_statistic_topwords, $value);
+				}
+			}
+		}
+	}
+	
+	//更新统计状态
+	foreach ($ids as $value) {
+		if(!empty($value['id'])){
+			$sql = "update ".$value['table']." set stats = 1 where id in (".substr($value['id'], 0, -1).")";
+			if($db->query($sql)) {
+				echo "update succeed<br>";
+			}
+		}
+		
+	}
+	
+	//更新下次执行时间
+	$now = time();
+	$nexttime = get_timestamp($now, 0, 1);
+	$sql = "update `$t_statistic_conf` set nextrun = ".$nexttime[0].", lastrun = ". $now ." where id = ".$days['id'];
+	$db->query($sql);
+}
 
 //统计每周 每月的数据
 $mandw = array();
@@ -98,6 +110,7 @@ foreach ($rows as $row) {
 	} elseif ($row['type'] == 2) {
 		$sql = "select * from `$t_statistic_topwords` where `type` = 0 and monthly_stats = 0";
 	}
+	
 	$week = $db->findall($sql);
 
 	/*$sql = "select * from `$t_statistic_topwords` where `type` = 0 and weekly_stats = 0";
@@ -105,7 +118,7 @@ foreach ($rows as $row) {
 	
 	//按关键词分组
 	$week = array_order($week, 'key_words');
-	
+	//print_r($week);
 	$week_statistic = array();
 	$week_ids = '';
 	if(!empty($week)) {
@@ -119,7 +132,7 @@ foreach ($rows as $row) {
 			}
 		}
 	}
-	
+
 	//写入数据
 	foreach ($week_statistic as $value) {
 		if(is_array($value)) {
@@ -147,7 +160,7 @@ foreach ($rows as $row) {
 	$now = time();
 	$nexttime = get_timestamp($now, $row['type'], 1);
 	$sql = "update `$t_statistic_conf` set nextrun = ".$nexttime[0].", lastrun = $now where id = ".$row['id'];
-	//$db->query($sql);
+	$db->query($sql);
 	
 }
 

@@ -123,6 +123,7 @@ class SearchwordsAction extends CommonAction{
     	$data['hour'] = intval($_REQUEST['hour']);
     	$data['minute'] = intval($_REQUEST['minute']);
     	$data['groups'] = 'search';
+    	$data['nextrun'] = strtotime($_REQUEST['start_time']);
     	
     	if(!$data['week'] && !$data['day'] && !$data['hour']) {
 	    	//最小间隔15分钟

@@ -32,6 +32,7 @@ class TopwordsAction extends CommonAction{
     	$data['day'] = intval($_REQUEST['day']);
     	$data['hour'] = intval($_REQUEST['hour']);
     	$data['minute'] = intval($_REQUEST['minute']);
+    	$data['nextrun'] = strtotime($_REQUEST['start_time']);
     	$data['groups'] = 'key';
     	
     	if(!$data['week'] && !$data['day'] && !$data['hour']) {
@@ -91,12 +92,18 @@ class TopwordsAction extends CommonAction{
     	import("ORG.Util.Input");
     	$group = Input::getVar($_REQUEST['group']);
     	$way = Input::getVar($_REQUEST['way']);
+    	$pageSize = isset($_REQUEST['rows']) ? intval($_REQUEST['rows']) : 30;
+		$_GET['p'] = isset($_REQUEST['page']) ? intval($_REQUEST['page']) : 1;
     	
     	if(!empty($group)) {
     		$top = M('DataTopUrl');
-    		if($list = $top->where("groups = '". $group ."'")->select()) {
+    		$count = $top->where("groups = '". $group ."'")->count();
+    		$p = new Page($count, $pageSize);
+    		$list = $top->where("groups = '". $group ."'")->limit($p->firstRow .",". $p->listRows)->select();
+
+    		if(!empty($list)) {
     			$this->error['error'] = 1;
-    			$this->error['total'] = count($list);
+    			$this->error['total'] = $count;
     			$data = array();
     			foreach($list as $key=>$value) {
     				$data[$key]['task_id'] = $value['id'];

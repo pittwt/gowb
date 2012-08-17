@@ -6,6 +6,7 @@ require_once("includes/Spider.class.php");
 require_once('includes/Crons.class.php');
 require_once('includes/common.function.php');
 set_time_limit(0);
+ini_set ('memory_limit', '256M');
 
 $db = new mysql($host, $user, $pwd, $db, '', 'UTF8');
 
@@ -29,7 +30,7 @@ exit;*/
 //test end /////////////////////////////////////////////////////////
 
 //获取每天的统计时间
-$sql = "select * from `$t_statistic_conf` where type = 0";
+$sql = "select * from `$t_statistic_task` where type = 0";
 $days = $db->findone($sql);
 
 if($days['nextrun'] < time()) {
@@ -95,13 +96,13 @@ if($days['nextrun'] < time()) {
 	//更新下次执行时间
 	$now = time();
 	$nexttime = get_timestamp($now, 0, 1);
-	$sql = "update `$t_statistic_conf` set nextrun = ".$nexttime[0].", lastrun = ". $now ." where id = ".$days['id'];
+	$sql = "update `$t_statistic_task` set nextrun = ".$nexttime[0].", lastrun = ". $now ." where id = ".$days['id'];
 	$db->query($sql);
 }
 
 //统计每周 每月的数据
 $mandw = array();
-$sql = "select * from `$t_statistic_conf` where type in (1, 2) and nextrun <=".time()." order by type asc";
+$sql = "select * from `$t_statistic_task` where type in (1, 2) and nextrun <=".time()." order by type asc";
 $rows = $db->findall($sql);
 foreach ($rows as $row) {
 	
@@ -159,7 +160,7 @@ foreach ($rows as $row) {
 	//更新下次执行时间
 	$now = time();
 	$nexttime = get_timestamp($now, $row['type'], 1);
-	$sql = "update `$t_statistic_conf` set nextrun = ".$nexttime[0].", lastrun = $now where id = ".$row['id'];
+	$sql = "update `$t_statistic_task` set nextrun = ".$nexttime[0].", lastrun = $now where id = ".$row['id'];
 	$db->query($sql);
 	
 }

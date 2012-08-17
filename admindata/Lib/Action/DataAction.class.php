@@ -1,12 +1,7 @@
 <?php
 class DataAction extends CommonAction{
 
-    
-    function _initialize(){
-		import("ORG.Util.Page");
-		import("ORG.Util.Input");
-	}
-	
+
 	/**
 	 * 
 	 * 添加标签
@@ -39,22 +34,22 @@ class DataAction extends CommonAction{
 		import("ORG.Util.Input");
 		$way = Input::getVar($_REQUEST['way']);
 		$tag = M('Tags');
-		$list = $tag->select();
+		$pageSize = isset($_REQUEST['rows']) ? $_REQUEST['rows'] : 1;
+    	$_GET['p'] = isset($_REQUEST['page']) ? intval($_REQUEST['page']) : 1;
+    	
+    	$count = $tag->count();
+    	$p = new Page($count, $pageSize);
+		$list = $tag->limit($p->firstRow .",". $p->listRows)->order("tag_id desc")->select();
 		if(!empty($list)) {
 			$data = array();
-			//print_r($list);exit;
-			/*foreach ($list as $key=>$value) {
-				$data[$key]['tag_id'] = $value['tag_id'];
-				$data[$key]['tag_name'] = $value['tag_name'];
-			}*/
-			$this->error['total'] = count($list);
+			$this->error['total'] = $count;
 			$this->error['rows'] = $list;
+			$this->error['page'] = $_GET['p'];
 			//生成下拉菜单
     		if($way == "select"){
     			$this->error = $list;
     		}
 		}
-		
 		$this->ajaxerr($this->error);
 	}
 	
@@ -89,7 +84,6 @@ class DataAction extends CommonAction{
 	 * 获取标签详情
 	 */
 	public function tagInfo() {
-		echo date('Y-m-d H:i:s',1343360023);
 		$tag_id = intval($_REQUEST['tag_id']);
 		if($tag_id) {
 			$tag = M('Tags');
@@ -131,6 +125,7 @@ class DataAction extends CommonAction{
 	public function dataKeyList() {
 		$task_id = intval($_REQUEST['task_id']);
     	$pageSize = isset($_REQUEST['rows']) ? $_REQUEST['rows'] : 30;
+    	$_GET['p'] = isset($_REQUEST['page']) ? intval($_REQUEST['page']) : 1;
     	
     	if($task_id) {
     		import("ORG.Util.Page");
@@ -147,17 +142,13 @@ class DataAction extends CommonAction{
 				$page = $p->show();
 				if(!empty($list)) {
 					$this->error['error'] = 1;
-					$this->error['count'] = $count;
-					$this->error['total'] = count($list);
+					$this->error['total'] = $count;
 					$this->error['p'] = isset($_REQUEST['p']) ? $_REQUEST['p'] : 1;
 					$this->error['pageSize'] = $pageSize;
 					$this->error['rows'] = $list;
 				} else {
 					$this->error['error'] = 0;
 				}
-				
-				//echo "<div>".$page."</div>";
-	    		//$this->printr($list);
 
 	    	} else {
 	    		$this->error['error'] = '1008';
@@ -180,11 +171,11 @@ class DataAction extends CommonAction{
 		$task_id = intval($_REQUEST['task_id']);
 		$topwords = Input::getVar($_REQUEST['topwords']);
 		$pageSize = isset($_REQUEST['rows']) ? intval($_REQUEST['rows']) : 30;
+		$_GET['p'] = isset($_REQUEST['page']) ? intval($_REQUEST['page']) : 1;
     	
 		if($task_id) {
 			$top = M('DataTopUrl');
 	    	$rows = $top->where("id = '". $task_id ."' and groups = 'key'")->select();
-	    	//$this->printr($rows);
 			$model = M();
 			$table = C('DB_PREFIX').$rows[0]['table'];
 			
@@ -216,12 +207,10 @@ class DataAction extends CommonAction{
 				$count = $model->table($table)->count();
 				$p = new Page($count, $pageSize);
 				$data = $model->table($table)->distinct(true)->field('key_words')->limit($p->firstRow .','. $p->listRows)->order("id desc")->select();
-				//$page = $p->show();
 
 				if($data) {
 					$this->error['error'] = 1;
-					$this->error['total'] = count($data);
-					$this->error['count'] = $count;
+					$this->error['total'] = $count;
 					$this->error['rows']  = $data;
 					$this->error['p'] = isset($_REQUEST['p']) ? $_REQUEST['p'] : 1;
 					$this->error['pageSize'] = $pageSize;
@@ -286,12 +275,9 @@ class DataAction extends CommonAction{
 		$task_id = intval($_REQUEST['task_id']);
 		$start_time = Input::getVar($_REQUEST['start_time']);
 		$end_time = Input::getVar($_REQUEST['end_time']);
-/*echo strtotime('10/8/2012 02:03:56')."<br>";
-echo date("Y-m-d H:i:s",1349633036)."<br>";
-echo $start_time."<br>";
-echo strtotime($start_time)."<br>";
-echo date("Y-m-d H:i:s", $start_time)."<br>";
-echo date("Y-m-d H:i:s", $end_time)."<br>";*/
+		$pageSize = isset($_REQUEST['rows']) ? $_REQUEST['rows'] : 30;
+		$_GET['p'] = isset($_REQUEST['page']) ? $_REQUEST['page'] : 1;
+
 		if($task_id) {
 			import("ORG.Util.Page");
     		$top = M('DataTopUrl');
@@ -310,19 +296,20 @@ echo date("Y-m-d H:i:s", $end_time)."<br>";*/
 			$model = M();
 			$table = C('DB_PREFIX').$rows[0]['table'];
 			$tag = M('Tags');
-			$list = $tag->select();
+			$count = $tag->count();
+			$p = new Page($count, $pageSize);
+			$list = $tag->limit($p->firstRow.",".$p->listRows)->select(); 
 			$result = array();
 			foreach ($list as $key=>$value) {
 				$result[$key]['tag_name'] = $value['tag_name'];
 				//$where .= " and tag_id like '%". $value['tag_id'] .",%'";
 				$result[$key]['count'] = $model->table($table)->where($where." and tag_id like '%". $value['tag_id'] .",%'")->count();
-				//echo $model->getLastSql()."<br>";
 			}
 			
-			//print_r($result);exit;
 			if(!empty($result)) {
 				$this->error['error'] = 1;
-				$this->error['total'] = count($result);
+				$this->error['total'] = $count;
+				$this->error['page'] = $_GET['p'];
 				$this->error['rows'] = $result;
 			} else {
 				$this->error['error'] = 0;
@@ -375,7 +362,7 @@ echo date("Y-m-d H:i:s", $end_time)."<br>";*/
 			
 			if(!empty($list)) {
 				$this->error['error'] = 1;
-				$this->error['total'] = count($list);
+				$this->error['total'] = $count;
 				$this->error['rows'] = $list;
 			} else {
 				$this->error['error'] = 0;

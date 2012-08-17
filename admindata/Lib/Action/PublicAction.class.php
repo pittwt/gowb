@@ -5,13 +5,16 @@ class PublicAction extends BaseAction{
 		$this->redirect('Public/login');
     }
 	
-	public function login(){
-       if(!isset($_SESSION[C('USER_AUTH_KEY')])){
-       		$this->display("login");
-       } else {
-       		$this->redirect('Index');
-       }
-	
+	public function loginStatus(){
+		if(!isset($_SESSION[C('USER_AUTH_KEY')])){
+			$this->error['error'] = '1000';
+			
+		} else {
+			$this->error['error'] = '1';
+			$this->error['uid'] = $_SESSION[C('USER_AUTH_KEY')];
+			$this->error['username'] = $_SESSION['loginusername'];
+		}
+		$this->ajaxerr($this->error);
     }
     
     
@@ -75,11 +78,14 @@ class PublicAction extends BaseAction{
 			unset($_SESSION[C('USER_AUTH_KEY')]);
 			unset($_SESSION);
 			session_destroy();
-            $this->assign("jumpUrl",__URL__.'/login/');
-            $this->success('登出成功！');
+            //$this->assign("jumpUrl",__URL__.'/login/');
+            //$this->success('登出成功！');
+            $this->error['error'] = '1000';
         }else {
-            $this->error('已经登出！');
-        }
+            $this->error['error'] = '1000';
+            //$this->error('已经登出！');
+        } 
+        $this->ajaxerr($this->error);
     }
     
     

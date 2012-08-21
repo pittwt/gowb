@@ -34,7 +34,7 @@ if(!empty($list)) {
 		$data = $spider->openUrl();
 		$data = $spider->getData($data, '<table cellspacing="0" cellpadding="0" class="box_Show_z box_zs"', '</table>');
 					
-		if($data){
+		if(!empty($data)){
 			$keyWords = $spider->getTextDataAll($data, '<span class=\"zw_topic\"><[^>]+>', '</[^>]+></span>');
 			$number = $spider->getTextDataAll($data, '<span class="times_zw">', '</span>');
 		
@@ -88,7 +88,7 @@ if(!empty($list)) {
 			}
 			
 		}else{
-			$error_info .= '获取实时关键词数据错误， ';
+			$error_info .= '获取('.$item['detail'].')热词数据错误， ';
 		}
 		
 		//更新执行时间

@@ -104,16 +104,17 @@ if($days['nextrun'] < time()) {
 $mandw = array();
 $sql = "select * from `$t_statistic_task` where type in (1, 2) and nextrun <=".time()." order by type asc";
 $rows = $db->findall($sql);
+
 foreach ($rows as $row) {
 	
 	if($row['type'] == 1) {
-		$sql = "select * from `$t_statistic_topwords` where `type` = 0 and weekly_stats = 0";
+		$sql = "select * from `$t_statistic_topwords` where `type` = 0 and weekly_stats = 0 and min_time < '1345334400'";
 	} elseif ($row['type'] == 2) {
 		$sql = "select * from `$t_statistic_topwords` where `type` = 0 and monthly_stats = 0";
 	}
 	
 	$week = $db->findall($sql);
-
+//print_r($week);exit;
 	/*$sql = "select * from `$t_statistic_topwords` where `type` = 0 and weekly_stats = 0";
 	$week = $db->findall($sql);*/
 	

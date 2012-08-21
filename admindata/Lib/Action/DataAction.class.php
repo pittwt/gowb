@@ -34,7 +34,7 @@ class DataAction extends CommonAction{
 		import("ORG.Util.Input");
 		$way = Input::getVar($_REQUEST['way']);
 		$tag = M('Tags');
-		$pageSize = isset($_REQUEST['rows']) ? $_REQUEST['rows'] : 1;
+		$pageSize = isset($_REQUEST['rows']) ? $_REQUEST['rows'] : 30;
     	$_GET['p'] = isset($_REQUEST['page']) ? intval($_REQUEST['page']) : 1;
     	
     	$count = $tag->count();
@@ -344,10 +344,10 @@ class DataAction extends CommonAction{
 				$where .= " and tag_id like '%". $tag_id .",%'";
 			}
 			if($start_time) {
-				$where .= ' and add_time > '.strtotime($start_time);
+				$where .= ' and weibo_time > '.strtotime($start_time);
 			}
 			if($start_time) {
-				$where .= ' and add_time < '.strtotime($end_time);
+				$where .= ' and weibo_time < '.strtotime($end_time);
 			}
 			$model = M();
 			$table = C('DB_PREFIX').$rows[0]['table'];
@@ -358,7 +358,6 @@ class DataAction extends CommonAction{
 			$list = $model->table($table)->field($field)->where($where)->limit($p->firstRow .','. $p->listRows)->select();
 			$list = $this->arrtime($list, 'weibo_time');
 			$page = $p->show();
-		
 			
 			if(!empty($list)) {
 				$this->error['error'] = 1;

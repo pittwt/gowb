@@ -176,15 +176,16 @@ class TopwordsAction extends CommonAction{
 	public function taskEdit() {
 		import("ORG.Util.Input");
 		$data['id'] = intval($_REQUEST['task_id']);
-		$data['groups'] = Input::getVar($_REQUEST['group']);
+		/*$data['groups'] = Input::getVar($_REQUEST['group']);
 		if($data['groups'] == 'key') {
 			$data['type'] = intval($_REQUEST['type']);
 			$data['url'] = Input::getVar($_REQUEST['url']);
 		}
 		if($data['groups'] == 'search') {
 			$data['keywords'] = Input::getVar($_REQUEST['url']);
-		}
-		
+		}*/
+		$data['url'] = Input::getVar($_REQUEST['url']);
+		$data['keywords'] = Input::getVar($_REQUEST['url']);
     	$data['detail'] = Input::getVar($_REQUEST['detail']);
     	$data['table'] = Input::getVar($_REQUEST['table']);
     	$data['status'] = intval($_REQUEST['status']);

@@ -181,7 +181,8 @@ class DataAction extends CommonAction{
 			
 			//获取单个热词所有次数
 			if($topwords) {
-				$data = $model->table($table)->where("key_words = '".$topwords."'")->order("add_time asc")->select();
+				$field = "key_words, number, add_time";
+				$data = $model->table($table)->field($field)->where("key_words = '".$topwords."'")->order("add_time asc")->select();
 				//去除连续两次相同的值
 				$result = array();
 				$tmp = '';

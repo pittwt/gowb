@@ -4,7 +4,7 @@
  */
 $dirname = dirname(__FILE__)."/";
 $dir = scandir($dirname,1);
-//print_r($dir);
+
 //备份文件 保留天数
 $size = 4;
 $num=0;
@@ -16,9 +16,7 @@ foreach ($dir as $item) {
 			$subdir = scandir($dirname . "/$item",1);
 			foreach ($subdir as $value) {
 				if (!is_dir($dirname. "/$item".$value)) {
-					echo $dirname . $item."/".$value;
-					echo unlink($dirname . $item . "/".$value);
-					//exit;
+					unlink($dirname . $item . "/".$value);
 				}
 				
 			}
@@ -26,7 +24,6 @@ foreach ($dir as $item) {
 		}
 	}
 }
-//sleep(30);
 
 
 ?>

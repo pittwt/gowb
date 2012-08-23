@@ -36,19 +36,34 @@ $days = $db->findone($sql);
 if($days['nextrun'] < time()) {
 	
 	//获取所有热词任务
-	$sql = "select * from `$t_data_top_url` where `groups` = 'key'";
+	$sql = "select * from `$t_data_top_url` where `groups` = 'key' order by type asc";
 	$tables = $db->findall($sql);
-	//print_r($tables);exit;
+	
 	$statistic = array();
 	$ids = array();
 	$i=0;
 	//统计每天的数据
 	if(!empty($tables)) {
 		foreach ($tables as $value) {
+			$countsql = "select count(*) from `". $db_prefix . $value['table'] ."` where `stats` = 0";
+			$count = $db->findone($countsql);
+			if($count[0] > 100000) {
+				//一次未执行完
+				$_SESSION['exe_status'] = true;
+				//获取最小时间
+				$sql = "SELECT MIN(add_time) AS mintime FROM `". $db_prefix . $value['table'] ."` WHERE `stats` = 0";
+				$ttimes = $db->findone($sql);
+				//数据过多时  一次执行7天
+				$mintime = get_timestamp($ttimes['mintime'],0,7);
+				$where = " and add_time < ".$mintime[0];
+			} else {
+				$_SESSION['exe_status'] = false;
+				$where = "";
+			}
 			//获取热词
-			$sql = "select * from `". $db_prefix . $value['table'] ."` where `stats` = 0 order by key_words desc";
+			$sql = "select * from `". $db_prefix . $value['table'] ."` where `stats` = 0".$where;
 			$list = $db->findall($sql);
-			
+				
 			$ids[$i]['table'] = $db_prefix . $value['table'];
 			$ids[$i]['id'] = '';
 			//按关键词分组
@@ -95,7 +110,13 @@ if($days['nextrun'] < time()) {
 	
 	//更新下次执行时间
 	$now = time();
-	$nexttime = get_timestamp($now, 0, 1);
+	//一次问执行完   下次间隔5分钟    之行完下次间隔一天
+	if(isset($_SESSION['exe_status']) && $_SESSION['exe_status']){
+		$nexttime = $now + 300;
+	} else {
+		$nexttime = get_timestamp($now, 0, 1);
+	}
+	
 	$sql = "update `$t_statistic_task` set nextrun = ".$nexttime[0].", lastrun = ". $now ." where id = ".$days['id'];
 	$db->query($sql);
 }
@@ -160,7 +181,13 @@ foreach ($rows as $row) {
 	
 	//更新下次执行时间
 	$now = time();
-	$nexttime = get_timestamp($now, $row['type'], 1);
+	//一次问执行完   下次间隔5分钟    之行完下次间隔一天
+	if(isset($_SESSION['exe_status']) && $_SESSION['exe_status']){
+		$nexttime = $now + 300;
+	} else {
+		$nexttime = get_timestamp($now, $row['type'], 1);
+	}
+	
 	$sql = "update `$t_statistic_task` set nextrun = ".$nexttime[0].", lastrun = $now where id = ".$row['id'];
 	$db->query($sql);
 	

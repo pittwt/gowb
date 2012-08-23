@@ -1,0 +1,1 @@
+D:\wamp\bin\php\php5.3.13\php.exe -q D:/wamp/www/gowb/statistic_topwords.php

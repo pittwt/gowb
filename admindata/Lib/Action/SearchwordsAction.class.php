@@ -82,12 +82,13 @@ class SearchwordsAction extends CommonAction{
     			$list = $model->table($table)->field($field)->where("keywords_id = ".$keywords_id)->order("")->select();
     			
     			if(!empty($list[0]['keywords_id'])) {
-    				$num = $model->table($table."_num")->where('key_id ='.$list[0]['keywords_id'])->order("id desc")->select();
-    				$this->error['nums'] = $num;
+    				$field = "forward_num, comment_num, update_time";
+    				$num = $model->table($table."_num")->field($field)->where('keywords_id ='.$list[0]['keywords_id'])->order("id desc")->select();
+    				$this->error['rows'] = $num;
     			}
     			if(!empty($list[0]['tag_id'])) {
     				$model = M('Tags');
-    				$tag = $model->where("tag_id in (". $list[0]['tag_id'] .")")->select();
+    				$tag = $model->where("tag_id in (". substr($list[0]['tag_id'], 0, -1) .")")->select();
     				$this->error['tags'] = $tag;
     				//$this->printr($tag);
     			}

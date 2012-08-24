@@ -9,7 +9,6 @@ $dir = scandir($dirname,1);
 $size = 4;
 $num=0;
 foreach ($dir as $item) {
-	//echo var_dump(is_dir($dirname.$item))."$item<br>";
 	if(is_dir($dirname.$item) && $item != '.' && $item != '..') {
 		$num++;
 		if(strtotime($item) < (time()-3600*24*$size) && $num >$size){
@@ -18,7 +17,6 @@ foreach ($dir as $item) {
 				if (!is_dir($dirname. "/$item".$value)) {
 					unlink($dirname . $item . "/".$value);
 				}
-				
 			}
 			rmdir($dirname . $item);
 		}

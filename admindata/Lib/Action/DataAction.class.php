@@ -194,11 +194,19 @@ class DataAction extends CommonAction{
 						$result[] = $value;
 					}
 				}
+				$count = count($result);
+				$start = $pageSize * ($_GET['p']-1);
+				$list = $count - $start > $pageSize ? $start+$pageSize : $count;
+				$valid_result = array();
+				for($i=$start; $i<$list; $i++) {
+					$valid_result[] = $result[$i];
+				}
 				
 				if(!empty($data)) {
 					$this->error['error'] = 1;
-					$this->error['total'] = count($result);
-					$this->error['rows'] = $result;
+					$this->error['total'] = $count;
+					$this->error['rows'] = $valid_result;
+					$this->error['pageSize'] = $pageSize;
 				} else {
 					$this->error['error'] = 0;
 				}
@@ -213,7 +221,7 @@ class DataAction extends CommonAction{
 					$this->error['error'] = 1;
 					$this->error['total'] = $count;
 					$this->error['rows']  = $data;
-					$this->error['p'] = isset($_REQUEST['p']) ? $_REQUEST['p'] : 1;
+					$this->error['page'] = isset($_REQUEST['p']) ? $_REQUEST['p'] : 1;
 					$this->error['pageSize'] = $pageSize;
 				} else {
 					$this->error['error'] = 0;

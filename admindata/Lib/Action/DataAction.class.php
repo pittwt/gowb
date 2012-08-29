@@ -244,9 +244,9 @@ class DataAction extends CommonAction{
 		
 		$task_id = intval($_REQUEST['task_id']);
 		$keywords_id = intval($_REQUEST['keywords_id']);
-		$tag_id = Input::getVar($_REQUEST['tag_id']);
+		$tag_id = Input::getVar($_REQUEST['tag_ids']);
 		
-		if($keywords_id && $task_id && $tag_id) {
+		if($keywords_id && $task_id) {
     		import("ORG.Util.Page");
     		$top = M('DataTopUrl');
     		$rows = $top->where("id = ".$task_id." and groups = 'search'")->select();
@@ -254,9 +254,9 @@ class DataAction extends CommonAction{
     			$model = M();
     			$table = C('DB_PREFIX').$rows[0]['table'];
     			$data = array(
-    				'tag_id' => $tag_id
+    				'tag_id' => $tag_id/*.","*/
     			);
-    			$field = "keywords_id, weibo_username, weibo_content, weibo_time, tag_id";
+    			//$field = "keywords_id, weibo_username, weibo_content, weibo_time, tag_id";
     			if($model->table($table)->where("keywords_id = ".$keywords_id)->data($data)->save()) {
     				$this->error['error'] = 1;
     			} else {
@@ -390,7 +390,7 @@ class DataAction extends CommonAction{
 		import("ORG.Util.Page");
 		
 		
-		if(isset($_REQUEST['time']) && isset($_REQUEST['method'])) {
+		if(isset($_REQUEST['time']) && isset($_REQUEST['method']) && isset($_REQUEST['task_id'])) {
 			$pageSize = isset($_REQUEST['rows']) ? intval($_REQUEST['rows']) : 30;
     		$_GET['p'] = isset($_REQUEST['page']) ? intval($_REQUEST['page']) : 1;
     		
@@ -402,25 +402,21 @@ class DataAction extends CommonAction{
 			$count = $model->table($table)->where("type = $time and task_id = $task_id")->count();
 			$p = new Page($count, $pageSize);
 			if($method == 'up') {
-				$field = "key_words, min_number, max_number";
+				$field = "DISTINCT key_words, min_number, max_number";
 				$list = $model->table($table)->field($field)->where("type = $time and task_id = $task_id")->limit($p->firstRow .','. $p->listRows)->order("up_value desc")->select();
-				/*$page = $p->show();
-				echo $page."<p>";*/
-			/*	foreach ($list as $value) {
-					echo $value['id']."=>".$value['key_words']."=>".$value['up_value']."<br>";
-				}*/
-				//print_r($list);
+//echo $model->getLastSql();
+//$this->printr($list);
 				if(!empty($list)) {
 					$this->error['error'] = 1;
 					$this->error['page'] = $_GET['p'];
 					$this->error['total'] = $count;
 					$this->error['rows'] = $list;
 				} else {
-					$this->error['error'] = 0;
+					$this->error['error'] = '1008';
 				}
 			}
 			if($method == 'num') {
-				$field = "key_words";
+				$field = "DISTINCT key_words";
 				$list = $model->table($table)->field($field)->field($field)->where("type = $time and task_id = $task_id")->limit($p->firstRow .','. $p->listRows)->order("count desc")->select();
 				if(!empty($list)) {
 					$this->error['error'] = 1;
@@ -428,10 +424,9 @@ class DataAction extends CommonAction{
 					$this->error['total'] = $count;
 					$this->error['rows'] = $list;
 				} else {
-					$this->error['error'] = 0;
+					$this->error['error'] = '1008';
 				}
 			}
-			//print_r($list);
 		} else {
 			$this->error['error'] = '1006';
 		}

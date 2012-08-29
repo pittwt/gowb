@@ -54,13 +54,19 @@ class PublicAction extends BaseAction{
 	    		$_SESSION[C('USER_AUTH_KEY')]	=	$auth[0]['id'];
 	    		$_SESSION['email']				=	$auth[0]['email'];
            	 	$_SESSION['loginusername']		=	$auth[0]['username'];
+           	 	$_SESSION['lastlogin_time']		=	$auth[0]['lastlogin_time'];
 	    		//$this->assign("jumpUrl","__APP__/Index");
 	    		//登录成功
 	    		$this->error['error'] = '1';
 	    		$this->error['uid'] = $auth[0]['id'];
 				$this->error['username'] = $auth[0]['username'];
 				$this->error['email'] = $auth[0]['email'];
-				$this->error['lastlogin_time'] = $auth[0]['lastlogin_time'];
+				$this->error['lastlogin_time'] = $_SESSION['lastlogin_time'];
+				$data = array(
+					'id' => $auth[0]['id'],
+					'lastlogin_time' => time(),
+				);
+				$User->data($data)->save();
 	    		//$this->success("登录成功");
 	    	}else{
 	    		$this->error['error'] .= "1005";

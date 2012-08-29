@@ -34,6 +34,7 @@ class TopwordsAction extends CommonAction{
     	$data['minute'] = intval($_REQUEST['minute']);
     	$data['nextrun'] = strtotime($_REQUEST['start_time']);
     	$data['groups'] = 'key';
+    	$data['phpfile'] = 'get_weibo_data.php';
     	
     	if(!$data['week'] && !$data['day'] && !$data['hour']) {
 	    	//最小间隔5分钟
@@ -50,6 +51,20 @@ class TopwordsAction extends CommonAction{
     		$top = M('DataTopUrl');
 	    	if($top->data($data)->add()){
 	    		$this->error['error'] = 1;
+	    		//创建表
+	    		$crete_sql = "CREATE TABLE IF NOT EXISTS `".C('DB_PREFIX').$data['table']."` (
+							  `id` int(10) NOT NULL AUTO_INCREMENT,
+							  `source_id` int(10) NOT NULL COMMENT '数据源id对应data_top_source表',
+							  `key_words` varchar(255) NOT NULL,
+							  `number` int(10) NOT NULL DEFAULT '0',
+							  `add_time` int(10) NOT NULL DEFAULT '0' COMMENT '操作时间',
+							  `stats` tinyint(1) NOT NULL DEFAULT '0' COMMENT '是否统计0未统计,1已统计 ',
+							  `valid` tinyint(1) DEFAULT '0' COMMENT '去除重复 有效的',
+							  PRIMARY KEY (`id`),
+							  KEY `NewIndex1` (`key_words`(3)),
+							  KEY `stats` (`stats`)
+							) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=0 ;";
+	    		$top->query($crete_sql);
 	    	} else {
 	    		$this->error['error'] = 0;
 	    	}
@@ -184,10 +199,15 @@ class TopwordsAction extends CommonAction{
 		if($data['groups'] == 'search') {
 			$data['keywords'] = Input::getVar($_REQUEST['url']);
 		}*/
-		$data['url'] = Input::getVar($_REQUEST['url']);
-		$data['keywords'] = Input::getVar($_REQUEST['url']);
+		if(isset($_REQUEST['url']) && !empty($_REQUEST['url'])){
+			$data['url'] = Input::getVar($_REQUEST['url']);
+		}
+		if(isset($_REQUEST['table']) && !empty($_REQUEST['table'])){
+			$data['table'] = Input::getVar($_REQUEST['table']);
+		}
+		
+		$data['keywords'] = Input::getVar($_REQUEST['keywords']);
     	$data['detail'] = Input::getVar($_REQUEST['detail']);
-    	$data['table'] = Input::getVar($_REQUEST['table']);
     	$data['status'] = intval($_REQUEST['status']);
     	$data['week'] = intval($_REQUEST['week']);
     	$data['day'] = intval($_REQUEST['day']);

@@ -344,4 +344,12 @@ function get_date($time) {
 	return date("Y-m-d H:i:s", $time);
 }
 
+function get_keylist($keylist) {
+	$list = null;
+	foreach ($keylist as $value) {
+		$list .= '\''.$value['key_words'].'\''.',';
+	}
+	return substr($list, 0, -1);
+} 
+
 

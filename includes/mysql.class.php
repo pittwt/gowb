@@ -153,6 +153,13 @@ class mysql {
     }
 	
 	//获取一条
+    public function count($sql) {
+        $result = $this->query($sql);
+		$num_rows = mysql_num_rows($result);
+		return $num_rows;
+    }
+    
+	//获取一条
     public function findone($sql) {
         $rs=array();
         $result = $this->query($sql);

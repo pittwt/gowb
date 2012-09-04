@@ -119,6 +119,7 @@ if($days['nextrun'] < time()) {
 	
 	$sql = "update `$t_statistic_task` set nextrun = ".$nexttime[0].", lastrun = ". $now ." where id = ".$days['id'];
 	$db->query($sql);
+	unset($_SESSION['exe_status']);
 }
 
 //统计每周 每月的数据
@@ -129,23 +130,31 @@ $rows = $db->findall($sql);
 foreach ($rows as $row) {
 	
 	if($row['type'] == 1) {
-		$sql = "select * from `$t_statistic_topwords` where `type` = 0 and weekly_stats = 0 and min_time < '1345334400'";
+		$sql = "select * from `$t_statistic_topwords` where `type` = 0 and weekly_stats = 0";
+		$countsql = "select count(*) from `$t_statistic_topwords` where `type` = 0 and weekly_stats = 0";
 	} elseif ($row['type'] == 2) {
 		$sql = "select * from `$t_statistic_topwords` where `type` = 0 and monthly_stats = 0";
+		$countsql = "select count(*) from `$t_statistic_topwords` where `type` = 0 and monthly_stats = 0";
+	}
+	$count = $db->findone($countsql);
+	//数据过多时 每次执行200个词
+	if($count[0] > 300){
+		$_SESSION['exe_status'] = true;
+		$keysql = "select key_words from `$t_statistic_topwords` where `type` = 0 and monthly_stats = 0 group by key_words limit 200";
+		$key_list = $db->findall($keysql);
+		$sql .= " and key_words in (".get_keylist($key_list).")";
 	}
 	
-	$week = $db->findall($sql);
-//print_r($week);exit;
-	/*$sql = "select * from `$t_statistic_topwords` where `type` = 0 and weekly_stats = 0";
-	$week = $db->findall($sql);*/
 	
+	$week = $db->findall($sql);
 	//按关键词分组
 	$week = array_order($week, 'key_words');
-	//print_r($week);
+
 	$week_statistic = array();
 	$week_ids = '';
 	if(!empty($week)) {
 		foreach ($week as $items) {
+
 			$result = get_statistics($items, 0, $row['type']);
 			if(!empty($result['result'])) {
 				$week_statistic[] = $result['result'];
@@ -153,9 +162,9 @@ foreach ($rows as $row) {
 			if(!empty($result['id'])) {
 				$week_ids .= $result['id'];
 			}
+			
 		}
 	}
-
 	//写入数据
 	foreach ($week_statistic as $value) {
 		if(is_array($value)) {
@@ -183,7 +192,7 @@ foreach ($rows as $row) {
 	$now = time();
 	//一次问执行完   下次间隔5分钟    之行完下次间隔一天
 	if(isset($_SESSION['exe_status']) && $_SESSION['exe_status']){
-		$nexttime = $now + 300;
+		$nexttime = $now + 900;
 	} else {
 		$nexttime = get_timestamp($now, $row['type'], 1);
 	}

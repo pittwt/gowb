@@ -11,18 +11,20 @@ set_time_limit(0);
 $db = new mysql($host, $user, $pwd, $db, '', 'UTF8');
 
 //echo date('Y-m-d H:i:s', 1342669636);exit;
-$search_words = urlencode(urlencode('万豪酒店'));
-$url = 'http://s.weibo.com/weibo/'. $search_words .'&Refer=STopic_realtime';
+//$search_words = urlencode(urlencode('万豪酒店'));
+//$url = 'http://s.weibo.com/weibo/'. $search_words .'&Refer=STopic_realtime';
 
 //获取搜索任务
 $sql = "select * from `$t_data_top_url` where `phpfile` = '". basename(__FILE__) ."' and `status` = 1 and nextrun <=".time();
 $slist = $db->findall($sql);
-
+/*echo $sql;
+print_r($slist);
+exit;*/
 $spider = new Spider();
 if(!empty($slist)) {
 	foreach($slist as $list) {
 		//新浪微博搜索链接 
-		$url = $list['url'].urlencode(urlencode($list['keywords']));
+		$url = $list['url'].urlencode(urlencode('"'.$list['keywords'].'"'));
 		$spider->setUrl($url);
 		//搜索结果页数
 		$pages = intval($spider->getSerachPagenum());

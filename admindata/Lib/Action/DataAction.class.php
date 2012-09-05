@@ -366,7 +366,8 @@ class DataAction extends CommonAction{
 			$p = new Page($count, $pageSize);
 			$list = $model->table($table)->field($field)->where($where)->limit($p->firstRow .','. $p->listRows)->select();
 			$list = $this->arrtime($list, 'weibo_time');
-			$page = $p->show();
+			//echo $model->getLastSql();
+			//$page = $p->show();
 			
 			if(!empty($list)) {
 				$this->error['error'] = 1;

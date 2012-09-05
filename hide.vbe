@@ -1,2 +1,5 @@
 Set ws = CreateObject("Wscript.Shell")
-ws.run "cmd /c auto.bat",vbhide
+ws.run "cmd /c bat\get_wb_search.bat",vbhide
+ws.run "cmd /c bat\get_weibo_data.bat",vbhide
+ws.run "cmd /c bat\statistic_topwords.bat",vbhide
+ws.run "cmd /c bat\databackup.bat",vbhide

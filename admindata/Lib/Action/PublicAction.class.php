@@ -67,6 +67,13 @@ class PublicAction extends BaseAction{
 					'lastlogin_time' => time(),
 				);
 				$User->data($data)->save();
+				$UserLog = M('UserLog');
+				$log = array(
+					'uid' => $auth[0]['id'],
+					'login_time' => date("Y-m-d H:i:s",time()),
+					'login_ip' => $_SERVER['SERVER_ADDR']
+				);
+				$UserLog->data($log)->add();
 	    		//$this->success("登录成功");
 	    	}else{
 	    		$this->error['error'] .= "1005";

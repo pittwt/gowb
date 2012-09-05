@@ -186,7 +186,7 @@ class SearchwordsAction extends CommonAction{
 							  `update_time` datetime DEFAULT NULL,
 							  PRIMARY KEY (`id`)
 								) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=0 ;"
-				);
+						);
 				foreach ($insert_sql as $sql) {
 					$top->query($sql);
 				}

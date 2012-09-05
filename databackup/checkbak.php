@@ -1,6 +1,6 @@
 <?php 
 /**
- * 清除备份文件
+ * 清除备份数据库文件
  */
 $dirname = dirname(__FILE__)."/";
 $dir = scandir($dirname,1);

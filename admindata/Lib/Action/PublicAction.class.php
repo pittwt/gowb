@@ -71,7 +71,7 @@ class PublicAction extends BaseAction{
 				$log = array(
 					'uid' => $auth[0]['id'],
 					'login_time' => date("Y-m-d H:i:s",time()),
-					'login_ip' => $_SERVER['SERVER_ADDR']
+					'login_ip' => $_SERVER['REMOTE_ADDR']
 				);
 				$UserLog->data($log)->add();
 	    		//$this->success("登录成功");

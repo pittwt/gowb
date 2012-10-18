@@ -434,7 +434,37 @@ class DataAction extends CommonAction{
 		$this->ajaxerr($this->error);
 	}
 	
+	/**
+	 * 
+	 * 统计微博加V的数量
+	 */
+	function keywordsV() {
+		
+		$top = M('DataTopUrl');
+    	$rows = $top->where("groups = 'search'")->select();
+    	
+    	$model = M();
+    	$v_list = array();
+    	foreach ($rows as $key=>$value) {
+    		$table = C('DB_PREFIX').$value['table'];
+    		$v_list[$key]['key_words'] = $value['keywords'];
+    		$v_list[$key]['isv_num'] = $model->table($table)->where("is_verify = 1")->count();
+    		$v_list[$key]['nov_num'] = $model->table($table)->where("is_verify = 0")->count();
+    	}
+    	//$this->printr($v_list);
+		if(!empty($v_list)) {
+			$this->error['error'] = 1;
+			$this->error['total'] = count($v_list);
+			$this->error['p'] = isset($_REQUEST['p']) ? $_REQUEST['p'] : 1;
+			$this->error['pageSize'] = $pageSize;
+			$this->error['rows'] = $v_list;
+		} else {
+			$this->error['error'] = 0;
+		}
+		
+		$this->ajaxerr($this->error);
 
+	}
 	
 }
 

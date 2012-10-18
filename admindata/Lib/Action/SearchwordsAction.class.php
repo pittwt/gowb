@@ -170,6 +170,7 @@ class SearchwordsAction extends CommonAction{
 							  `weibo_username` varchar(255) NOT NULL COMMENT '微博用户名称',
 							  `weibo_content` text NOT NULL COMMENT '微博内容',
 							  `weibo_time` int(10) DEFAULT NULL COMMENT '发微薄时间',
+							  `is_verify` tinyint(1) NOT NULL COMMENT '是否加V， 1是，0否',
 							  `forward_num` int(10) DEFAULT NULL COMMENT '转发次数',
 							  `comment_num` int(10) DEFAULT NULL COMMENT '评论数',
 							  `weibo_thumbimg` varchar(255) DEFAULT NULL COMMENT '微博图片',

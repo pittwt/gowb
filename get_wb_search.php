@@ -11,8 +11,16 @@ set_time_limit(0);
 $db = new mysql($host, $user, $pwd, $db, '', 'UTF8');
 
 //echo date('Y-m-d H:i:s', 1342669636);exit;
-//$search_words = urlencode(urlencode('万豪酒店'));
-//$url = 'http://s.weibo.com/weibo/'. $search_words .'&Refer=STopic_realtime';
+//test start
+/*$search_words = urlencode(urlencode('万豪酒店'));
+$url = 'http://s.weibo.com/weibo/'. $search_words .'&Refer=STopic_realtime';
+echo $url;
+$spider = new Spider();
+$spider->setUrl($url);
+$Alldata = $spider->getSearchWeiboAll();
+print_r($Alldata);
+exit;*/
+//test end
 
 //获取搜索任务
 $sql = "select * from `$t_data_top_url` where `phpfile` = '". basename(__FILE__) ."' and `status` = 1 and nextrun <=".time();
@@ -29,6 +37,7 @@ if(!empty($slist)) {
 		//搜索结果页数
 		$pages = intval($spider->getSerachPagenum());
 		
+		
 		//$insert = array();
 		for($i=1; $i<=$pages; $i++) {
 			$items = array(
@@ -41,15 +50,17 @@ if(!empty($slist)) {
 			//生成微博搜索 队列
 			$db->insert($t_search_keywords_url,$items);
 		}
-		//更新下次执行时间
-		$now = time();
-		$nextrun = Crons::nextRuntime($list['week'], $list['day'], $list['hour'], $list['minute'], $now);
-		$update = array(
-				'lastrun' => $now,
-				'nextrun' => $nextrun,
-		);
-		$condition = " id = ". $list['id'];
-		$db->update($t_data_top_url, $update, $condition);
+		//更新下次执行时间 $pages<0搜索过多时新浪机器人检测
+		if($pages > 0){
+			$now = time();
+			$nextrun = Crons::nextRuntime($list['week'], $list['day'], $list['hour'], $list['minute'], $now);
+			$update = array(
+					'lastrun' => $now,
+					'nextrun' => $nextrun,
+			);
+			$condition = " id = ". $list['id'];
+			$db->update($t_data_top_url, $update, $condition);
+		}
 	}
 }
 
@@ -59,14 +70,19 @@ $clist = $db->findall($sql);
 
 $insert_list = array();
 $num_list = array();
+$s_empty = false;
 foreach($clist as $item) {
 	$spider->setUrl($item['search_url']);
 	$Alldata = $spider->getSearchWeiboAll();
+	//s_empty 新浪是否机器人检测
+	if(empty($Alldata)){
+		$s_empty = true;
+	}
 	//查看获取的微博数据是否已存在
 	foreach ($Alldata as $value) {
 		$sql = "SELECT * FROM `". $db_prefix . $item['table'] ."` WHERE weibo_username = '". $value['username'] ."' AND weibo_time = ".$value['weibo_time'];
 		$row = $db->findall($sql);
-		echo $sql."<be>";
+		//echo $sql."<be>";
 		if(empty($row)) {
 			$value['table'] = $db_prefix . $item['table'];
 			$insert_list[] = $value;
@@ -90,6 +106,7 @@ if(!empty($insert_list)) {
 			'weibo_username'	=> $value['username'],
 			'weibo_content'		=> $value['weibo_content'],
 			'weibo_time'		=> $value['weibo_time'],
+			'is_verify'			=> $value['is_verify'],
 			'weibo_thumbimg'	=> $value['weibo_thumbimg'],
 			'weibo_middleimg'	=> $value['weibo_middleimg'],
 			'weibo_largeimg'	=> $value['weibo_largeimg'],
@@ -127,10 +144,12 @@ if(!empty($num_list)) {
 
 //print_r($clist);
 //更新搜索地址状态
-$time = date("Y-m-d H:i:s", time());
-foreach ($clist as $value) {
-	$sql = "update `$t_search_keywords_url` set run_time = '". $time ."', status = 1 where id = ". $value['id'];
-	$db->query($sql);
+if(!$s_empty){
+	$time = date("Y-m-d H:i:s", time());
+	foreach ($clist as $value) {
+		$sql = "update `$t_search_keywords_url` set run_time = '". $time ."', status = 1 where id = ". $value['id'];
+		$db->query($sql);
+	}
 }
 
 

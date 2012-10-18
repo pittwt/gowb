@@ -135,11 +135,12 @@ class Spider{
 			foreach($list[0] as $key=>$item){
 				$thumbimg = $this->getData($item, '<img class="bigcursor" src="', '"');
 				$data[$key] = array(
-					'username'	=> $this->getData($item, 'weibo_nologin_name>', '<'),
+					'username'	=> $this->getData($item, 'nick-name="', '"'),
 					'weibo_content'	=> $this->getData($item, '<em>', '</em>'),
 					'weibo_time'	=> substr($this->getData($item, 'date="', '" class="date"'), 0, 10),
 					'forward_num'	=> $this->getData($item, '>转发(', ')</a>'),
 					'comment_num'	=> $this->getData($item, '>评论(', ')</a>'),
+					'is_verify'		=> $this->getData($item, 'http://verified.weibo.com/verify') ? 1 : 0,
 					'weibo_thumbimg'	=> $thumbimg,
 					'weibo_middleimg'	=> str_replace('/thumbnail/', '/bmiddle/', $thumbimg),
 					'weibo_largeimg'	=> str_replace('/thumbnail/', '/large/', $thumbimg),

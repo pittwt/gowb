@@ -439,9 +439,11 @@ class DataAction extends CommonAction{
 	 * 统计微博加V的数量
 	 */
 	function keywordsV() {
-		
+		$pageSize = isset($_REQUEST['rows']) ? intval($_REQUEST['rows']) : 30;
+    	$_REQUEST['page'] = isset($_REQUEST['page']) ? intval($_REQUEST['page']) : 1;
+    	
 		$top = M('DataTopUrl');
-    	$rows = $top->where("groups = 'search'")->select();
+    	$rows = $top->where("groups = 'search'")->order("id desc")->select();
     	
     	$model = M();
     	$v_list = array();
@@ -455,7 +457,7 @@ class DataAction extends CommonAction{
 		if(!empty($v_list)) {
 			$this->error['error'] = 1;
 			$this->error['total'] = count($v_list);
-			$this->error['p'] = isset($_REQUEST['p']) ? $_REQUEST['p'] : 1;
+			$this->error['p'] = $_REQUEST['page'];
 			$this->error['pageSize'] = $pageSize;
 			$this->error['rows'] = $v_list;
 		} else {

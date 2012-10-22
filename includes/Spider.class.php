@@ -126,6 +126,15 @@ class Spider{
 	}
 	
 	/*
+	 * 是否新浪机器人验证 
+	 * <span>我真滴不是机器人</span> => <span>\u6211\u771f\u6ef4\u4e0d\u662f\u673a\u5668\u4eba<\/span>
+	 */
+	public function isCheckRobot() {
+		$content = $this->openUrl($this->url);
+		return strpos($content, '<span>\u6211\u771f\u6ef4\u4e0d\u662f\u673a\u5668\u4eba<\/span>');
+	}
+	
+	/*
 	 * 获取搜索微博的单条内容
 	 */
 	public function getSearchWeibo($content) {

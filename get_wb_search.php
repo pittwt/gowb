@@ -12,13 +12,16 @@ $db = new mysql($host, $user, $pwd, $db, '', 'UTF8');
 
 //echo date('Y-m-d H:i:s', 1342669636);exit;
 //test start
-/*$search_words = urlencode(urlencode('万豪酒店'));
+/*$search_words = urlencode(urlencode('雅士利奶粉'));
 $url = 'http://s.weibo.com/weibo/'. $search_words .'&Refer=STopic_realtime';
-echo $url;
+echo $url."<br>";
 $spider = new Spider();
 $spider->setUrl($url);
-$Alldata = $spider->getSearchWeiboAll();
-print_r($Alldata);
+if($spider->isCheckRobot() !== false) echo "**(".$spider->isCheckRobot().")**";
+print_r($spider->openUrl($url));
+
+//$Alldata = $spider->getSearchWeiboAll();
+//print_r($Alldata);
 exit;*/
 //test end
 
@@ -32,7 +35,7 @@ $spider = new Spider();
 if(!empty($slist)) {
 	foreach($slist as $list) {
 		//新浪微博搜索链接 
-		$url = $list['url'].urlencode(urlencode('"'.$list['keywords'].'"'));
+		$url = $list['url'].urlencode(urlencode($list['keywords']));
 		$spider->setUrl($url);
 		//搜索结果页数
 		$pages = intval($spider->getSerachPagenum());
@@ -64,19 +67,24 @@ if(!empty($slist)) {
 	}
 }
 
-//获取20条搜索地址
-$sql = "SELECT * FROM `$t_search_keywords_url` WHERE status = 0 ORDER BY add_time ASC, id ASC LIMIT 0, 20";
+//获取10条搜索地址
+$sql = "SELECT * FROM `$t_search_keywords_url` WHERE status = 0 ORDER BY add_time ASC, id ASC LIMIT 0, 10";
 $clist = $db->findall($sql);
 
 $insert_list = array();
 $num_list = array();
 $s_empty = false;
 foreach($clist as $item) {
+	$item['search_url'] = str_replace('%2522', '', $item['search_url']);
 	$spider->setUrl($item['search_url']);
 	$Alldata = $spider->getSearchWeiboAll();
 	//s_empty 新浪是否机器人检测
-	if(empty($Alldata)){
+	if(empty($Alldata) && $spider->isCheckRobot() !== false){
 		$s_empty = true;
+		echo empty($Alldata);
+		echo "<br>".$item['search_url']."<br>";
+		print_r($Alldata);
+		exit;
 	}
 	//查看获取的微博数据是否已存在
 	foreach ($Alldata as $value) {
@@ -144,13 +152,12 @@ if(!empty($num_list)) {
 
 //print_r($clist);
 //更新搜索地址状态
-if(!$s_empty){
-	$time = date("Y-m-d H:i:s", time());
-	foreach ($clist as $value) {
-		$sql = "update `$t_search_keywords_url` set run_time = '". $time ."', status = 1 where id = ". $value['id'];
-		$db->query($sql);
-	}
+$time = date("Y-m-d H:i:s", time());
+foreach ($clist as $value) {
+	$sql = "update `$t_search_keywords_url` set run_time = '". $time ."', status = 1 where id = ". $value['id'];
+	$db->query($sql);
 }
+
 
 
 

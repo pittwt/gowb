@@ -1,0 +1,1 @@
+ALTER TABLE `wb_search_keywords_wanhao` ADD `is_verify` TINYINT( 1 ) NOT NULL COMMENT 'ÊÇ·ñ¼ÓV£¬ 1ÊÇ£¬0·ñ' AFTER `weibo_time` 

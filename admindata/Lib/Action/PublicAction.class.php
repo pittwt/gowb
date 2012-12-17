@@ -93,7 +93,7 @@ class PublicAction extends BaseAction{
 			session_destroy();
             //$this->assign("jumpUrl",__URL__.'/login/');
             //$this->success('登出成功！');
-            $this->error['error'] = '1000';
+            $this->error['error'] = '1';
         }else {
             $this->error['error'] = '1000';
             //$this->error('已经登出！');

@@ -1,0 +1,13 @@
+'''HTTP/1.1 200 OK
+Server: nginx/0.7.61
+Date: Thu, 13 Dec 2012 09:00:32 GMT
+Content-Type: text/vnd.wap.wml; charset=UTF-8
+Transfer-Encoding: chunked
+Connection: close
+Content-Language: zh-CN
+
+445
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE wml PUBLIC "-//WAPFORUM//DTD WML 1.1//EN" "http://www.wapforum.org/DTD/wml_1.1.xml"><wml><head><meta forua="true" http-equiv="Cache-Control" content="no-cache"/><meta forua="true" http-equiv="Cache-Control" content="max-age=0"/><meta forua="true" http-equiv="Cache-Control" content="must-revalidate"/></head><card id="start" title="发送成功" ontimer="/im/index/index.action" newcontext="true"><timer value="30"/><p> 短信发送成功!<a href="/im/index/index.action">3秒自动返回WAP飞信..</a><br/><br/><a href="/im/user/myuserinfo.action">我的资料</a>&gt;<a href="/im/user/sendMsgToMyself.action">给自己发短信</a><br/><a href="http://f.10086.cn/index.jsp">手机飞信网</a>-<a href="http://f.10086.cn/info/c/?nid=29">导航</a>-<a href="http://f.10086.cn/portal/cscenter.action?do=layout">客服</a><br/> 我的<a href="http://f.10086.cn/im/">飞信</a>.<a href="http://f.10086.cn/space/myspace/layout.action">同窗</a>.<a href="http://f.10086.cn/jy/home/index.action">家园</a><br/> [12月13日 17:00] </p></card></wml>
+0
+
+'''
